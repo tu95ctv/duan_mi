@@ -1,0 +1,43 @@
+  <odoo>
+  <data>
+  
+ 
+  
+  <!--  DL -->
+      <record id="xoakho_form" model="ir.ui.view">
+         <field name="name">tonkho.xoakho.form</field>
+         <field name="model">tonkho.xoakho</field>
+         <field name="arch" type="xml">
+            <form>
+               <header>
+                  <button name="xoakho_action" string="Xóa Kho" type="object" class="btn-primary" />
+                  <button name="xoa_stock_move" string="xoa_stock_move" type="object" class="btn-primary" />
+                  <button name="xoa_stock_move_line" string="xoa_stock_move_line" type="object" class="btn-primary" />
+                  <button name="xoa_stock_picking" string="xoa_stock_picking" type="object" class="btn-primary" />
+                  <button name="xoa_product_template" string="xoa_product_template" type="object" class="btn-primary" />
+               </header>
+               <sheet>
+                  <group>
+                     
+                  </group>
+               </sheet>
+            </form>
+         </field>
+      </record>
+      
+      
+      <record model="ir.actions.act_window" id="xoakho_action">
+         <field name="name">Xóa Kho</field>
+         <field name="res_model">tonkho.xoakho</field>
+         <field name="view_mode">form</field>
+         <field name="view_type">form</field>
+         <field name="target">new</field>
+      </record>
+      
+      
+      <menuitem id="xoakho_menu"  action="xoakho_action"
+        parent="stock.menu_stock_inventory_control" sequence="1"
+        groups="base.group_erp_manager"
+        />
+       </data>
+  </odoo>

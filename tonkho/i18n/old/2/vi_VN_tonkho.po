@@ -1,0 +1,861 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* tonkho
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0-20180210\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-26 12:55+0000\n"
+"PO-Revision-Date: 2018-06-26 12:55+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.ky_ten_old
+msgid "(Ký, họ tên)"
+msgstr "(Ký, họ tên)"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.ngay_thang_dia_diem
+msgid ", Tại:"
+msgstr ", Tại:"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.cong_hoa_xhcn_so_STT
+msgid "<b>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</b>"
+msgstr "<b>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</b>"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.cong_hoa_xhcn_so_STT
+msgid "<b>ĐÀI VIỄN THÔNG HCM</b>"
+msgstr "<b>ĐÀI VIỄN THÔNG HCM</b>"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.cong_hoa_xhcn_so_STT
+msgid "<b>Độc Lập - Tự Do - Hạnh Phúc</b>"
+msgstr "<b>Độc Lập - Tự Do - Hạnh Phúc</b>"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.cong_hoa_xhcn_so_STT
+msgid "<span>TP HCM, Ngày</span>"
+msgstr "<span>TP HCM, Ngày</span>"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.table_thead
+msgid "<strong>Ghi Chú</strong>"
+msgstr "<strong>Ghi Chú</strong>"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.table_thead
+msgid "<strong>Part Number</strong>"
+msgstr "<strong>Part Number</strong>"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.table_thead
+msgid "<strong>S/N</strong>"
+msgstr "<strong>S/N</strong>"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.table_thead
+msgid "<strong>SL</strong>"
+msgstr "<strong>SL</strong>"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.table_thead
+msgid "<strong>STT</strong>"
+msgstr "<strong>STT</strong>"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.table_thead
+msgid "<strong>TT</strong>"
+msgstr "<strong>TT</strong>"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.table_thead
+msgid "<strong>Tên Vật Tư</strong>"
+msgstr "<strong>Tên Vật Tư</strong>"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.table_thead
+msgid "<strong>ĐVT</strong>"
+msgstr "<strong>ĐVT</strong>"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.ky_ten_old
+msgid "<strong>ĐẠI DIỆN BÊN GIAO kaka</strong>"
+msgstr "<strong>ĐẠI DIỆN BÊN GIAO kaka</strong>"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.ky_ten_old
+msgid "<strong>ĐẠI DIỆN BÊN NHẬN</strong>"
+msgstr "<strong>ĐẠI DIỆN BÊN NHẬN</strong>"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_ban_giao_or_nghiem_thu
+msgid "BG hay NT"
+msgstr "BG hay NT"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.bien_ban_ban_giao_vat_tu
+msgid "BIÊN BẢN"
+msgstr "BIÊN BẢN"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.so_ban_in
+msgid "Biên bản này được in thành"
+msgstr "Biên bản này được in thành"
+
+#. module: tonkho
+#: selection:stock.picking,ban_giao_or_nghiem_thu:0
+msgid "Bàn Giao"
+msgstr "Bàn Giao"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_ben_giao_giu
+msgid "Bên giao giữ"
+msgstr "Bên giao giữ"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_ben_nhan_giu
+msgid "Bên nhận giữ"
+msgstr "Bên nhận giữ"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_ben_thu_3_ids
+msgid "Bên thứ 3"
+msgstr "Bên thứ 3"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_ben_thu_4_ids
+msgid "Bên thứ 4"
+msgstr "Bên thứ 4"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_ltk_config_settings_cancel_mode
+#: model:ir.model.fields,field_description:tonkho.field_res_config_settings_cancel_mode
+msgid "Cancel Mode"
+msgstr "Cancel Mode"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_location_cho_phep_khac_tram_chon
+msgid "Cho phép khác trạm chọn"
+msgstr "Cho phép khác trạm chọn"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_location_cho_phep_am
+msgid "Cho phép số lượng âm"
+msgstr "Cho phép số lượng âm"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_choosed_stock_quants_ids
+msgid "Choosed Stock Quants"
+msgstr "Choosed Stock Quants"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.cac_ben
+msgid "Chúng tôi gồm:"
+msgstr "Chúng tôi gồm:"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.cac_ben
+msgid "Chúng tôi đã tiến hành"
+msgstr "Chúng tôi đã tiến hành"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.ben_giao_nhan_info
+msgid "Chức Vụ:"
+msgstr "Chức Vụ:"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.view_picking_form_inherit
+msgid "Chức vụ"
+msgstr "Chức vụ"
+
+#. module: tonkho
+#: model:ir.model,name:tonkho.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_brand_create_uid
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_texttemplate_create_uid
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_thietbi_create_uid
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_title_cac_ben_create_uid
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_xoakho_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_brand_create_date
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_texttemplate_create_date
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_thietbi_create_date
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_title_cac_ben_create_date
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_xoakho_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: tonkho
+#: model:ir.ui.menu,name:tonkho.stock_move_line_menu
+#: model:ir.ui.view,arch_db:tonkho.view_production_lot_form
+msgid "Các Dòng Điều Chuyển"
+msgstr "Các Dòng Điều Chuyển"
+
+#. module: tonkho
+#: model:ir.ui.menu,name:tonkho.menu_action_location_form
+msgid "Các địa điểm"
+msgstr "Các địa điểm"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_quant_tracking
+msgid "Có SN"
+msgstr "Có SN"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.product_template_search_view
+msgid "Có SN hay Không"
+msgstr "Có SN hay Không"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_inventory_line_tracking
+msgid "Có SN không men?"
+msgstr "Có SN không men?"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_move_line_tracking
+msgid "Có SN?"
+msgstr "Có SN?"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.totrinh
+msgid "Căn cứ vào tờ trình"
+msgstr "Căn cứ vào tờ trình"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_location_department_id
+msgid "Department"
+msgstr "Phòng ban"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_quant_department_id_selection
+msgid "Department Id Selection"
+msgstr "Department Id Selection"
+
+#. module: tonkho
+#: code:addons/tonkho/models/stock_move.py:29
+#, python-format
+msgid "Detailed Operations"
+msgstr "Detailed Operations"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_brand_display_name
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_texttemplate_display_name
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_thietbi_display_name
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_title_cac_ben_display_name
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_xoakho_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_texttemplate_field_context
+msgid "Field Context"
+msgstr "Field Context"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_production_lot_ghi_chu_ban_dau
+msgid "Ghi Chú Ban Đầu"
+msgstr "Ghi Chú Ban Đầu"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_production_lot_ghi_chu_ngay_nhap
+msgid "Ghi Chú Ngày Nhập"
+msgstr "Ghi Chú Ngày Nhập"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_production_lot_ghi_chu_ngay_xuat
+msgid "Ghi Chú Ngày Xuất"
+msgstr "Ghi Chú Ngày Xuất"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_move_line_ghi_chu
+#: model:ir.model.fields,field_description:tonkho.field_stock_production_lot_ghi_chu
+msgid "Ghi chú"
+msgstr "Ghi chú"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_product_product_ghi_chu_ban_dau
+#: model:ir.model.fields,field_description:tonkho.field_product_template_ghi_chu_ban_dau
+msgid "Ghi chú ban đầu"
+msgstr "Ghi chú ban đầu"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_product_product_ghi_chu_ngay_nhap
+#: model:ir.model.fields,field_description:tonkho.field_product_template_ghi_chu_ngay_nhap
+msgid "Ghi chú ngày nhập"
+msgstr "Ghi chú ngày nhập"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_product_product_ghi_chu_ngay_xuat
+#: model:ir.model.fields,field_description:tonkho.field_product_template_ghi_chu_ngay_xuat
+msgid "Ghi chú ngày xuất"
+msgstr "Ghi chú ngày xuất"
+
+#. module: tonkho
+#: model:ir.model,name:tonkho.model_hr_department
+msgid "HR Department"
+msgstr "HR Department"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_product_product_brand_id
+#: model:ir.model.fields,field_description:tonkho.field_product_template_brand_id
+#: model:ir.model.fields,field_description:tonkho.field_stock_inventory_line_brand_id
+msgid "Hãng sản xuất"
+msgstr "Hãng sản xuất"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.ngay_thang_dia_diem
+msgid "Hôm nay ngày:"
+msgstr "Hôm nay ngày:"
+
+#. module: tonkho
+#: selection:stock.move.line,tinh_trang:0
+#: selection:stock.production.lot,tinh_trang:0
+msgid "Hỏng"
+msgstr "Hỏng"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_brand_id
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_texttemplate_id
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_thietbi_id
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_title_cac_ben_id
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_xoakho_id
+msgid "ID"
+msgstr "ID"
+
+#. module: tonkho
+#: model:ir.actions.report,name:tonkho.action_bao_cao_dieu_chuyen
+msgid "In Biên Bản Bàn Giao"
+msgstr "In Biên Bản Bàn Giao"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.product_template_form_view_procurement_button_inherit
+msgid "Internal Category"
+msgstr "Internal Category"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_move_line_inventory_id
+msgid "Inventory"
+msgstr "Tồn kho"
+
+#. module: tonkho
+#: model:ir.model,name:tonkho.model_stock_inventory_line
+msgid "Inventory Line"
+msgstr "Chi tiết kiểm kho"
+
+#. module: tonkho
+#: model:ir.model,name:tonkho.model_stock_location
+msgid "Inventory Locations"
+msgstr "Địa điểm Tồn kho"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_location_is_kho_cha
+msgid "Kho Cha"
+msgstr "Kho Cha"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_hr_department_default_location_id
+msgid "Kho mặc định"
+msgstr "Kho mặc định"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_brand___last_update
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_texttemplate___last_update
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_thietbi___last_update
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_title_cac_ben___last_update
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_xoakho___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_brand_write_uid
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_texttemplate_write_uid
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_thietbi_write_uid
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_title_cac_ben_write_uid
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_xoakho_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_brand_write_date
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_texttemplate_write_date
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_thietbi_write_date
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_title_cac_ben_write_date
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_xoakho_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: tonkho
+#: model:ir.model,name:tonkho.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr "Lô/Số sê-ri"
+
+#. module: tonkho
+#: code:addons/tonkho/models/old/stock_pack_operation.py:67
+#, python-format
+msgid "Lot/Serial Number Details"
+msgstr "Lot/Serial Number Details"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_ly_do
+msgid "Lý do"
+msgstr "Lý do"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.reason
+msgid "Lý do:"
+msgstr "Lý do:"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_move_line_stock_quant_id
+msgid "Lấy vật tư có trong kho change"
+msgstr "Lấy vật tư có trong kho change"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_production_lot_move_line_ids
+msgid "Move Line"
+msgstr "di chuyển dòng"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_ma_bien_ban
+msgid "Mã biên bản"
+msgstr "Mã biên bản"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_texttemplate_id
+msgid "Mẫu lý do"
+msgstr "Mẫu lý do"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_brand_name
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_texttemplate_name
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_thietbi_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: tonkho
+#: code:addons/tonkho/models/stock_picking11.py:205
+#, python-format
+msgid "New Move:"
+msgstr "New Move:"
+
+#. module: tonkho
+#: selection:stock.picking,ban_giao_or_nghiem_thu:0
+msgid "Nghiệm thu"
+msgstr "Nghiệm thu"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_source_member_ids
+msgid "Nhân viên giao"
+msgstr "Nhân viên giao"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_dest_member_ids
+msgid "Nhân viên nhận"
+msgstr "Nhân viên nhận"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_inventory_line_categ_id
+#: model:ir.model.fields,field_description:tonkho.field_stock_quant_categ_id
+#: model:ir.ui.view,arch_db:tonkho.quant_search_view
+msgid "Nhóm"
+msgstr "Nhóm"
+
+#. module: tonkho
+#: selection:stock.picking,ban_giao_or_nghiem_thu:0
+msgid "Nhập kho vật tư lỗi"
+msgstr "Nhập kho vật tư lỗi"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.cong_hoa_xhcn_so_STT
+msgid "Năm"
+msgstr "Năm"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_noi_ban_giao
+msgid "Nơi bàn giao"
+msgstr "Nơi bàn giao"
+
+#. module: tonkho
+#: model:ir.model,name:tonkho.model_stock_move_line
+msgid "Packing Operation"
+msgstr "Packing Operation"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_inventory_line_pn
+#: model:ir.model.fields,field_description:tonkho.field_stock_production_lot_pn
+#: model:ir.model.fields,field_description:tonkho.field_stock_quant_pn
+msgid "Part Number"
+msgstr "Part Number"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_move_line_pn
+#: model:ir.ui.view,arch_db:tonkho.search_product_lot_filter
+msgid "Part number"
+msgstr "Part number"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_quant_department_id
+msgid "Phòng Ban"
+msgstr "Phòng Ban"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_location_partner_id_of_stock_for_report
+msgid "Phòng ban cho báo cáo"
+msgstr "Phòng ban cho báo cáo"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_production_lot_pn_id
+msgid "Pn"
+msgstr "Pn"
+
+#. module: tonkho
+#: model:ir.model,name:tonkho.model_product_product
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: tonkho
+#: model:ir.model,name:tonkho.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: tonkho
+#: model:ir.model,name:tonkho.model_stock_quant
+msgid "Quants"
+msgstr "Số lượng"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_inventory_line_stt
+msgid "STT kkaka"
+msgstr "STT kkaka"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_stt_trong_bien_ban_in
+msgid "STT trong biên bản"
+msgstr "STT trong biên bản"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_stt_bien_ban
+msgid "STT điều chuyển"
+msgstr "STT điều chuyển"
+
+#. module: tonkho
+#: model:ir.model.fields,help:tonkho.field_stock_inventory_line_categ_id
+#: model:ir.model.fields,help:tonkho.field_stock_quant_categ_id
+msgid "Select category for the current product"
+msgstr "lựa chọn danh mục của sản phẩm"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_hr_department_sequence_id
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.view_picking_form_inherit
+msgid "Serial number"
+msgstr "Serial number"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_product_product_stock_location_id_selection
+#: model:ir.model.fields,field_description:tonkho.field_product_template_stock_location_id_selection
+#: model:ir.model.fields,field_description:tonkho.field_stock_quant_stock_location_id_selection
+msgid "Stock Location Id Selection"
+msgstr "Stock Location Id Selection"
+
+#. module: tonkho
+#: model:ir.model,name:tonkho.model_stock_move
+msgid "Stock Move"
+msgstr "Dịch chuyển kho"
+
+#. module: tonkho
+#: model:ir.actions.act_window,name:tonkho.stock_quant_action_product
+#: model:ir.ui.menu,name:tonkho.menu_stock_quant_action_product
+msgid "Số Lượng Trong Kho"
+msgstr "Số Lượng Trong Kho"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_so_ban_in
+msgid "Số bản in"
+msgstr "Số bản in"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.cong_hoa_xhcn_so_STT
+msgid "Số:"
+msgstr "Số:"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.cong_hoa_xhcn_so_STT
+msgid "TRUNG TÂM HẠ TẦNG MẠNG MIỀN NAM"
+msgstr "TRUNG TÂM HẠ TẦNG MẠNG MIỀN NAM"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_product_product_thiet_bi_id
+#: model:ir.model.fields,field_description:tonkho.field_product_template_thiet_bi_id
+#: model:ir.model.fields,field_description:tonkho.field_stock_inventory_line_thiet_bi_id
+msgid "Thiết bị"
+msgstr "Thiết bị"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.cong_hoa_xhcn_so_STT
+msgid "Tháng"
+msgstr "Tháng"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.view_picking_form_inherit
+msgid "Thông Tin Thêm"
+msgstr "Thông Tin Thêm"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_tonkho_title_cac_ben_name
+msgid "Title"
+msgstr "Tiêu đề"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_title_ben_thu_3
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_title_ben_thu_4
+msgid "Title bên thứ 3"
+msgstr "Title bên thứ 3"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.quant_search_view
+msgid "Tracking"
+msgstr "Tracking"
+
+#. module: tonkho
+#: model:ir.model,name:tonkho.model_stock_picking
+msgid "Transfer"
+msgstr "Dịch chuyển"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_product_product_quant_ids
+#: model:ir.model.fields,field_description:tonkho.field_product_template_quant_ids
+msgid "Trong kho"
+msgstr "Trong kho"
+
+#. module: tonkho
+#: selection:stock.picking,ban_giao_or_nghiem_thu:0
+msgid "Trình vật tư"
+msgstr "Trình vật tư"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.quant_search_view
+#: model:ir.ui.view,arch_db:tonkho.search_product_lot_filter
+msgid "Trạng Thái"
+msgstr "Trạng Thái"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.quant_search_view
+msgid "Tìm Số lượng trong kho có tên"
+msgstr "Tìm Số lượng trong kho có tên"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.quant_search_view
+msgid "Tìm Số lượng trong đơn vị có tên"
+msgstr "Tìm Số lượng trong đơn vị có tên"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.product_template_search_view
+msgid "Tìm vật tư có trong kho Này"
+msgstr "Tìm vật tư có trong kho Này"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_production_lot_tinh_trang
+#: model:ir.model.fields,field_description:tonkho.field_stock_quant_tinh_trang
+msgid "Tình Trạng"
+msgstr "Tình Trạng"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_move_line_tinh_trang
+msgid "Tình trạng"
+msgstr "Tình trạng"
+
+#. module: tonkho
+#: selection:stock.move.line,tinh_trang:0
+#: selection:stock.production.lot,tinh_trang:0
+msgid "Tốt"
+msgstr "Tốt"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_totrinh_id
+msgid "Tờ trình"
+msgstr "Tờ trình"
+
+#. module: tonkho
+#: model:ir.model,name:tonkho.model_res_users
+msgid "Users"
+msgstr "Người dùng"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.bien_ban_ban_giao_vat_tu
+msgid "VẬT TƯ"
+msgstr "VẬT TƯ"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.product_template_search_view
+msgid "Vật tư có tồn tại trong bất cứ kho"
+msgstr "Vật tư có tồn tại trong bất cứ kho"
+
+#. module: tonkho
+#: code:addons/tonkho/models/stock_move_line.py:36
+#, python-format
+msgid "Warning"
+msgstr "Warning"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.view_picking_form_inherit
+msgid "Xem Biên Bản html"
+msgstr "Xem Biên Bản html"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.view_picking_form_inherit
+msgid "Xem Biên Bản pdf"
+msgstr "Xem Biên Bản pdf"
+
+#. module: tonkho
+#: model:ir.actions.act_window,name:tonkho.xoakho_action
+#: model:ir.ui.menu,name:tonkho.xoakho_menu
+#: model:ir.ui.view,arch_db:tonkho.xoakho_form
+msgid "Xóa Kho"
+msgstr "Xóa Kho"
+
+#. module: tonkho
+#: code:addons/tonkho/models/stock_move_line.py:35
+#, python-format
+msgid "You can only process 1.0 %s for products with unique serial number."
+msgstr "You can only process 1.0 %s for products with unique serial number."
+
+#. module: tonkho
+#: code:addons/tonkho/models/old/stock_pack_operation.py:45
+#, python-format
+msgid "You need to provide a Lot/Serial Number for product in operation pack *1 %s"
+msgstr "You need to provide a Lot/Serial Number for product in operation pack *1 %s"
+
+#. module: tonkho
+#: code:addons/tonkho/models/old/stock_pack_operation.py:49
+#, python-format
+msgid "You should provide a different serial number for each piece"
+msgstr "You should provide a different serial number for each piece"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.so_ban_in
+msgid "bản."
+msgstr "bản."
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.cac_ben
+msgid "các vật tư bên dưới:"
+msgstr "các vật tư bên dưới:"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.product_template_search_view
+msgid "quant is not set"
+msgstr "quant is not set"
+
+#. module: tonkho
+#: model:ir.model,name:tonkho.model_res_config_settings
+msgid "res.config.settings"
+msgstr "res.config.settings"
+
+#. module: tonkho
+#: model:ir.model,name:tonkho.model_tonkho_brand
+msgid "tonkho.brand"
+msgstr "tonkho.brand"
+
+#. module: tonkho
+#: model:ir.model,name:tonkho.model_tonkho_texttemplate
+msgid "tonkho.texttemplate"
+msgstr "tonkho.texttemplate"
+
+#. module: tonkho
+#: model:ir.model,name:tonkho.model_tonkho_thietbi
+msgid "tonkho.thietbi"
+msgstr "tonkho.thietbi"
+
+#. module: tonkho
+#: model:ir.model,name:tonkho.model_tonkho_title_cac_ben
+msgid "tonkho.title_cac_ben"
+msgstr "tonkho.title_cac_ben"
+
+#. module: tonkho
+#: model:ir.model,name:tonkho.model_tonkho_xoakho
+msgid "tonkho.xoakho"
+msgstr "tonkho.xoakho"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.xoakho_form
+msgid "xoa_product_template"
+msgstr "xoa_product_template"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.xoakho_form
+msgid "xoa_stock_move"
+msgstr "xoa_stock_move"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.xoakho_form
+msgid "xoa_stock_move_line"
+msgstr "xoa_stock_move_line"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.xoakho_form
+msgid "xoa_stock_picking"
+msgstr "xoa_stock_picking"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.ben_giao_nhan_info
+msgid "Ông/Bà:"
+msgstr "Ông/Bà:"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.product_template_search_view
+msgid "Đơn Vị"
+msgstr "Đơn Vị"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.quant_search_view
+msgid "Đơn Vị/Phòng Ban"
+msgstr "Đơn Vị/Phòng Ban"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.ben_giao_nhan_info
+msgid "Đơn Vị:"
+msgstr "Đơn Vị:"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_department_id
+msgid "Đơn vị"
+msgstr "Đơn vị"
+
+#. module: tonkho
+#: selection:stock.picking,ban_giao_or_nghiem_thu:0
+msgid "Đưa vào sử dụng"
+msgstr "Đưa vào sử dụng"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.cac_ben
+msgid "Đại diện bên giao:"
+msgstr "Đại diện bên giao:"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.cac_ben
+msgid "Đại diện bên nhận tào lao:"
+msgstr "Đại diện bên nhận:"
+
+#. module: tonkho
+#: model:ir.ui.view,arch_db:tonkho.view_picking_form_inherit
+msgid "Đặt Trước"
+msgstr "Đặt Trước"
+

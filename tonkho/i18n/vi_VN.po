@@ -1,0 +1,402 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0-20180210\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-14 02:51+0000\n"
+"PO-Revision-Date: 2018-06-14 02:51+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock
+#: model:ir.actions.act_window,name:stock.stock_picking_action_picking_type
+msgid "All Transfers"
+msgstr "Điều chuyển vật tư"
+
+#. module: stock
+#: code:addons/stock/models/stock_move.py:451
+#: model:ir.ui.view,arch_db:stock.view_picking_form
+#, python-format
+msgid "Detailed Operations"
+msgstr "Các dòng điều chuyển"
+
+#. module: stock
+#: model:ir.actions.act_window,name:stock.stock_move_line_action
+#: model:ir.ui.menu,name:stock.stock_move_line_menu
+#: model:ir.ui.view,arch_db:stock.product_form_view_procurement_button
+#: model:ir.ui.view,arch_db:stock.product_template_form_view_procurement_button
+msgid "Product Moves"
+msgstr "Các dòng điều chuyển"
+
+#. module: stock
+#: model:ir.actions.act_window,name:stock.action_picking_tree_all
+msgid "Stock Operations"
+msgstr "Điều chuyển"
+
+#. module: stock
+#: model:ir.actions.act_window,name:stock.action_picking_tree
+#: model:ir.ui.menu,name:stock.all_picking
+#: model:ir.ui.view,arch_db:stock.stock_picking_type_kanban
+msgid "Transfers"
+msgstr "Điều chuyển"
+
+
+#. module: stock
+#: code:addons/stock/models/stock_inventory.py:106
+#, python-format
+msgid "One product category"
+msgstr "Một nhóm sản phẩm"
+
+#. module: stock
+#: code:addons/stock/models/stock_inventory.py:108
+#, python-format
+msgid "Select products manually"
+msgstr "Chọn từng sản phẩm"
+
+#. module: stock
+#: code:addons/stock/models/stock_inventory.py:113
+msgid "One Lot/Serial Number"
+msgstr "Một Lot/Serial Number"
+
+#. module: stock
+#: selection:product.template,tracking:0
+msgid "By Unique Serial Number"
+msgstr "Có serial number"
+
+#. module: stock
+#: selection:product.template,tracking:0
+msgid "No Tracking"
+msgstr "Không có SN"
+
+
+#. module: stock
+#: model:ir.model.fields,field_description:stock.field_product_product_tracking
+#: model:ir.model.fields,field_description:stock.field_product_template_tracking
+#: model:ir.model.fields,field_description:stock.field_stock_scrap_tracking
+msgid "Tracking"
+msgstr "Có SN hay không"
+
+#. module: stock
+#: model:ir.model.fields,field_description:stock.field_stock_move_line_product_uom_qty
+#: model:ir.ui.view,arch_db:stock.view_move_picking_form
+#: model:ir.ui.view,arch_db:stock.view_picking_form
+#: model:ir.ui.view,arch_db:stock.view_stock_quant_tree
+msgid "Reserved"
+msgstr "Số lượng đặt trước"
+
+#. module: stock
+#: code:addons/stock/models/product.py:327
+#: model:ir.model.fields,field_description:stock.field_product_template_virtual_available
+#: model:ir.model.fields,field_description:stock.field_stock_move_availability
+#, python-format
+msgid "Forecasted Quantity"
+msgstr "Số lượng dự đoán"
+
+#. module: stock
+#: model:ir.actions.act_window,name:stock.action_production_lot_form
+#: model:ir.ui.menu,name:stock.menu_action_production_lot_form
+#: model:ir.ui.view,arch_db:stock.view_production_lot_form
+#: model:ir.ui.view,arch_db:stock.view_production_lot_form_simple
+#: model:ir.ui.view,arch_db:stock.view_production_lot_tree
+#: model:ir.model.fields,field_description:stock.field_stock_production_lot_name
+msgid "Lots/Serial Numbers"
+msgstr "Serial Numbers"
+
+#. module: stock
+#: model:ir.model.fields,field_description:stock.field_stock_change_product_qty_lot_id
+#: model:ir.model.fields,field_description:stock.field_stock_inventory_line_prod_lot_id
+#: model:ir.model.fields,field_description:stock.field_stock_move_line_lot_name
+#: model:ir.model.fields,field_description:stock.field_stock_production_lot_name
+#: model:ir.model.fields,field_description:stock.field_stock_quant_lot_id
+#: model:ir.ui.view,arch_db:stock.product_form_view_procurement_button
+#: model:ir.ui.view,arch_db:stock.product_template_form_view_procurement_button
+#: model:ir.ui.view,arch_db:stock.quant_search_view
+#: model:ir.ui.view,arch_db:stock.report_delivery_document
+#: model:ir.ui.view,arch_db:stock.report_lot_barcode
+#: model:ir.ui.view,arch_db:stock.report_package_barcode
+#: model:ir.ui.view,arch_db:stock.report_picking
+#: model:ir.ui.view,arch_db:stock.view_move_line_form
+#: model:res.request.link,name:stock.req_link_tracking
+msgid "Lot/Serial Number"
+msgstr "Serial Number"
+
+
+#. module: stock
+#: model:ir.model.fields,field_description:stock.field_stock_move_quantity_done
+#: model:ir.ui.view,arch_db:stock.view_move_line_form
+#: model:ir.ui.view,arch_db:stock.view_move_line_tree
+#: model:ir.ui.view,arch_db:stock.view_stock_move_line_kanban
+msgid "Quantity Done"
+msgstr "Số lượng hoàn thành"
+
+#. module: stock
+#: model:ir.ui.view,arch_db:stock.product_form_view_procurement_button
+#: model:ir.ui.view,arch_db:stock.product_template_form_view_procurement_button
+#: model:ir.ui.view,arch_db:stock.view_stock_quant_tree
+msgid "On Hand"
+msgstr "Số lượng"
+
+
+#. module: stock
+#: model:ir.model.fields,field_description:stock.field_stock_inventory_location_id
+msgid "Inventoried Location"
+msgstr "Kho được kiểm"
+
+#. module: stock
+#: model:ir.model.fields,field_description:stock.field_stock_inventory_name
+#: model:ir.ui.view,arch_db:stock.view_inventory_filter
+msgid "Inventory Reference"
+msgstr "Tên"
+
+#. module: stock
+#: model:ir.ui.view,arch_db:stock.view_inventory_form
+msgid "e.g. Annual inventory"
+msgstr ""
+
+#. module: stock
+#: model:ir.model.fields,field_description:stock.field_stock_inventory_category_id
+msgid "Inventoried Category"
+msgstr "Nhóm sản phẩm"
+
+#. module: stock
+#: model:ir.ui.menu,name:stock.menu_stock_inventory_control
+msgid "Master Data"
+msgstr "Dữ Liệu"
+
+#. module: stock
+#: model:ir.ui.view,arch_db:stock.product_form_view_procurement_button
+#: model:ir.ui.view,arch_db:stock.product_template_form_view_procurement_button
+msgid "<span class=\"o_stat_text\">Forecasted</span>"
+msgstr "<span class=\"o_stat_text\">SL dự đoán</span>"
+
+
+
+#. module: product
+#: model:ir.model.fields,field_description:product.field_product_product_categ_id
+#: model:ir.model.fields,field_description:product.field_product_template_categ_id
+msgid "Internal Category"
+msgstr "Nhóm"
+
+
+#. module: base
+#: model:ir.model.fields,field_description:base.field_res_partner_parent_id
+msgid "related Company"
+msgstr "Công ty"
+
+
+#. module: product
+#: model:ir.model.fields,field_description:product.field_product_uom_category_id
+#: model:ir.ui.view,arch_db:product.product_template_form_view
+msgid "Category"
+msgstr "Nhóm"
+
+#. module: product
+#: model:ir.ui.view,arch_db:product.product_template_form_view
+#: model:ir.ui.view,arch_db:product.product_variant_easy_edit_view
+msgid "Product Name"
+msgstr "Tên vật tư"
+
+#. module: product
+#: model:ir.actions.act_window,name:product.product_template_action
+#: model:ir.actions.act_window,name:product.product_template_action_all
+#: model:ir.model.fields,field_description:product.field_product_product_product_variant_ids
+#: model:ir.model.fields,field_description:product.field_product_template_product_variant_ids
+#: model:ir.ui.view,arch_db:product.product_template_search_view
+msgid "Products"
+msgstr "Vật tư"
+
+#. module: product
+#: model:ir.model,name:product.model_product_product
+#: model:ir.model.fields,field_description:product.field_product_packaging_product_id
+#: model:ir.model.fields,field_description:product.field_product_price_history_product_id
+#: model:ir.model.fields,field_description:product.field_product_pricelist_item_product_id
+#: model:ir.model.fields,field_description:product.field_product_product_product_variant_id
+#: model:ir.model.fields,field_description:product.field_product_template_product_variant_id
+#: model:ir.ui.view,arch_db:product.product_pricelist_item_form_view
+#: model:ir.ui.view,arch_db:product.product_supplierinfo_form_view
+#: model:ir.ui.view,arch_db:product.product_supplierinfo_search_view
+#: model:ir.ui.view,arch_db:product.product_supplierinfo_tree_view
+#: model:ir.ui.view,arch_db:product.product_template_form_view
+#: model:ir.ui.view,arch_db:product.product_template_search_view
+#: model:ir.ui.view,arch_db:product.product_template_tree_view
+#: selection:product.pricelist.item,applied_on:0
+#: model:res.request.link,name:product.req_link_product
+msgid "Product"
+msgstr "Vật tư"
+
+#. module: stock
+#: code:addons/stock/models/stock_location.py:168
+#: code:addons/stock/wizard/stock_quantity_history.py:29
+#: model:ir.actions.act_window,name:stock.act_product_location_open
+#: model:ir.actions.act_window,name:stock.product_template_action_product
+#: model:ir.model.fields,field_description:stock.field_stock_location_route_product_ids
+#: model:ir.ui.menu,name:stock.menu_product_in_config_stock
+#: model:ir.ui.menu,name:stock.menu_product_variant_config_stock
+#: model:ir.ui.view,arch_db:stock.res_config_settings_view_form
+#: model:ir.ui.view,arch_db:stock.stock_location_route_form_view
+#: model:ir.ui.view,arch_db:stock.view_location_form
+#, python-format
+msgid "Products"
+msgstr "Vật tư"
+
+#. module: stock
+#: model:ir.model,name:stock.model_product_product
+#: model:ir.model.fields,field_description:stock.field_report_stock_forecast_product_id
+#: model:ir.model.fields,field_description:stock.field_stock_change_product_qty_product_id
+#: model:ir.model.fields,field_description:stock.field_stock_move_line_product_id
+#: model:ir.model.fields,field_description:stock.field_stock_move_product_id
+#: model:ir.model.fields,field_description:stock.field_stock_picking_product_id
+#: model:ir.model.fields,field_description:stock.field_stock_production_lot_product_id
+#: model:ir.model.fields,field_description:stock.field_stock_quant_product_id
+#: model:ir.model.fields,field_description:stock.field_stock_return_picking_line_product_id
+#: model:ir.model.fields,field_description:stock.field_stock_scrap_product_id
+#: model:ir.model.fields,field_description:stock.field_stock_warehouse_orderpoint_product_id
+#: model:ir.model.fields,field_description:stock.field_stock_warn_insufficient_qty_product_id
+#: model:ir.model.fields,field_description:stock.field_stock_warn_insufficient_qty_scrap_product_id
+#: model:ir.ui.view,arch_db:stock.quant_search_view
+#: model:ir.ui.view,arch_db:stock.report_lot_barcode
+#: model:ir.ui.view,arch_db:stock.report_package_barcode
+#: model:ir.ui.view,arch_db:stock.report_picking
+#: model:ir.ui.view,arch_db:stock.search_product_lot_filter
+#: model:ir.ui.view,arch_db:stock.stock_scrap_search_view
+#: model:ir.ui.view,arch_db:stock.view_move_search
+msgid "Product"
+msgstr "Vật tư"
+
+#: model:ir.model.fields,field_description:stock.field_stock_quant_product_id
+#: model:ir.model.fields,field_description:stock.field_stock_inventory_line_product_id
+msgid "Product"
+msgstr "Tên vật tư"
+
+
+#. module: stock
+#: model:ir.model.fields,field_description:stock.field_stock_move_line_product_id
+msgid "Product"
+msgstr "Vật tư"
+
+
+
+#. module: stock
+#: model:ir.model.fields,field_description:stock.field_stock_move_line_qty_done
+msgid "Done"
+msgstr "Số lượng"
+
+#. module: stock
+#: model:ir.model.fields,field_description:stock.field_stock_move_line_state
+msgid "state"
+msgstr "Tiến trình"
+
+#. module: stock
+#: model:ir.ui.menu,name:stock.menu_stock_uom_form_actionmơi
+#: model:ir.ui.view,arch_db:stock.stock_inventory_line_tree2
+#: model:ir.ui.view,arch_db:stock.view_inventory_form
+msgid "UoM"
+msgstr "Đơn vị tính"
+
+
+#. module: stock
+#: model:ir.ui.view,arch_db:stock.stock_move_line_view_search
+#: model:ir.ui.view,arch_db:stock.stock_scrap_form_view2
+#: model:ir.ui.view,arch_db:stock.view_move_search
+#: model:ir.ui.view,arch_db:stock.view_picking_form
+#: model:ir.ui.view,arch_db:stock.view_picking_internal_search
+#: selection:stock.move,state:0
+#: selection:stock.picking,state:0
+#: selection:stock.scrap,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+
+
+#. module: stock
+#: selection:product.template,tracking:0
+msgid "By Unique Serial Number"
+msgstr "Có Serial Number"
+
+#. module: stock
+#: model:ir.ui.view,arch_db:stock.view_stock_quant_form
+msgid "Picking Moves"
+msgstr "Các dòng điều chuyển"
+
+
+#. module: base
+#: selection:res.partner,company_type:0
+msgid "Individual"
+msgstr "Cá nhân"
+
+#. module: stock
+#: model:ir.ui.view,arch_db:stock.view_picking_form
+#: model:ir.ui.view,arch_db:stock.view_stock_return_picking_form
+msgid "Return"
+msgstr "Trả vật tư"
+
+#. module: stock
+#: model:ir.model.fields,field_description:stock.field_stock_location_complete_name
+msgid "Full Location Name kaka"
+msgstr "Tên kho đầy đủ"
+
+
+
+#. module: stock
+#: model:ir.ui.menu,name:stock.menu_stock_root
+msgid "Inventory"
+msgstr "Vật tư"
+
+#. module: stock
+#: model:ir.ui.view,arch_db:stock.search_product_lot_filter
+msgid "Product Lots"
+msgstr "Serial number"
+
+#. module: stock
+#: model:ir.model.fields,field_description:stock.field_stock_move_create_date
+#: model:ir.model.fields,field_description:stock.field_stock_picking_date
+#: model:ir.model.fields,field_description:stock.field_stock_production_lot_create_date
+msgid "Creation Date"
+msgstr "Ngày giờ tạo"
+
+#. module: stock
+#: code:addons/stock/models/stock_move_line.py:398
+#: code:addons/stock/models/stock_picking.py:704
+#, python-format
+msgid "You need to supply a lot/serial number for %s."
+msgstr "Bạn cần cung cấp Serial number cho %s."
+
+
+#. module: tonkho
+#: code:addons/stock/models/model_dict_folder/recursive_func.py:398
+#, python-format
+msgid "Excel not has column one in %s of %s, please change column name match with them"
+msgstr "File excel không có cột có tên một trong những tên dưới %s của field %s, vui lòng đổi tên cột trong file excel"
+
+#. module: stock
+#: model:ir.model.fields,field_description:stock.field_stock_return_picking_location_id
+msgid "Return Location"
+msgstr "Kho trả về"
+
+#. module: stock
+#: model:ir.model.fields,field_description:stock.field_stock_move_line_product_uom_id
+#: model:ir.model.fields,field_description:stock.field_stock_move_product_uom
+#: model:ir.model.fields,field_description:stock.field_stock_production_lot_product_uom_id
+#: model:ir.model.fields,field_description:stock.field_stock_quant_product_uom_id
+#: model:ir.model.fields,field_description:stock.field_stock_return_picking_line_uom_id
+#: model:ir.model.fields,field_description:stock.field_stock_scrap_product_uom_id
+#: model:ir.ui.view,arch_db:stock.stock_move_tree
+#: model:ir.ui.view,arch_db:stock.view_inventory_form
+#: model:ir.ui.view,arch_db:stock.view_move_line_form
+#: model:ir.ui.view,arch_db:stock.view_move_line_tree
+#: model:ir.ui.view,arch_db:stock.view_move_picking_tree
+#: model:ir.ui.view,arch_db:stock.view_move_tree
+#: model:ir.ui.view,arch_db:stock.view_move_tree_receipt_picking
+#: model:ir.ui.view,arch_db:stock.view_move_tree_receipt_picking_board
+#: model:ir.ui.view,arch_db:stock.view_picking_form
+#: model:ir.ui.view,arch_db:stock.view_stock_move_line_kanban
+#: model:ir.ui.view,arch_db:stock.view_stock_move_line_operation_tree
+msgid "Unit of Measure"
+msgstr "Đơn vị tính"

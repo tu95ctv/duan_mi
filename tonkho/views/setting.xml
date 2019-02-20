@@ -1,0 +1,113 @@
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.stock.d4</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="30" />
+            <field name="inherit_id" ref="base.res_config_settings_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='production_lot_info']" position="inside">
+                    <div class="col-xs-12 col-md-6 o_setting_box" title="cancel_mode">
+                        <div class="o_setting_left_pane">
+                            <field name="cancel_mode" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="cancel_mode" />
+                            <div class="text-muted">
+                                    Chế độ cancel
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box" title="is_validate_mode">
+                        <div class="o_setting_left_pane">
+                            <field name="is_validate_mode" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="is_validate_mode" />
+                            <div class="text-muted">
+                                    is_validate_mode
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box" title="is_validate_mode">
+                        <div class="o_setting_left_pane">
+                            <field name="is_bg_or_nt_tra_do_muon" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="is_bg_or_nt_tra_do_muon" />
+                            <div class="text-muted">
+                                    is name is_bg_or_nt_tra_do_muon
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box" title="is_show_for_admin_tram_nao_tao_vat_tu">
+                        <div class="o_setting_left_pane">
+                            <field name="is_show_for_admin_tram_nao_tao_vat_tu" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="is_show_for_admin_tram_nao_tao_vat_tu" />
+                            <div class="text-muted">
+                                    is_show_for_admin_tram_nao_tao_vat_tu
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box" title="not_allow_check_lot_id_in_different_location">
+                        <div class="o_setting_left_pane">
+                            <field name="not_allow_check_lot_id_in_different_location" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="not_allow_check_lot_id_in_different_location" />
+                            <div class="text-muted">
+                                    not_allow_check_lot_id_in_different_location
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box" title="group_show_thong_tin_khong_dau">
+                        <div class="o_setting_left_pane">
+                            <field name="group_show_thong_tin_khong_dau" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="group_show_thong_tin_khong_dau" />
+                            <div class="text-muted">
+                                    group_show_thong_tin_khong_dau
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box" title="write_field_categ_id">
+                        <div class="o_setting_left_pane">
+                            <field name="write_field_categ_id" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="write_field_categ_id" />
+                            <div class="text-muted">
+                                    write_field_categ_id
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box" title="group write field">
+                        <div class="o_setting_left_pane">
+                            <field name="group_write_field" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="group_write_field" />
+                            <div class="text-muted">
+                                    group_write_field
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box" title="not use default excel import_setting">
+                        <div class="o_setting_left_pane">
+                            <field name="not_use_default_excel_import_setting" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="not_use_default_excel_import_setting" />
+                            <div class="text-muted">
+                                    not_use_default_excel_import_setting
+                                    </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,33 @@
+<odoo>
+<data>
+<record id="fetch_form" model="ir.ui.view">
+            <field name="name">fetch</field>
+            <field name="model">tkbd.leech</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="fetch" string="fetch ahaha" type="object" class="btn-primary" />
+                        <button name="test_soup" string="test" type="object" class="btn-primary" />
+                        <button name="test_odds" string="test_odds" type="object" class="btn-primary" />
+                    </header>
+                    <group>
+                        <field name="url_id" />
+                        <field name="url"/>
+                        <field name="test"/>
+                        <field name="html"/>
+                    </group>
+                    
+                </form>
+            </field>
+        </record>
+        
+ <record model="ir.actions.act_window" id="fetch_action">
+            <field name="name">fetch window</field>
+            <field name="res_model">tkbd.leech</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+         <menuitem name="Leech" id="leech" parent="tkbd.menu_1" action="fetch_action" sequence="1" />
+        
+</data>
+</odoo>

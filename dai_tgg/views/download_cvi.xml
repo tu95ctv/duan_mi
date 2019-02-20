@@ -1,0 +1,49 @@
+<odoo>
+<data>
+<!--  DL -->
+      <record id="dlcv_form" model="ir.ui.view">
+         <field name="name">dlcv.form</field>
+         <field name="model">dlcv</field>
+         <field name="arch" type="xml">
+            <form>
+               <header>
+                  <!--    <button name="import_bd_tuan" string="Import bảo dưỡng từ file excel" type="object" class="btn-warning" /> -->
+                  <!--       <button name="download_for_rnas 2G" string="download 2G" type="object" class="btn-primary" /> -->
+                <!--   <button name="download_cvi" string="download chi tiết nhân viên trong trạm" type="object" class="btn-primary" /> -->
+                  <button name="download_cvi_o" string="download chi tiết nhân viên trong trạm" type="object" class="btn-primary" />
+                  <button name="download_cvi_by_userlist" string="download danh sách tổng hợp" type="object" class="btn-primary" />
+                <!--   <button name="cvi_filter" string="cvi_filter" type="object" class="btn-primary" /> -->
+               </header>
+               <sheet>
+                  <group>
+                     <field name="ngay_bat_dau_filter" />
+                     <field name="ngay_ket_thuc_filter" />
+                   <!--   <field name="gio_utc" />
+                     <field name="gio_vn" />
+                      --> 
+                     <field name="chon_thang" />
+                  <!--   <field name="log"></field>
+                            <field name="log2"></field>
+                             -->  
+                     <field name="department_ids" />
+                   <!--   <field name="member_ids" />
+                       <field name="rs_cvi_ids"></field> -->
+                  </group>
+               </sheet>
+            </form>
+         </field>
+      </record>
+      <record model="ir.actions.act_window" id="dlcv_action">
+         <field name="name">Download P3 Cũ</field>
+         <field name="res_model">dlcv</field>
+         <field name="view_mode">tree,form</field>
+         <field name="view_type">form</field>
+         <field name="view_id" ref="dlcv_form"/>
+         <field name="target">new</field>
+      </record>
+      
+      
+            <menuitem id="dlcv_menu" parent="else_more_menu" action="dlcv_action" sequence="8" />
+      
+</data>
+</odoo>

@@ -1,0 +1,48 @@
+<odoo>
+    <data>
+        <record id="download_all_model_form" model="ir.ui.view">
+            <field name="name">downloadwizard.download.form</field>
+            <field name="model">downloadwizard.download</field>
+            <field name="arch" type="xml">
+                <form string="Download all model">
+                    <sheet>
+                        <group>
+                          <field name="is_moi_sheet_moi_loai"  attrs="{'invisible':[('model_name','!=','tvcv'),('model_name','!=','stock.quant'),('model_name','!=','product.product'),('model_name','!=','product.template')]}"   /> 
+                          <field name="data" readonly="1" filename="file_name" />
+                          <field name="file_name" invisible="1"></field>
+                         <field name="model_name" readonly="1" invisible="1"></field> 
+                         <field name="verbal_model_name" ></field> 
+                         <field name="is_not_skip_field_stt"  attrs="{'invisible':[('model_name','!=','stock.quant')]}"></field> 
+                         <field name="is_cho_phep_dl_right_now" groups="base.group_erp_manager" ></field> 
+                         <field name="font_height" ></field>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="download_all_model" string="Download" type="object" class="oe_highlight" groups="base.group_user" />
+                        <button name="download_all_model" string="Download Ngay" type="object" class="oe_highlight" groups="base.group_user" context="{'download_right_now':True}" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        <!-- 
+        <act_window id="downloadquants" name="Download số lượng trong kho" res_model="downloadwizard.download" src_model="stock.quant" view_mode="form" multi="True" target="new" key2="client_action_multi" />
+        <act_window id="download_product" name="Download vật tư" res_model="downloadwizard.download" src_model="product.product" view_mode="form" multi="True" target="new" key2="client_action_multi" />
+        <act_window id="download_template" name="Download Template" res_model="downloadwizard.download" src_model="product.template" view_mode="form" multi="True" target="new" key2="client_action_multi" />
+         -->
+        
+    <record model="ir.actions.act_window" id="downloadwizard_action">
+         <field name="name">Download </field>
+         <field name="res_model">downloadwizard.download</field>
+         <field name="view_mode">form</field>
+         <field name="view_type">form</field>
+         <field name="context">{'transfer_active_model':'download_bcn'}</field>
+         <field name="target">new</field>
+      </record>
+     
+      
+      
+    </data>
+</odoo>

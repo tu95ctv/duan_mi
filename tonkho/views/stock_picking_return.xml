@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+        <record id="view_stock_return_picking_form" model="ir.ui.view">
+            <field name="name">Return lines</field>
+            <field name="model">stock.return.picking</field>
+            <field name="inherit_id" ref="stock.view_stock_return_picking_form"></field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_return_moves']/tree/field[@name='uom_id']" position="after">
+                    <field name="lot_id"></field>
+                </xpath>
+                <xpath expr="//field[@name='product_return_moves']" position="attributes">
+                    <attribute name="readonly">context.get('tra_do_huy_for_readonly')</attribute>
+                </xpath>
+                <field name="original_location_id" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                    <attribute name="invisible">0</attribute>
+                </field>
+                <field name="location_id" position="attributes">
+                    <!-- <attribute name="domain">[('is_kho_cha','=',True)]</attribute> -->
+                    <attribute name="attrs">{'readonly':[('loai_tra_hay_chuyen_tiep','!=','chuyen_tiep')]}</attribute>
+                </field>
+                <field name="location_id" position="replace">
+                    <!-- <field name="location_id_show" attrs="{'invisible':[('loai_tra_hay_chuyen_tiep','=','chuyen_tiep')]}"></field> -->
+                    <field name="location_id" domain="[('is_kho_cha','=',True)]" attrs="{'readonly':[('loai_tra_hay_chuyen_tiep','!=','chuyen_tiep')]}" force_save="1"></field>
+                </field>
+                <field name="parent_location_id" position="after">
+                    <field name="loai_tra_hay_chuyen_tiep" readonly="1"></field>
+                </field>
+                <field name="original_location_id" position="replace"></field>
+                <field name="parent_location_id" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_picking_form_inherit" model="ir.ui.view">
+            <field name="name">stock picking inherit</field>
+            <field name="model">stock.picking</field>
+            <field name="priority">11</field>
+            <field name="inherit_id" ref="stock.view_picking_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//button[6]" position="attributes">
+                    <attribute name="attrs">{'invisible': ['|','|','|',('state', '!=', 'done'), ('is_locked', '=', False), ('ban_giao_or_nghiem_thu', '=', 'HUY'),('is_quyen_chuyen_tiep','=',False)]}</attribute>
+                </xpath>
+                <xpath expr="//button[5]" position="after">
+                    <button name="validate_cua_ben_giao" attrs="{'invisible': [('show_validate_ben_giao', '=', False)]}" string="Xác nhận bên giao" groups="stock.group_stock_user" type="object" class="oe_highlight" />
+                    <button name="%(stock.act_stock_return_picking)d" string="Hủy biên bản" context="{'default_loai_tra_hay_chuyen_tiep':'tra_do_huy','tra_do_huy_for_readonly':True}" attrs="{'invisible': ['|','|','|', ('state', '!=', 'done'), ('is_locked', '=', False),('ban_giao_or_nghiem_thu', '=', 'HUY'),('is_quyen_huy_bb','=',False)]}" type="action" groups="base.group_user" class="btn-danger" />
+                    <button name="%(stock.act_stock_return_picking)d" string="Chuyển tiếp" context="{'default_loai_tra_hay_chuyen_tiep':'chuyen_tiep'}" attrs="{'invisible': ['|','|','|',('state', '!=', 'done'), ('is_locked', '=', False), ('ban_giao_or_nghiem_thu', '=', 'HUY'),('is_quyen_chuyen_tiep','=',False)]}" type="action" groups="base.group_user" class="btn-primary" />
+                </xpath>
+                <xpath expr="//button[@name='action_confirm']" position="attributes">
+                    <attribute name="groups">base.group_erp_manager</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_confirm']" position="attributes">
+                    <attribute name="groups">base.group_erp_manager</attribute>
+                </xpath>
+                <xpath expr="//button[5]" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//button[3]" position="attributes">
+                    <attribute name="context">{'skip_overprocessed_check':True}</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_cancel']" position="attributes">
+                    <attribute name="groups">base.group_erp_manager</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_assign']" position="attributes">
+                    <attribute name="groups">base.group_erp_manager</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_toggle_is_locked']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@name='button_scrap']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@name='do_unreserve']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@name='do_print_picking']" position="replace"></xpath>
+                <xpath expr="//button[@name='action_toggle_is_locked']" position="after">
+                    <!-- 
+                    <button name="ghom_stock_move_lines" string="Tạo Bản In" type="object" />
+                    <button name="xem_print_theo_move_line" string="Xem biên bản html" type="object" class="btn-primary" />
+                    <button name="xem_print_pdf" string="Xem biên bản pdf" type="object" />
+                    -->
+                    <button name="download_xl_bbbg" string="Download BBBG Excel " type="object" class="btn-primary" />
+                </xpath>
+                <field name="location_id" position="replace">
+                    <field name="id" />
+                    <field name="location_id" context=""  domain="['|',('cho_phep_khac_tram_chon','=', True),'&amp;',('is_kho_cha','=',True),('department_id','=', department_id)]" />
+                    <!-- {'show_loc_type':True} -->
+                    <field name="is_required_doi_tac_giao" invisible="1"></field>
+                    <field name="doi_tac_giao_id" attrs="{'required':[('is_required_doi_tac_giao','=',True)],'readonly':[('is_required_doi_tac_giao','=',False)]}" force_save="1" />
+                    <field name="is_admin" invisible="1"></field>
+                    <field name="department_id" attrs="{'readonly':[('is_admin','=',False)]}" />
+                    <field name="noi_ban_giao" />
+                    <field name="stt_trong_bien_ban_in" readonly="0" />
+                </field>
+                <field name="origin" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="partner_id" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="scheduled_date" position="replace">
+                    <field name="date" attrs="{'readonly':False}" />
+                    <!--  invisible="1" cái này xài không được -->
+                    <field name="choosed_stock_quants_ids" invisible="1">
+                        <tree>
+                            <field name="id"></field>
+                        </tree>
+                    </field>
+                </field>
+                <!-- 
+                <field name="name" position="attributes">
+                 	<attribute name="readonly">0</attribute>
+                 	<attribute name="attrs">{'readonly':[('state','in',[('some')])]}</attribute>
+                </field>
+                 -->
+                <field name="location_dest_id" position="replace" />
+                <field name="origin" position="before">
+                    <field name="show_validate_ben_giao" invisible="1"></field>
+                    <field name="location_dest_id" domain="['|',('cho_phep_khac_tram_chon','=', True), '&amp;',('is_kho_cha','=',True),'&amp;',('usage','=','internal'),'|',('name','not ilike','Đang chạy'),('department_id','=', department_id)]" />
+                    <field name="is_required_doi_tac_nhan" invisible="1"></field>
+                    <!-- <field name="doi_tac_nhan_id" attrs="{'invisible':[('location_dest_id_partner_id','!=',False)],'required':[('location_dest_id_partner_id','=',False)]}" /> -->
+                    <field name="doi_tac_nhan_id" attrs="{'required':[('is_required_doi_tac_nhan','=',True)],'readonly':[('is_required_doi_tac_nhan','=',False)]}" force_save="1" />
+                    <field name="ban_giao_or_nghiem_thu" />
+                    <field name="totrinh_id" />
+                    <field name="texttemplate_id" context="{'default_field_context':'tonkho.stock.picking.field.ly_do'}" />
+                    <field name="ly_do" />
+                    <field name="is_quyen_chuyen_tiep" invisible="1" />
+                    <field name="is_quyen_huy_bb" invisible="1" />
+                </field>
+                <xpath expr="//page[1]" position="inside">
+                    <p>sltk:Số lượng trong kho</p>
+                </xpath>
+                <xpath expr="//page[1]" position="attributes">
+                    <attribute name="attrs">{'invisible': False}</attribute>
+                </xpath>
+                <xpath expr="//page[1]/field[@name='move_line_ids']" position="attributes">
+                    <attribute name="attrs">{}</attribute>
+                    <!-- 'show_loc_type':True, -->
+                    <attribute name="context">{  'default_picking_id': id, 'default_location_id': location_id, 'default_location_dest_id': location_dest_id,'ban_giao_or_nghiem_thu':ban_giao_or_nghiem_thu}</attribute>
+                </xpath>
+                <xpath expr="//page[1]/field[@name='move_line_ids']/tree" position="attributes">
+                    <!-- <attribute name="decoration-warning">qty_done&gt;product_uom_qty and state!='done'</attribute> -->
+                    <attribute name="decoration-danger">decoration_danger</attribute>
+                </xpath>
+                <xpath expr="//page[1]/field/tree" position="attributes">
+                    <attribute name="class">d4tree</attribute>
+                </xpath>
+                <!-- 
+                <field name="move_line_ids"  position="attributes">
+                	<attribute name="context">{'product_id_readonly':True}</attribute>
+                </field>
+                 -->
+                <xpath expr="//page[1]/field/tree/field[@name='product_uom_qty']" position="attributes">
+                    <attribute name="groups">base.group_erp_manager</attribute>
+                </xpath>
+                <xpath expr="//page[1]/field/tree/field[@name='product_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('parent.state', 'in', ('cancel','done'))]}</attribute>
+                    <attribute name="context">{'show_pn_in_lot_id_name_get':True}</attribute>
+                    <attribute name="required">0</attribute>
+                </xpath>
+                <xpath expr="//page[1]/field/tree/field[@name='location_id']" position="attributes">
+                      <attribute name="attrs"></attribute>
+                    <attribute name="context">{'parent_location_id':parent.location_id,'show_loc_type':True}</attribute>
+                </xpath>
+                <xpath expr="//page[1]/field/tree/field[@name='product_uom_qty']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//page[1]/field/tree/field[@name='location_dest_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': ['|',('in_entire_package', '=', True),('state', 'in', ('done', 'cancel'))]}</attribute>
+                </xpath>
+                <!--  cái này có dư khong
+                <xpath expr="//page[1]/field/tree/field[@name='lot_id']" position="attributes">
+                    <attribute name="attrs">{'column_invisible': [('parent.show_lots_text', '=', True)], 'invisible': [('lots_visible', '=', False)], 'readonly': ['|',('in_entire_package', '=', True),('state', 'in', ('done', 'cancel'))]}</attribute>
+                </xpath>
+                 -->
+                <xpath expr="//page[1]/field/tree/field[@name='qty_done']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', 'in', ('done', 'cancel'))]}</attribute>
+                </xpath>
+                <xpath expr="//page[1]/field/tree/field[@name='state']" position="replace"></xpath>
+                <xpath expr="//page[1]/field/tree/field[@name='qty_done']" position="after">
+                    <field name="ghi_chu"></field>
+                    <field name="sltk"></field>
+                    <field name="state"></field>
+                </xpath>
+                <xpath expr="//page[1]/field/tree/field[@name='product_id']" position="before">
+                    <field name="stock_quant_id" domain="[('location_id','child_of',parent.location_id),('quantity','&gt;',0)]" context="{'kho_da_chon':parent.choosed_stock_quants_ids}" attrs="{'readonly': [('state', 'in', ('done', 'cancel'))]}" />
+                </xpath>
+                <xpath expr="//page[1]/field/tree/field[@name='lot_id']" position="replace"></xpath>
+                <field name="product_uom_id" force_save="1" readonly="1" groups="product.group_uom" />
+                <xpath expr="//page[1]/field/tree/field[@name='product_uom_id']" position="attributes">
+                    <attribute name="required">0</attribute>
+                </xpath>
+                <xpath expr="//page[1]/field/tree/field[@name='product_uom_id']" position="after">
+                    <field name="categ_id" string="Nhóm"></field>
+                    <field name="thiet_bi_id"></field>
+                    <field name="tracking"></field>
+                    <field name="lot_id" invisible="0" attrs="{'column_invisible': [('parent.show_lots_text', '=', True)],                     'invisible': [('lots_visible', '=', False)],                                'readonly': ['|',('in_entire_package', '=', True),                 ('state', 'in', ('done', 'cancel'))]}" groups="stock.group_production_lot" domain="[('product_id', '=', product_id)]" context="{'product_id_readonly':True,'default_product_id': product_id}" />
+                    <field name="tinh_trang" attrs="{'readonly': [('state', 'in', ('done','cancel'))]}"></field>
+                    <field name="decoration_danger"></field>
+                </xpath>
+                <xpath expr="//page[1]/field/tree/field[@name='lot_id']" position="attributes">
+                    <attribute name="string">Serial number</attribute>
+                </xpath>
+                <xpath expr="//page[1]/field/tree/field[@name='product_uom_qty']" position="attributes"></xpath>
+                <xpath expr="//page[2]" position="attributes">
+                    <attribute name="groups">base.group_erp_manager</attribute>
+                </xpath>
+                <xpath expr="//page[3]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//page[2]/field[@name='move_lines']" position="attributes">
+                    <attribute name="attrs">{}</attribute>
+                </xpath>
+                <xpath expr="//page[2]/field/tree/field[@name='reserved_availability']" position="attributes">
+                    <attribute name="groups">base.group_erp_manager</attribute>
+                </xpath>
+                <xpath expr="//page[1]/field/tree/field[@name='lot_id']" position="before">
+                    <!--  <field name="pn" attrs="{'invisible': [('tracking', '=', 'none')],'readonly': [('state', 'in', ('done', 'cancel'))]}"></field> -->
+                    <!--   <field name="pn_id" attrs="{'readonly': [('state', 'in', ('done', 'cancel'))]}" context="{'default_product_id':product_id,'product_id_readonly':True}" domain="[('product_id','=',product_id)]"></field> -->
+                    <field name="pn" />
+                    <!-- 'invisible': [('tracking', '=', 'none')], -->
+                    <!-- <field name="id"></field> -->
+                </xpath>
+                <xpath expr="//page[1]/field/tree/field[@name='state']" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                </xpath>
+                <xpath expr="//page[2]/field/tree/field[@name='state']" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                </xpath>
+                <xpath expr="//page[2]/field/tree/field[@name='quantity_done']" position="attributes">
+                    <attribute name="readonly">0</attribute>
+                </xpath>
+                <xpath expr="//page[2]/field/tree/field[@name='state']" position="after">
+                    <field name="move_orig_ids"></field>
+                    <field name="move_dest_ids"></field>
+                </xpath>
+                <xpath expr="//page[2]/field/tree/field[@name='product_uom']" position="after">
+                    <field name="ghi_chu"></field>
+                    <field name="id"></field>
+                </xpath>
+                <xpath expr="//page[2]/field/tree/field[@name='product_uom_qty']" position="attributes">
+                    <attribute name="attrs">{}</attribute>
+                </xpath>
+                <xpath expr="//page[3]" position="after">
+                    <page string="Thông tin thêm">
+                        <group>
+                            <group>
+                                <field name="source_member_ids">
+                                    <tree editable="bottom">
+                                        <field name="name" />
+                                        <field name="department_id" />
+                                        <field name="job_id" string="Chức vụ" />
+                                        <field name="parent_id" />
+                                    </tree>
+                                </field>
+                                <field name="title_ben_thu_3" />
+                                <field name="ben_thu_3_ids">
+                                    <tree>
+                                        <field name="name" />
+                                        <field name="department_id" />
+                                        <field name="job_id" string="Chức vụ" />
+                                        <field name="parent_id" />
+                                    </tree>
+                                </field>
+                                <field name="ben_giao_giu" />
+                            </group>
+                            <group>
+                                <field name="dest_member_ids">
+                                    <tree>
+                                        <field name="name" />
+                                        <field name="department_id" />
+                                        <field name="job_id" string="Chức vụ" />
+                                        <field name="parent_id" />
+                                    </tree>
+                                </field>
+                                <field name="title_ben_thu_4" />
+                                <field name="ben_thu_4_ids">
+                                    <tree>
+                                        <field name="name" />
+                                        <field name="department_id" />
+                                        <field name="job_id" string="Chức vụ" />
+                                        <field name="parent_id" />
+                                    </tree>
+                                </field>
+                                <field name="ben_nhan_giu" />
+                            </group>
+                            <group>
+                                <field name="so_ban_in" />
+                            </group>
+                        </group>
+                        <group>
+                            <field name="lanh_dao_id" />
+                            <field name="file_ids"></field>
+                            <!-- <field name="is_chia_2_dong"/> -->
+                        </group>
+                    </page>
+                    <page string="Import file">
+                        <header>
+                            <button class="btn btn-primary" name="import_file" string="import_file" type="object" />
+                            <button name="check_file" string="check_file" type="object" class="btn" />
+                        </header>
+                        <group>
+                            <group>
+                                <div>
+                                STT, Tên vật tư, Mã vật tư, S/L, ĐVT, Serial Number,Ghi chú
+                            	</div>
+                                <field name="range_1" />
+                                <field name="range_2" />
+                                
+                                 <field name="sheet_name_select" />
+                                 <field name="sheet_name" />
+                                <field name="is_dl_right_now" />
+                                <field name="file_dl" readonly="1" filename="file_dl_name" />
+                                <field name="file_dl_name" invisible="1" />
+                                <!-- <field name="allow_product_qty_dieu_chinh"></field> -->
+                                <field name="allow_cate_for_ghi_chu" groups="tonkho.group_write_field_when_import_excel" />
+                                <field name="allow_check_excel_obj_is_exist_func" groups="tonkho.group_write_field_when_import_excel" />
+                                <field name="write_when_val_exist" groups="tonkho.group_write_field_when_import_excel" />
+                                <field name="cho_phep_empty_pn_tuong_duong_voi_pn_duy_nhat" groups="tonkho.group_write_field_when_import_excel" />
+                                <field name="cho_phep_co_pn_cap_nhat_empty_pn" groups="tonkho.group_write_field_when_import_excel" />
+                            </group>
+                            <group>
+                                <field name="file" filename="filename" />
+                                <!--   <field name="not_update_field_if_instance_exist_default" groups="base.group_erp_manager" /> -->
+                                <field name="cho_phep_exist_val_before_loop_fields_func" groups="tonkho.group_write_field_when_import_excel" />
+                                <field name="skip_stt" />
+                                <field name="filename" invisible="1" />
+                                <field name="log" groups="tonkho.group_write_field_when_import_excel" />
+                            </group>
+                        </group>
+                    </page>
+                    <page string="Biên bản">
+                        <group>
+                            <group>
+                                <field name="font_height" />
+                                <field name="font_height_another" />
+                                <field name="is_ghom_tot" />
+                                <field name="empty_ghi_chu_in_bb" />
+                            </group>
+                            <group>
+                                <field name="is_set_tt_col" />
+                                <field name="is_not_show_y_kien_ld" />
+                            </group>
+                        </group>
+                        <!-- 
+                        <group>
+                            <field name="file_ids"></field>
+                        </group>
+                         -->
+                    </page>
+                    <page string="Thông tin trả vật tư">
+                        <group>
+                            <field name="origin_pick_id"></field>
+                            <field name="loai_tra_hay_chuyen_tiep" />
+                            <field name="ten_truoc_huy" />
+                        </group>
+                    </page>
+                    <page string="Công Cụ">
+                        <group>
+                            <field name="categ_id"></field>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

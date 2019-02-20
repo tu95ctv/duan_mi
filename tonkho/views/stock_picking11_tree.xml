@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- TREE -->
+        <record id="cb_vpicktree_inherit" model="ir.ui.view">
+            <field name="name">stock.picking.tree_inherit</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.vpicktree" />
+            <field name="arch" type="xml">
+                <tree position="attributes">
+                    <attribute name="decoration-danger">state not in ('cancel', 'done') and scheduled_date &lt; current_date</attribute>
+                    <attribute name="decoration-warning">ban_giao_or_nghiem_thu=='HUY'</attribute>
+                    <attribute name="decoration-muted">ban_giao_or_nghiem_thu=='TRA_DO_HUY'</attribute>
+                </tree>
+                <field name="scheduled_date" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="name" position="before">
+                    <field name="id"></field>
+                </field>
+                <field name="scheduled_date" position="before">
+                    <field name="ly_do" />
+                    <field name="totrinh_id" />
+                    <field name="ban_giao_or_nghiem_thu" />
+                    <field name="department_id" />
+                    <field name="file" />
+                </field>
+                <field name="state">
+                    <field name="write_date"></field>
+                    <field name="create_date"></field>
+                </field>
+                <!-- 
+                <xpath expr="//field[@name='location_dest_id']" position="before">
+                    <field name="department_id" />
+                    <field name="loai_tra_hay_chuyen_tiep" />
+                    <field name="origin_pick_id" />
+                    <field name="location_id" />
+                </xpath>
+                 -->
+                <xpath expr="//field[@name='location_dest_id']" position="before">
+                    <field name="date" string="Ngày biên bản" />
+                    <field name="location_id" />
+                    <field name="doi_tac_giao_id"></field>
+                </xpath>
+                <xpath expr="//field[@name='location_dest_id']" position="after">
+                    <field name="doi_tac_nhan_id"></field>
+                    <field name="loai_tra_hay_chuyen_tiep" />
+                    <field name="origin_pick_id" />
+                </xpath>
+                <field name="backorder_id" position="replace" />
+                <field name="partner_id" position="replace" />
+                <field name="origin" position="replace" />
+            </field>
+        </record>
+        <!--! TREE -->
+    </data>
+</odoo>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <data>
+   <report string="In Biên Bản Bàn Giao" id="action_report_picking_dai_hcm" model="stock.picking" report_type="qweb-pdf" name="tonkho.report_picking_dai_hcm" file="abc.abc" />  
+      <!--<report string="In Tờ Trình" id="report_totrinh" model="stock.picking" report_type="qweb-pdf" name="tonkho." file="abc.abc" /> -->
+    
+    
+      <template id="ben_giao_nhan_info">
+         <div class="row">
+            <t t-foreach="member_ids" t-as="member">
+               <div class="row">
+                  <div class="col-xs-10">
+                     <div class="col-xs-4" style="padding-left:40px;">
+                        Ông/Bà:
+                        <span t-field="member.name" />
+                     </div>
+                     <div class="col-xs-4" style="padding-left:40px;">
+                        Chức Vụ:
+                        <span t-field="member.job_id" />
+                     </div>
+                     <div class="col-xs-4" style="padding-left:40px;">
+                        Đơn Vị:
+                        <t t-if="member.parent_id">
+                           <span t-esc="member.parent_id.name" />
+                        </t>
+                     </div>
+                  </div>
+               </div>
+            </t>
+         </div>
+      </template>
+      <template id="bien_ban_description">
+         <div class="row" style="">
+            <div class="col-xs-6" style="text-align: center;">
+               <p>TRUNG TÂM HẠ TẦNG MẠNG MIỀN NAM</p>
+               <p style="margin-top:-5px;">
+                  <b>ĐÀI VIỄN THÔNG HCM</b>
+               </p>
+               <p>
+                  Số:
+                  <span t-field="o.stt_bien_ban" />
+                  /
+                  <span t-field="o.department_id.name" />
+               </p>
+            </div>
+            <div class="col-xs-6" style="text-align: center">
+               <p>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
+               <p style="margin:-10px">Độc Lập - Tự Do - Hạnh Phúc</p>
+            </div>
+         </div>
+         <h2 style="text-align: center;font-weight:bold; margin:50px 0px 50px 0px;">
+            BIÊN BẢN
+            <span t-esc="o.ban_giao_or_nghiem_thu_show().upper()" />
+            VẬT TƯ
+         </h2>
+         <p />
+         <!--    <p>Căn cứ vào tờ trình số: <span t-field="o.totrinh_id.so_to_trinh"></span> ,Ngày: <span t-field="o.totrinh_id.ngay_to_trinh"></span>, V/v: <span t-field="o.totrinh_id.name"></span></p> -->
+         <p />
+         <!--   <p>Hôm nay ngày .........tháng .........năm.........., tại..........</p> -->
+         <p>
+            Hôm nay ngày:
+            <b t-field="o.date" t-field-options="{&quot;format&quot;: &quot;dd/MM/YYYY&quot;}" />
+            ,Tại: 
+            <span t-esc="o.department_id.get_department_name_for_report_()" />
+         </p>
+         <t t-set="source_member_ids" t-value="o.source_member_ids" />
+         <t t-set="dest_member_ids" t-value="o.dest_member_ids" />
+        <!--  <t t-if="source_member_ids or dest_member_ids"></t> -->
+            <p>Chúng tôi gồm:</p>
+         
+            <p style="font-size: 44">
+               <strong>Đại diện bên giao ( <t t-esc="o.location_id.get_report_name_()"/> ) </strong>
+            </p>
+            <t t-if="source_member_ids">
+            <t t-call="tonkho.ben_giao_nhan_info">
+               <t t-set="member_ids" t-value="source_member_ids" />
+            </t>
+         </t>
+         
+            <p />
+            <p />
+            <p >
+               <strong>Đại diện bên nhận ( <t t-esc="o.location_dest_id.get_report_name_()"/> )</strong>
+            </p>
+          <t t-if="dest_member_ids">
+            <t t-call="tonkho.ben_giao_nhan_info">
+               <t t-set="member_ids" t-value="dest_member_ids" />
+            </t>
+         </t>
+         <p />
+         <p />
+         <p>
+            Chúng tôi đã tiến hành
+            <span t-esc="o.ban_giao_or_nghiem_thu_show().lower()" />
+            các vật tư bên dưới
+         </p>
+      </template>
+      <template id="thead">
+         <thead>
+            <tr>
+               <th style="width:50px;">
+                  <strong>STT</strong>
+               </th>
+               <th>
+                  <strong>Tên Vật Tư</strong>
+               </th>
+               <th>
+                  <strong>Số Lượng</strong>
+               </th>
+               <th>
+                  <strong>ĐVT</strong>
+               </th>
+               <th t-if="has_serial_number">
+                  <strong>Part Number</strong>
+               </th>
+               <th t-if="has_serial_number">
+                  <strong>Serial Number</strong>
+               </th>
+               <td>
+                  <strong>Ghi Chú</strong>
+               </td>
+            </tr>
+         </thead>
+      </template>
+      <template id="move_line_row">
+         <tr>
+            <td>
+               <span t-esc="stt" />
+            </td>
+            <td>
+               <span t-field="move_line.product_id" />
+            </td>
+            <td class="text-right">
+               <span t-esc="product_qty" />
+            </td>
+            <td>
+               <span t-field="move_line.product_uom" />
+            </td>
+            <td t-if="has_serial_number">
+               <t t-if ="is_has_lot_id_in_a_move_line">
+               <t t-esc="pn" /></t>
+                <t t-else=""></t>
+            </td>
+            <td t-if="has_serial_number">
+               <t t-if ="is_has_lot_id_in_a_move_line">
+               <t t-esc="sn" /></t>
+                <t t-else=""></t>
+            </td>
+            <td>
+               <t t-esc="ghi_chu" />
+            </td>
+         </tr>
+      </template>
+      <template id="tbody_operation">
+      	<t t-set="stt" t-value="0" />
+         <tbody>
+            <t t-set="move_lines" t-value="o.move_lines" />
+            <t t-foreach="move_lines" t-as="move_line">
+            	 <t t-set="is_has_lot_id_in_a_move_line"  t-value="bool(move_line.move_line_ids.filtered(lambda r: r.lot_id))"/>
+            	 
+            	 <t t-if="not is_has_lot_id_in_a_move_line">
+            	 <t t-set="stt" t-value="stt + 1" />
+                  <t t-call="tonkho.move_line_row">
+                     <t t-set="product_qty" t-value="'%.0f'%(move_line.quantity_done)" />
+                  </t>
+               </t>
+              
+               <t t-elif="is_has_lot_id_in_a_move_line">
+                  <t t-foreach="move_line.move_line_ids" t-as="move_line_id">
+                     <t t-set="stt" t-value="stt + 1" />
+                     <t t-call="tonkho.move_line_row">
+                        <t t-set="pn" t-value="move_line_id.lot_id.pn" />
+                        <t t-set="sn" t-value="move_line_id.lot_id.name" />
+                        <t t-set="product_qty" t-value="1" />
+                        <!--  <t t-set="ghi_chu" t-value="move_line_id.ghi_chu" /> -->
+                        <t t-set="ghi_chu" t-value="move_line_id.ghi_chu" />
+                     </t>
+                  </t>
+               </t>
+           <!--     </t> t if t else -->
+            </t>
+         </tbody>
+      </template>
+      <template id="ky_ten">
+         <div class="row" style="margin-top:50px;">
+            <div class="col-xs-4">
+               <p class="text-center">
+                  <strong>ĐẠI DIỆN BÊN GIAO</strong>
+               </p>
+               <p class="text-center">(Ký, họ tên)</p>
+            </div>
+            <div class="col-xs-4" />
+            <div class="col-xs-4">
+               <p class="text-center">
+                  <strong>ĐẠI DIỆN BÊN NHẬN</strong>
+               </p>
+               <p class="text-center">(Ký, họ tên)</p>
+            </div>
+         </div>
+      </template>
+      <template id="tonkho.report_picking_dai_hcm">
+         <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+               <div class="article o_report_layout_standard">
+                  <!-- <t t-call="web.external_layout"> -->
+                  <div class="page" style="font-family:Times New Roman; font-size:14px">
+                     <t t-call="tonkho.bien_ban_description" />
+                     <t t-if="o.move_lines">
+                        <table class="table table-bordered">
+                           <!--           <t t-set="has_barcode" t-value="any([move_line.product_id and move_line.product_id.sudo().barcode or move_line.package_id for move_line in o.move_lines])" /> -->
+                           <t t-set="has_serial_number" t-value="o.move_line_ids.filtered(lambda ml: ml.lot_id or ml.lot_name)" groups="stock.group_production_lot" />
+                           <t t-call="tonkho.thead" />
+                           <t t-call="tonkho.tbody_operation" />
+                        </table>
+                        <p />
+                        <t t-set="ly_do" t-value="o.ly_do" />
+                        <t t-if="ly_do">
+                           <p>
+                              Lý do:
+                              <span t-esc="ly_do" />
+                           </p>
+                        </t>
+                        <p>
+                           Biên bản này được in thành
+                           <span t-field="o.so_ban_in" />
+                           bản. Bên nhận giữ
+                           <span t-field="o.ben_nhan_giu" />
+                           bản, bên giao nhận
+                           <span t-field="o.ben_giao_giu" />
+                           bản.
+                        </p>
+                        <t t-call="tonkho.ky_ten" />
+                     </t>
+                  </div>
+               </div>
+            </t>
+         </t>
+         <!--  </t> -->
+      </template>
+   </data>
+</odoo>
+

@@ -1,0 +1,94 @@
+<odoo>
+    <data>
+        <template id="tonkho.table_theo_move_line">
+            <table class="table table-bordered d4table" t-if="o.move_line_ids">
+                <t t-set="has_serial_number" t-value="o.move_line_ids.filtered(lambda ml: ml.lot_id or ml.lot_name)" groups="stock.group_production_lot" />
+              <!--  <t t-set="all_tot" t-value="not o.move_line_ids.filtered(lambda ml: ml.tinh_trang =='hong')" /> --> 
+           		<t t-set="all_tot" t-value="set(o.move_line_ids.mapped('tinh_trang')) ==set(['tot']) and o.is_ghom_tot" /> 
+                <thead>
+                    <tr>
+                        <th style="width:5%;text-align: center;">
+                            <strong>STT</strong>
+                        </th>
+                      <!--    <th style="width:5%;text-align: center;">
+                            <strong>thong bao</strong>
+                        </th> -->
+                        <th style="width:20%;text-align: center">
+                            <strong>Tên Vật Tư</strong>
+                        </th>
+                        <th style="text-align: center;width:5%;">
+                  			Số lượng
+               			</th>
+               			 <th style="text-align: center;width:10%;">
+                  				Đơn vị tính
+               			</th>
+                        <th width="20%" t-if="has_serial_number">
+                            Part number
+                        </th>
+                        <th width="20%" t-if="has_serial_number">
+                            <t>Serial Number</t>
+                        </th>
+                        <th t-if="not all_tot">Tình trạng</th>
+                        <th>Ghi chú</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-set="stt" t-value="0" />
+                    <t t-foreach="o.move_lines.sorted(key=lambda m: m.product_id.id)" t-as="move">
+                        <t t-set="stt" t-value="stt+1" />
+                        <t t-set="rowspan" t-value="len(move.move_line_ids)" />
+                        <t t-set="rowspan" t-value="rowspan if rowspan&gt;1 else False " />
+                        <t t-set="same_tinh_trang" t-value="len(set(move.move_line_ids.mapped('tinh_trang')))==1"/> <!--  t-if="not all_tot"  -->
+                        <t t-set="set_ghi_chu" t-value="set(move.move_line_ids.mapped('ghi_chu'))" />
+                        <t t-set="same_ghi_chu" t-value="len(set(move.move_line_ids.mapped('ghi_chu'))) ==1" />
+                        <t t-set="split" t-value="not(same_tinh_trang and same_ghi_chu)"></t>
+                        <t t-set="no_tracking" t-value="move.product_id.tracking =='none'" />
+                        <t t-set="no_tracking_and_split" t-value="no_tracking and not(same_tinh_trang and same_ghi_chu) " />
+                        <t t-set="same_part_number" t-value="(not no_tracking  and len(set(move.move_line_ids.mapped('pn_id'))) &lt;=1) or (no_tracking and not split)" />
+                        <t t-set="same_sn" t-value="no_tracking and not split" />
+                        <t t-set="same_so_luong" t-value="not no_tracking_and_split" />
+                        <tr t-foreach="move.move_line_ids" t-as="ml">
+                            <td t-att-rowspan="rowspan" t-if="ml_index==0" style="vertical-align: middle">
+                                <span t-esc="stt" />
+                            </td>
+                                <!--<td>
+                            	<span></span>
+                       <span t-esc="'split%s- set_ghi_chu%s'%(split ,set_ghi_chu)"/> 
+                            </td> -->
+                            <td t-att-rowspan="rowspan" t-if="ml_index==0" style="vertical-align: middle">
+                                <span t-field="move.product_id.display_name" />
+                            </td>
+                            <td t-att-rowspan="ml_index==0 and same_so_luong and rowspan" t-if="(same_so_luong and ml_index==0) or not same_so_luong"  style="vertical-align: middle" align="center">
+                                <span t-if="same_so_luong" t-esc="'%.0f'%move.product_uom._compute_quantity(move.quantity_done, move.product_id.uom_id, rounding_method='HALF-UP')" />
+                                <span t-else="" t-esc="'%.0f'%ml.qty_done"/>
+                            </td>
+                             <td t-att-rowspan="ml_index==0 and same_so_luong and rowspan" t-if="(same_so_luong and ml_index==0) or not same_so_luong"  style="vertical-align: middle" align="center">
+                                <span t-field="move.product_id.uom_id" groups="product.group_uom" />
+                            </td>
+                            <td t-if="has_serial_number and ((same_part_number and ml_index==0) or not same_part_number)"   t-att-rowspan="ml_index==0 and same_part_number and rowspan" style="vertical-align: middle">
+                                <t t-if="ml.product_id.tracking != 'none'">
+                                    <span t-field="ml.pn_id" />
+                                </t>
+                            </td>
+                            <td t-if="has_serial_number and ((same_sn and ml_index==0) or not same_sn)"  t-att-rowspan="ml_index==0 and same_sn and rowspan"  style="vertical-align: middle">
+                                <t t-if="ml.product_id.tracking != 'none'">
+                                    <div class="col-xs-12">
+                                        <span t-field="ml.lot_id" />
+                                        <span t-if="not ml.lot_id" t-field="ml.lot_name" />
+                                    </div>
+                                </t>
+                            </td>
+                            <td t-att-rowspan="ml_index==0 and same_tinh_trang and rowspan" t-if="not all_tot and ((same_tinh_trang and ml_index==0) or not same_tinh_trang) " align="center" style="vertical-align: middle">
+                                <span t-field="ml.tinh_trang"></span>
+                            </td>
+                            <td t-att-rowspan="ml_index==0 and same_ghi_chu  and rowspan" t-if="(same_ghi_chu and ml_index==0) or not same_ghi_chu " style="vertical-align: middle">
+                                <span t-esc="ml.ghi_chu or move.ghi_chu"></span>
+                            </td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+            <div t-if="all_tot" class="alltot">Tất cả vật tư đều tốt</div>
+        </template>
+    </data>
+</odoo>

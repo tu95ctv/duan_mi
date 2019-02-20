@@ -1,0 +1,102 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="pn_form">
+            <field name="name">pn.form</field>
+            <field name="model">tonkho.pn</field>
+            <field name="priority">15</field>
+            <field name="arch" type="xml">
+                <form string="Pn Form">
+                    <sheet>
+                        <group>
+                            <field name="name"></field>
+                            <field name="name_replace"></field>
+                            <field name="product_id"  readonly="context.get('product_id_readonly')" required="not context.get('product_id_readonly')"></field>
+                            <field name="sn_ids"></field>
+                            <field name="context"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <!--  
+        <record model="ir.ui.view" id="pn_form_simple_not_product_id">
+            <field name="name">pn.simple.form</field>
+            <field name="model">tonkho.pn</field>
+            <field name="priority">16</field>
+            <field name="arch" type="xml">
+                <form string="Pn Form">
+                    <sheet>
+                        <group>
+                            <field name="name"></field>
+                            <field name="sn_ids"></field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+         
+        -->
+        
+        <record id="pn_list" model="ir.ui.view">
+            <field name="name">tonkho.pn.tree</field>
+            <field name="model">tonkho.pn</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"></field>
+                    <field name="name_replace"></field>
+                    <field name="product_id"></field>
+                    <field name="sn_ids"></field>
+                   <!-- 
+                    <field name="tram_ltk_tao" groups="base.group_erp_manager"></field>
+                    <field name="dang_chay_tao" groups="base.group_erp_manager"></field>
+                    <field name="du_phong_tao" groups="base.group_erp_manager"></field>
+                 -->
+                </tree>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="pn_action">
+            <field name="type">ir.actions.act_window</field>
+            <field name="name">Part Number</field>
+            <field name="res_model">tonkho.pn</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]" />
+            <field name="view_mode">tree,form</field>
+        	<field name="view_type">form</field>
+            <field name="view_id" ref="pn_list"/>
+        </record>
+        
+        <!-- 
+         <record id="pn_act_window_view" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="pn_form"/>
+            <field name="act_window_id" ref="pn_action"/>
+        </record>
+        
+         <record id="pn_act_window_view2" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="pn_list"/>
+            <field name="act_window_id" ref="pn_action"/>
+        </record>
+          
+        
+         -->
+        <menuitem name="Part Number" id="pn_menu" parent="stock.menu_stock_inventory_control" action="pn_action" sequence="2" />
+        
+      
+      <!-- 
+         <record model="ir.actions.act_window" id="pn_actioncon">
+            <field name="name">Part Number</field>
+            <field name="res_model">tonkho.pncon</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]" />
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem name="Part Number" id="pn_menucon" parent="stock.menu_stock_inventory_control" action="pn_actioncon" sequence="1" />
+         -->
+        
+    </data>
+</odoo>

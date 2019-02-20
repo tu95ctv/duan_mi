@@ -1,0 +1,17 @@
+<openerp>
+    <data>
+    <!--  
+         <record model="res.users" id="user1">
+            <field name="name">Nguyen</field>
+            <field name="login">nguyen@vnpt.vn</field>
+            <field name="notify_email">nguyen@vnpt.vn</field>
+            <field name="password">123456</field>
+        </record>
+        <record model="res.users" id="user2">
+            <field name="name">Cuong</field>
+            <field name="login">cuong@vnpt.vn</field>
+            <field name="notify_email">cuong@vnpt.vn</field>
+            <field name="password">123456</field>
+        </record> -->
+    </data>
+</openerp>

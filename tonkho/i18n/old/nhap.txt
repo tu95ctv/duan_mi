@@ -1,0 +1,4 @@
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_picking_stt_bien_ban
+msgid "Stt kaka"
+msgstr "Stt kaka vi"

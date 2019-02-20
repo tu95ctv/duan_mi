@@ -1,0 +1,207 @@
+<openerp>
+  <data>
+ <!--  THƯ VIỆN CÔNG VIỆC -->
+      <record id="tvcv_search" model="ir.ui.view">
+         <field name="name">Thư viện công việc search</field>
+         <field name="model">tvcv</field>
+         <field name="arch" type="xml">
+            <search>
+               <field name="name" filter_domain="['|','|',('name_khong_dau','ilike',self),('name','ilike',self),('code','ilike',self)]" />
+               <field name="department_id"></field>
+               <field name="id" />
+               <field name="active" />
+               <field name="code" />
+               <field name="don_vi" />
+               <field name="do_phuc_tap" />
+               <field name="thoi_gian_hoan_thanh" />
+               <field name="diem" />
+               <field name="dot_xuat_hay_dinh_ky" />
+               <field name="cong_viec_cate_id" />
+               <field name="ghi_chu" />
+               <field name="diem_percent"  groups="dai_tgg.show_tvcv_con"/>
+               <field name="children_ids"   groups="dai_tgg.show_tvcv_con"/>
+               <field name="is_has_children"  groups="dai_tgg.show_tvcv_con"/>
+               <field name="co_cong_viec_cha"   groups="dai_tgg.show_tvcv_con"/>
+               <field name="parent_id" string="Có công việc cha" filter_domain="[('parent_id','!=',False)]"  groups="dai_tgg.show_tvcv_con"/>
+               <field name="parent_id"  groups="dai_tgg.show_tvcv_con" />
+           
+               <group expand="0" string="Group By">
+                  <filter string="group by Đơn vị tính" context="{'group_by':'don_vi'}" />
+                  <filter string="group by Độ Phức Tạp" context="{'group_by':'do_phuc_tap'}" />
+                  <filter string="group by Thời Gian Hoàn Thành" context="{'group_by':'thoi_gian_hoan_thanh'}" />
+                  <filter string="group by Điểm" context="{'group_by':'diem'}" />
+                  <filter string="group by Đột xuất hay định kỳ" context="{'group_by':'dot_xuat_hay_dinh_ky'}" />
+                  <filter string="group by Phân loại công việc" context="{'group_by':'cong_viec_cate_id'}" />
+                  <filter string="group by Có CV giai đoạn con" context="{'group_by':'is_has_children'}"  groups="dai_tgg.show_tvcv_con" />
+                  <filter string="group by Công Việc giai đoạn Cha" context="{'group_by':'parent_id'}"   groups="dai_tgg.show_tvcv_con"/>
+                  <filter string="group by Có công việc cha" context="{'group_by':'co_cong_viec_cha'}"  groups="dai_tgg.show_tvcv_con" />
+               </group>
+            </search>
+         </field>
+      </record>
+      <record id="tvcv_form" model="ir.ui.view">
+         <field name="name">tvcv form</field>
+         <field name="model">tvcv</field>
+         <field name="arch" type="xml">
+            <form>
+               <sheet>
+                  <group>
+                     <group>
+                        <field name="id" />
+                        <field name="name"/>
+               			<field name="state" groups="dai_tgg.thay_doi_thu_vien_group"></field>
+               			<field name="department_id" attrs="{'invisible':[('loai_record','!=','Công Việc')]}"></field>
+                         <!-- TÊn -->
+                       <!--  <field name="name_khong_dau"/>
+                        <field name="name_viet_tat"/> -->
+                     </group>
+                     <group>
+                        <field name="is_bc" />
+                        <field name="loai_record" readonly="1" />
+                     </group>
+                  </group>
+                  <group attrs="{'invisible':[('loai_record','!=','Công Việc')]}">
+                     <group>
+                        <field name="code" />
+                        <field name="cong_viec_cate_id" />
+                        <field name="don_vi" />
+                        <field name="diem" readonly="context.get('you_at_thu_vien_con')" />
+                        <field name = "active"></field>
+                    	<field name="is_bc" />
+                     </group>
+                     <group>
+                     	 <field name="do_phuc_tap" />
+                        <field name="thoi_gian_hoan_thanh" />
+                        <field name="dot_xuat_hay_dinh_ky" />
+                        <field name="ghi_chu" />
+                        <field name="create_date"  groups="dai_tgg.show_thong_tin_create_write"/>
+                        <field name="write_date" groups="dai_tgg.show_thong_tin_create_write" />
+                        <field name="create_uid" groups="dai_tgg.show_thong_tin_create_write"/>
+                        <field name="write_uid" groups="dai_tgg.show_thong_tin_create_write"/>
+                     </group>
+                  </group>
+                  <group attrs="{'invisible':[('loai_record','!=','Công Việc')]}" groups="dai_tgg.show_tvcv_con">
+                  	<group>
+                     <field name="diem_percent" invisible="not context.get('you_at_thu_vien_con')" />
+                     <field name="valid_thu_vien" />
+                     <field name="parent_id" readonly="1" />
+                     <field name="co_cong_viec_cha" />
+                     </group>
+                     <group>
+                     <field name="is_has_children" />
+                     <field name="children_ids" context="{'you_at_thu_vien_con':True, 'default_loai_record':'Công Việc',}" attrs="{'invisible':[('co_cong_viec_cha','=',True)]}" />
+                     </group>
+                  </group>
+                  <div class="oe_chatter">
+                       <!--  <field name="message_follower_ids" widget="mail_followers" groups="base.group_user" />
+                        <field name="activity_ids" widget="mail_activity" /> -->
+                        <field name="message_ids" widget="mail_thread" />
+                    </div>
+               </sheet>
+            </form>
+         </field>
+      </record>
+      <record id="tvcv_list" model="ir.ui.view">
+         <field name="priority">17</field>
+         <field name="name">tvcv list</field>
+         <field name="model">tvcv</field>
+         <field name="arch" type="xml">
+            <tree>
+               <field name="loai_record"  />
+               <field name="name" />
+              <!-- 
+                <field name="name_khong_dau" groups="base.group_erp_manager"/>
+                <field name="name_viet_tat" groups="base.group_erp_manager"/>
+                 -->
+               <field name="code" />
+               <!-- <field name="state"></field> -->
+               <field name="department_id"></field>
+               <field name="cong_viec_cate_id" />
+               <field name="don_vi" />
+               <field name="do_phuc_tap" />
+               <field name="thoi_gian_hoan_thanh" />
+               <field name="diem" />
+              <!--   <field name="valid_cong_thuc_diem"/>-->
+               <field name="dot_xuat_hay_dinh_ky" />
+               <field name="ghi_chu" />
+               <field name="diem_percent" groups="dai_tgg.show_tvcv_con" />
+               <field name="co_cong_viec_cha" groups="dai_tgg.show_tvcv_con"/>
+               <field name="parent_id" groups="dai_tgg.show_tvcv_con" />
+               <field name="is_has_children"  groups="dai_tgg.show_tvcv_con"/>
+               <field name="children_ids" groups="dai_tgg.show_tvcv_con" />
+               <field name="valid_thu_vien"  groups="dai_tgg.show_tvcv_con"/>
+               <field name="active" />
+               <field name="is_bc" />
+               
+               <field name="create_date" string="Ngày giờ tạo"  groups="dai_tgg.show_thong_tin_create_write"/>
+               <field name="write_date" string="Ngày giờ sửa" groups="dai_tgg.show_thong_tin_create_write"/>
+               <field name="create_uid" string="Người Tạo" groups="dai_tgg.show_thong_tin_create_write"/>
+               <field name="write_uid" string="Người Sửa" groups="dai_tgg.show_thong_tin_create_write"/>
+                
+            </tree>
+         </field>
+      </record>
+      <record model="ir.actions.act_window" id="thuvientvcv_action">
+         <field name="name">Thư viện công việc (TVCV)</field>
+         <field name="res_model">tvcv</field>
+         <field name="context">{'default_loai_record':'Công Việc'}</field>
+      <!--    <field name="domain">[('loai_record','=','Công Việc'),'|',('active','=',True),('active','=',False)]</field> -->
+         <field name="domain">[('loai_record','=','Công Việc')]</field>
+         <field name="view_mode">tree,form</field>
+         <field name="search_view_id" ref="tvcv_search" />
+      </record>
+      <record id="loai_suco_action_link_list" model="ir.actions.act_window.view">
+         <field eval="1" name="sequence" />
+         <field name="view_mode">tree</field>
+         <field name="view_id" ref="tvcv_list" />
+         <field name="act_window_id" ref="thuvientvcv_action" />
+      </record>
+      <!-- END THƯ VIỆN -->
+      <!--  THƯ VIỆN CÔNG VIỆC -->
+      <record id="loai_suco_suvu_search" model="ir.ui.view">
+         <field name="name">Thư viện công việc search</field>
+         <field name="model">tvcv</field>
+         <field name="arch" type="xml">
+            <search>
+               <field name="name" />
+            </search>
+         </field>
+      </record>
+      <record id="loai_suco_suvu_list" model="ir.ui.view">
+         <field name="name">tvcv list</field>
+         <field name="model">tvcv</field>
+         <field name="arch" type="xml">
+            <tree>
+               <field name="id" />
+               <field name="name" string="Tên" />
+               <field name="loai_record" />
+               <field name="is_bc" />
+             <!--   <field name="name_khong_dau" groups="base.group_erp_manager"/>
+               <field name="name_viet_tat" groups="base.group_erp_manager"/>
+                -->
+            </tree>
+         </field>
+      </record>
+      <record model="ir.actions.act_window" id="loai_suco_action">
+         <field name="name">Loại Sự Cố</field>
+         <field name="res_model">tvcv</field>
+         <field name="context">{'default_loai_record':'Sự Cố'}</field>
+         <field name="domain">[('loai_record','=','Sự Cố')]</field>
+         <field name="search_view_id" ref="loai_suco_suvu_search" />
+         <field name="view_mode">tree,form</field>
+      </record>
+      <record model="ir.actions.act_window" id="loai_suvu_action">
+         <field name="name">Loại Sự Vụ</field>
+         <field name="res_model">tvcv</field>
+         <field name="context">{'default_loai_record':'Sự Vụ'}</field>
+         <field name="domain">[('loai_record','=','Sự Vụ')]</field>
+         <field name="search_view_id" ref="loai_suco_suvu_search" />
+         <field name="view_mode">tree,form</field>
+      </record>
+      <!-- END THƯ VIỆN -->
+   <menuitem id="tvcv_menu" parent="menu_menu" action="thuvientvcv_action" sequence="2"  groups="base.group_user"/>     
+	<menuitem id="suco_menu" parent="ctrmenu_menu" action="suco_action" sequence="2" />
+      <menuitem id="loai_suco_menu" parent="ctrmenu_menu" action="loai_suco_action" sequence="3" />
+      <menuitem id="suvu_menu" parent="ctrmenu_menu" action="suvu_action" sequence="4" />
+      <menuitem id="loai_suvu_menu" parent="ctrmenu_menu" action="loai_suvu_action" sequence="5"  />  </data>
+</openerp>

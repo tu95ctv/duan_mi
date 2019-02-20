@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <record id="statistics_form" model="ir.ui.view">
+            <field name="name">tonkho.statistics.form</field>
+            <field name="model">downloadwizard.statistics</field>
+            <field name="arch" type="xml">
+            <form>
+            <group>
+                <field name="date_time"/>
+                <field name="model_name"></field>
+                <field name="statistics_ids">
+                	<tree name="stats form">
+                			
+                		<field name="name_categ"></field>
+                		<field name="quantity"></field>
+                		<field name="ket_luan"></field>
+                	</tree>
+                </field>
+                	 </group>
+                </form>
+            </field>
+        </record>
+        
+       <record id="statistics_tree" model="ir.ui.view">
+            <field name="name">tonkho.statistics.tree</field>
+            <field name="model">downloadwizard.statistics</field>
+            <field name="arch" type="xml">
+            <tree name="">
+                <field name="date_time"/>
+                </tree>
+            </field>
+        </record>
+        
+     
+
+    </data>
+</odoo>

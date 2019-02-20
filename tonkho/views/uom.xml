@@ -1,0 +1,12 @@
+<odoo>
+    <record id="product_uom_tree_view" model="ir.ui.view">
+        <field name="name">product.uom.tree</field>
+        <field name="model">product.uom</field>
+        <field name="inherit_id" ref="product.product_uom_tree_view"></field>
+        <field name="arch" type="xml">
+                <field name="uom_type" position="after">
+                	<field name="create_date"/>
+                </field>
+        </field>
+    </record>
+ </odoo>

@@ -1,0 +1,104 @@
+<odoo><data>
+<template id="full_table">
+      	 <table class="table table-bordered">
+           <t t-set="has_serial_number" t-value="o.move_line_ids.filtered(lambda ml: ml.lot_id or ml.lot_name)" groups="stock.group_production_lot" />
+           <t t-call="tonkho.table_thead" />
+           <t t-call="tonkho.tbody_operation" />
+        </table>
+      </template>
+      
+      
+<template id="tbody_operation">
+         <t t-set="stt" t-value="0" />
+         <tbody>
+            <t t-foreach="o.move_line_ids" t-as="move_line_id">
+               <t t-set="is_has_lot_id_in_a_move_line" t-value="bool(move_line_id.lot_id)" />
+               <t t-set="stt" t-value="stt + 1" />
+               <t t-call="tonkho.move_line_row">
+                  <t t-set="pn" t-value="move_line_id.lot_id.pn" />
+                  <t t-set="sn" t-value="move_line_id.lot_id.name" />
+                  <t t-if="is_has_lot_id_in_a_move_line">
+                     <t t-set="product_qty" t-value="'%.0f'%(move_line_id.qty_done)" />
+                  </t>
+                  <t t-elif="not is_has_lot_id_in_a_move_line">
+                     <t t-set="product_qty" t-value="1" />
+                  </t>
+               </t>
+            </t>
+         </tbody>
+      </template>
+      
+ <template id="move_line_row">
+         <tr>
+            <td>
+               <span t-esc="stt" />
+            </td>
+            <td>
+               <span t-field="move_line_id.product_id" />
+            </td>
+            <td class="text-right">
+               <span t-esc="product_qty" />
+            </td>
+            <td>
+               <span t-field="move_line_id.product_uom_id" />
+            </td>
+            <td t-if="has_serial_number">
+               <t t-if="is_has_lot_id_in_a_move_line">
+                  <t t-esc="pn" />
+               </t>
+               <t t-else="" />
+            </td>
+            <td t-if="has_serial_number">
+               <t t-if="is_has_lot_id_in_a_move_line">
+                  <t t-esc="sn" />
+               </t>
+               <t t-else="" />
+            </td>
+            <td>
+               <span t-field="move_line_id.tinh_trang" />
+            </td>
+            
+            <td>
+               <t t-esc="move_line_id.ghi_chu" />
+            </td>
+         </tr>
+      </template>
+      
+         
+      
+<template id="table_thead">
+         <thead>
+            <tr>
+               <th style="width:5%;text-align: center;">
+                  <strong>STT</strong>
+               </th>
+               <th style="width:21%;text-align: center">
+                  <strong>Tên Vật Tư</strong>
+               </th>
+               <th style="text-align: center;width:5%;">
+                  <strong>SL</strong>
+               </th>
+               <th style="text-align: center;width:8%">
+                  <strong>ĐVT</strong>
+               </th>
+               <th t-if="has_serial_number" style="text-align: center;width:18%;">
+                  <strong>Part Number</strong>
+               </th>
+               <th t-if="has_serial_number" style="text-align: center;width:16%;">
+                  <strong>S/N</strong>
+               </th>
+               <td style="text-align: center;width:5%">
+                  <strong>TT</strong>
+               </td>
+               
+               <td style="text-align: center;width:20%">
+                  <strong>Ghi Chú</strong>
+               </td>
+            </tr>
+         </thead>
+      </template>
+      
+      
+      
+      
+</data></odoo>

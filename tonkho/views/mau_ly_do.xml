@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="mau_ly_do_form">
+            <field name="name">tonkho.texttemplate.form</field>
+            <field name="model">tonkho.texttemplate</field>
+            <field name="arch" type="xml">
+                <form string="Form Mẫu Lý do">
+                    <sheet>
+                        <group>
+                            <field name="name"></field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

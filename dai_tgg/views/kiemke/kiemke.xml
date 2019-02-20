@@ -1,0 +1,403 @@
+<openerp>
+  <data>
+  <!--PN -->
+      <record id="pn_search" model="ir.ui.view">
+         <field name="name">KK search</field>
+         <field name="model">pn</field>
+         <field name="arch" type="xml">
+            <search string="PN">
+               <field name="name" />
+               <field name="kiemke_ids" />
+               <field name="vattu_ids" />
+               <group expand="0" string="Group By">
+                  <filter string="group theo name" context="{'group_by':'name'}" />
+                  <filter string="group theo kiemke_ids" context="{'group_by':'kiemke_ids'}" />
+                  <filter string="group theo vattu_ids" context="{'group_by':'vattu_ids'}" />
+               </group>
+            </search>
+         </field>
+      </record>
+      <record model="ir.ui.view" id="pn_form">
+         <field name="name">PN Form</field>
+         <field name="model">pn</field>
+         <field name="arch" type="xml">
+            <form string="kk ">
+               <sheet>
+                  <group>
+                     <field name="name" />
+                     <field name="kiemke_ids" />
+                     <field name="vattu_ids" />
+                  </group>
+               </sheet>
+            </form>
+         </field>
+      </record>
+      <record model="ir.ui.view" id="pn_list">
+         <field name="name">pn list</field>
+         <field name="model">pn</field>
+         <field name="arch" type="xml">
+            <tree string="kk">
+               <field name="name" />
+               <field name="kiemke_ids" />
+               <field name="vattu_ids" />
+            </tree>
+         </field>
+      </record>
+      <record model="ir.actions.act_window" id="pn_action">
+         <field name="name">PN</field>
+         <field name="res_model">pn</field>
+         <field name="view_mode">tree,form</field>
+      </record>
+      <!-- PN -->
+      <!--KIỂM KÊ -->
+      <record id="kiemke_search" model="ir.ui.view">
+         <field name="name">KK search</field>
+         <field name="model">kiemke</field>
+         <field name="arch" type="xml">
+            <search string="Search kk">
+               <field name="name" />
+               <field name="so_the" />
+               <field name="pn" />
+               <field name="sn" />
+               <field name="map_kknoc_id" />
+               <field name="tram" />
+               <!--<field name="duplicate_sn_vat_tu_ids"></field>-->
+               <field name="len_duplicate_sn_vat_tu_ids" />
+               <field name="len_sn" />
+               <field name="sn_false" />
+               <filter name="sn" string="Có SN" domain="[('sn','!=',False)]" />
+               <filter name="sn" string="Không Có SN" domain="[('sn','=',False)]" />
+               <filter name="tram" string="NOT LTK" domain="[('tram','!=','LTK')]" />
+               <filter name="map_kknoc_id" string="Có Map với NOC but NOTLTK" domain="[('map_kknoc_id','!=',False),('tram','!=','LTK')]" />
+               <filter name="map_kknoc_id" string="Có Map với NOC" domain="[('map_kknoc_id','!=',False)]" />
+               <filter name="map_ltk_id" string="Có Map với LTK" domain="[('map_ltk_id','!=',False)]" />
+               <group expand="0" string="Group By">
+                  <filter string="group theo name" context="{'group_by':'name'}" />
+                  <filter string="group theo stt" context="{'group_by':'stt'}" />
+                  <filter string="group theo ten_vat_tu" context="{'group_by':'ten_vat_tu'}" />
+                  <filter string="group theo so_the" context="{'group_by':'so_the'}" />
+                  <filter string="group theo ma_du_an" context="{'group_by':'ma_du_an'}" />
+                  <filter string="group theo ten_du_an" context="{'group_by':'ten_du_an'}" />
+                  <filter string="group theo pn" context="{'group_by':'pn'}" />
+                  <filter string="group theo sn" context="{'group_by':'sn'}" />
+                  <filter string="group theo ma_vach" context="{'group_by':'ma_vach'}" />
+                  <filter string="group theo ma_vach_thuc_te" context="{'group_by':'ma_vach_thuc_te'}" />
+                  <filter string="group theo trang_thai" context="{'group_by':'trang_thai'}" />
+                  <filter string="group theo hien_trang_su_dung" context="{'group_by':'hien_trang_su_dung'}" />
+                  <filter string="group theo ghi_chu" context="{'group_by':'ghi_chu'}" />
+                  <filter string="group theo don_vi" context="{'group_by':'don_vi'}" />
+                  <filter string="group theo vi_tri_lap_dat" context="{'group_by':'vi_tri_lap_dat'}" />
+                  <filter string="group theo loai_tai_san" context="{'group_by':'loai_tai_san'}" />
+                  <filter string="group theo len_duplicate_sn_vat_tu_ids" context="{'group_by':'len_duplicate_sn_vat_tu_ids'}" />
+                  <filter string="group theo sn_false" context="{'group_by':'sn_false'}" />
+                  <filter string="group theo map_kknoc_id" context="{'group_by':'map_kknoc_id'}" />
+                  <filter string="group theo tram" context="{'group_by':'tram'}" />
+                  <filter string="group theo pn_id" context="{'group_by':'pn_id'}" />
+                  <filter string="group theo duplicate_sn_vat_tu_ids" context="{'group_by':'duplicate_sn_vat_tu_ids'}" />
+                  <filter string="group theo yes_no_search" context="{'group_by':'yes_no_search'}" />
+                  <filter string="group theo map_ltk_id" context="{'group_by':'map_ltk_id'}" />
+                  <filter string="group theo len_sn" context="{'group_by':'len_sn'}" />
+                  <filter string="group theo len_ilike_map_ltk_ids" context="{'group_by':'len_ilike_map_ltk_ids'}" />
+               </group>
+            </search>
+         </field>
+      </record>
+      <record model="ir.ui.view" id="kiemke_form">
+         <field name="name">KK Form</field>
+         <field name="model">kiemke</field>
+         <field name="arch" type="xml">
+            <form string="kk ">
+               <sheet>
+                  <group>
+                     <field name="name" />
+                     <field name="stt" />
+                     <field name="kiem_ke_id" />
+                     <field name="ten_vat_tu" />
+                     <field name="so_the" />
+                     <field name="ma_du_an" />
+                     <field name="ten_du_an" />
+                     <field name="pn" />
+                     <field name="sn" />
+                     <field name="len_sn" />
+                     <field name="ma_vach" />
+                     <field name="ma_vach_thuc_te" />
+                     <field name="trang_thai" />
+                     <field name="hien_trang_su_dung" />
+                     <field name="ghi_chu" />
+                     <field name="don_vi" />
+                     <field name="vi_tri_lap_dat" />
+                     <field name="loai_tai_san" />
+                     <field name="len_duplicate_sn_vat_tu_ids" />
+                     <field name="sn_false" />
+                     <field name="map_kknoc_id" />
+                     <field name="tram" />
+                     <field name="pn_id" />
+                     <field name="duplicate_sn_vat_tu_ids" />
+                     <field name="yes_no_search" />
+                     <field name="map_ltk_id" />
+                     <field name="ilike_map_kknoc_ids" />
+                     <field name="len_ilike_map_kknoc_ids" />
+                     <field name="ilike_map_ltk_ids" />
+                     <field name="len_ilike_map_ltk_ids" />
+                  </group>
+               </sheet>
+            </form>
+         </field>
+      </record>
+      <record model="ir.ui.view" id="kiemke_list">
+         <field name="name">kiemke list</field>
+         <field name="model">kiemke</field>
+         <field name="arch" type="xml">
+            <tree string="kk">
+               <field name="name" />
+               <field name="stt" />
+               <field name="ten_vat_tu" />
+               <field name="so_the" />
+               <field name="ma_du_an" />
+               <field name="ten_du_an" />
+               <field name="pn" />
+               <field name="sn" />
+               <field name="len_sn" />
+          
+               <field name="len_duplicate_sn_vat_tu_ids" />
+               <field name="sn_false" />
+               <field name="map_kknoc_id" />
+               <field name="ilike_map_kknoc_ids" />
+               <field name="len_ilike_map_kknoc_ids" />
+               <field name="ilike_map_ltk_ids" />
+               <field name="len_ilike_map_ltk_ids" />
+               <field name="map_ltk_id" />
+               <field name="tram" />
+               <field name="don_vi" />
+               <field name="vi_tri_lap_dat" />
+            </tree>
+         </field>
+      </record>
+      <record model="ir.actions.act_window" id="kiemke_action">
+         <field name="name">Kiểm kê kế toán</field>
+         <field name="res_model">kiemke</field>
+         <field name="view_mode">tree,form</field>
+      </record>
+      <!-- Kiem Ke -->
+      <!--VẬT TƯ -->
+      <record id="vattu_search" model="ir.ui.view">
+         <field name="name">KK search</field>
+         <field name="model">vattu</field>
+         <field name="arch" type="xml">
+            <search string="Search vattu">
+               <field name="name" />
+               <field name="phan_loai" />
+               <field name="loai_card" />
+               <field name="he_thong" />
+               <field name="cabinet_rack" />
+               <field name="shelf" />
+               <field name="stt_shelf" />
+               <field name="slot" />
+               <field name="ghi_chu" />
+               <field name="pn" />
+               <field name="pn_id" />
+               <field name="sn" />
+               <field name="map_kiem_ke_id" />
+               <field name="is_not_also_map_pn" />
+               <!--<field name="duplicate_sn_vat_tu_ids"></field>-->
+               <field name="len_duplicate_sn_vat_tu_ids" />
+               <field name="sn_false" />
+               <filter name="sn" string="Có SN" domain="[('sn','!=',False)]" />
+               <filter name="sn" string="Không Có SN" domain="[('sn','=',False)]" />
+               <filter name="map_kiem_ke_id" string="Có Map với Kiểm Kê" domain="[('map_kiem_ke_id','!=',False)]" />
+               <filter name="map_kiem_ke_id" string="Có Map với Noc" domain="[('map_kknoc_id','!=',False)]" />
+               <group expand="0" string="Group By">
+                  <filter string="group theo name" context="{'group_by':'name'}" />
+                  <filter string="group theo phan_loai" context="{'group_by':'phan_loai'}" />
+                  <filter string="group theo loai_card" context="{'group_by':'loai_card'}" />
+                  <filter string="group theo he_thong" context="{'group_by':'he_thong'}" />
+                  <filter string="group theo cabinet_rack" context="{'group_by':'cabinet_rack'}" />
+                  <filter string="group theo shelf" context="{'group_by':'shelf'}" />
+                  <filter string="group theo stt_shelf" context="{'group_by':'stt_shelf'}" />
+                  <filter string="group theo slot" context="{'group_by':'slot'}" />
+                  <filter string="group theo ghi_chu" context="{'group_by':'ghi_chu'}" />
+                  <filter string="group theo pn" context="{'group_by':'pn'}" />
+                  <filter string="group theo sn" context="{'group_by':'sn'}" />
+                  <filter string="group theo sn" context="{'group_by':'tram'}" />
+               </group>
+            </search>
+         </field>
+      </record>
+      <record model="ir.ui.view" id="vattu_form">
+         <field name="name">KK Form</field>
+         <field name="model">vattu</field>
+         <field name="arch" type="xml">
+            <form string="kk ">
+               <sheet>
+                  <group>
+                     <field name="stt" />
+                     <field name="name" />
+                     <field name="phan_loai" />
+                     <field name="loai_card" />
+                     <field name="he_thong" />
+                     <field name="cabinet_rack" />
+                     <field name="shelf" />
+                     <field name="stt_shelf" />
+                     <field name="slot" />
+                     <field name="ghi_chu" />
+                     <field name="pn" />
+                     <field name="pn_id" />
+                     <field name="sn" />
+                     <field name="map_kiem_ke_id" />
+                     <field name="map_kknoc_id" />
+                     <field name="is_not_also_map_pn" />
+                     <field name="len_duplicate_sn_vat_tu_ids" />
+                     <field name="sn_false" />
+                     <field name="ilike_map_kk_ids" />
+                     <field name="len_ilike_map_kk_ids" />
+                  </group>
+               </sheet>
+            </form>
+         </field>
+      </record>
+      <record model="ir.ui.view" id="vattu_list">
+         <field name="name">vattu list</field>
+         <field name="model">vattu</field>
+         <field name="arch" type="xml">
+            <tree string="kk">
+               <field name="stt" />
+               <field name="name" />
+               <field name="phan_loai" />
+               <field name="loai_card" />
+               <field name="he_thong" />
+               <field name="cabinet_rack" />
+               <field name="shelf" />
+               <field name="stt_shelf" />
+               <field name="slot" />
+               <field name="ghi_chu" />
+               <field name="pn" />
+               <field name="pn_id" />
+               <field name="sn" />
+               <field name="map_kiem_ke_id" />
+               <field name="ilike_map_kk_ids" />
+               <field name="len_ilike_map_kk_ids" />
+               <field name="map_kknoc_id" />
+               <field name="tram" />
+               <field name="is_not_also_map_pn" />
+               <!--<field name="duplicate_sn_vat_tu_ids"></field>-->
+               <field name="len_duplicate_sn_vat_tu_ids" />
+               <field name="sn_false" />
+            </tree>
+         </field>
+      </record>
+      <record model="ir.actions.act_window" id="vattu_action">
+         <field name="name">Vật tư</field>
+         <field name="res_model">vattu</field>
+         <field name="view_mode">tree,form</field>
+      </record>
+      <!-- VẬT TƯ -->
+      <!--kknoc -->
+      <record id="kknoc_search" model="ir.ui.view">
+         <field name="name">kknoc search</field>
+         <field name="model">kknoc</field>
+         <field name="arch" type="xml">
+            <search>
+               <field name="name" />
+               <field name="stt" />
+               <field name="pn" />
+               <field name="clei" />
+               <field name="sn" />
+               <field name="pn_id" />
+               <field name="len_duplicate_sn_vat_tu_ids" />
+               <field name="sn_false" />
+               <field name="data" />
+               <field name="sheet_name" />
+               <field name="file_name" />
+               <field name="tram" />
+               <field name="map_ltk_id" />
+               <filter name="sn" string="Có SN" domain="[('sn','!=',False)]" />
+               <filter name="sn" string="Không Có SN" domain="[('sn','=',False)]" />
+               <filter name="tram" string="Trạm LTK" domain="[('tram','ilike','ltk')]" />
+               <filter name="map_ltk_id" domain="[('map_ltk_id','!=',False)]" />
+               <filter name="map_kiemke_id" domain="[('map_kiemke_id','!=',False)]" />
+               <group expand="0" string="Group By">
+                  <filter string="group theo name" context="{'group_by':'name'}" />
+                  <filter string="group theo stt" context="{'group_by':'stt'}" />
+                  <filter string="group theo pn" context="{'group_by':'pn'}" />
+                  <filter string="group theo sn" context="{'group_by':'sn'}" />
+                  <filter string="group theo pn_id" context="{'group_by':'pn_id'}" />
+                  <filter string="group theo len_duplicate_sn_vat_tu_ids" context="{'group_by':'len_duplicate_sn_vat_tu_ids'}" />
+                  <filter string="group theo sn_false" context="{'group_by':'sn_false'}" />
+                  <filter string="group theo data" context="{'group_by':'data'}" />
+                  <filter string="group theo file_name" context="{'group_by':'file_name'}" />
+                  <filter string="group theo sheet_name" context="{'group_by':'sheet_name'}" />
+                  <filter string="group theo tram" context="{'group_by':'tram'}" />
+               </group>
+            </search>
+         </field>
+      </record>
+      <record model="ir.ui.view" id="pn_form">
+         <field name="name">kknoc Form</field>
+         <field name="model">kknoc</field>
+         <field name="arch" type="xml">
+            <form string="kk ">
+               <sheet>
+                  <group>
+                     <field name="name" />
+                     <field name="stt" />
+                     <field name="pn" />
+                     <field name="clei" />
+                     <field name="sn" />
+                     <field name="pn_id" />
+                     <field name="len_duplicate_sn_vat_tu_ids" />
+                     <field name="sn_false" />
+                     <field name="data" />
+                     <field name="sheet_name" />
+                     <field name="file_name" />
+                     <field name="tram" />
+                     <field name="map_ltk_id" />
+                     <field name="ilike_map_kk_ids" />
+                     <field name="len_ilike_map_kk_ids" />
+                     <field name="ilike_map_vattu_ids" />
+                     <field name="len_ilike_map_vattu_ids" />
+                  </group>
+               </sheet>
+            </form>
+         </field>
+      </record>
+      <record model="ir.ui.view" id="kknoc_list">
+         <field name="name">kknoc list</field>
+         <field name="model">kknoc</field>
+         <field name="arch" type="xml">
+            <tree string="kk">
+               <field name="name" />
+               <field name="stt" />
+               <field name="pn" />
+               <field name="clei" />
+               <field name="sn" />
+               <field name="pn_id" />
+               <field name="len_duplicate_sn_vat_tu_ids" />
+               <field name="sn_false" />
+               <field name="data" />
+               <field name="sheet_name" />
+               <field name="file_name" />
+               <field name="tram" />
+               <field name="map_kiemke_id" />
+               <field name="map_ltk_id" />
+               <!-- <field name="ilike_map_kk_ids"></field> -->
+               <field name="len_ilike_map_kk_ids" />
+               <!-- <field name="ilike_map_vattu_ids"></field> -->
+               <field name="len_ilike_map_vattu_ids" />
+            </tree>
+         </field>
+      </record>
+      <record model="ir.actions.act_window" id="kknoc_action">
+         <field name="name">KK Noc</field>
+         <field name="res_model">kknoc</field>
+         <field name="view_mode">tree,form</field>
+      </record>
+     
+      <!-- kknoc -->
+          <!-- end doi tac-->
+      <menuitem name="Kiểm Kê" id="kiemke_icon" sequence="1" />
+      <menuitem name="Vật Tư LTK" id="vattu_menu" parent="kiemke_icon" sequence="1" action="vattu_action" />
+      <menuitem name="kế toán kiểm kê" id="kiemke_menu" parent="kiemke_icon" sequence="1" action="kiemke_action" />
+      <menuitem name="KKNOC" id="kknoc_menu" parent="kiemke_icon" sequence="1" action="kknoc_action" />
+      <menuitem name="PN" id="pn_menu" parent="kiemke_icon" sequence="1" action="pn_action" />
+  </data>
+</openerp>

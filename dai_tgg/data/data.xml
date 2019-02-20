@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <!-- end group -->
+        <!-- GHI CHÚ CV
+        <record id="gccv_odoo" model="gccvtype">
+            <field name="name">Odoo</field>
+        </record>
+        <record id="gccv_xml" model="gccvtype">
+            <field name="name">XML</field>
+            <field name="parent_id" eval="ref('gccv_odoo')"></field>
+        </record>
+        <record id="gccv_test_context" model="gccvtype">
+            <field name="name">Context</field>
+            <field name="parent_id" eval="ref('gccv_xml')"></field>
+        </record>
+        <record id="gccv_test_domain" model="gccvtype">
+            <field name="name">Domain</field>
+            <field name="parent_id" eval="ref('gccv_xml')"></field>
+        </record>
+        <record id="gccv_test_domain_force" model="gccvtype">
+            <field name="name">domain_force</field>
+            <field name="parent_id" eval="ref('gccv_xml')"></field>
+        </record>
+        <record id="gccv_test_domain_force" model="gccvtype">
+            <field name="name">domain_force</field>
+            <field name="parent_id" eval="ref('gccv_xml')"></field>
+        </record>
+        <record id="gccv_test_domain_attrs" model="gccvtype">
+            <field name="name">domain_force</field>
+            <field name="parent_id" eval="ref('gccv_xml')"></field>
+        </record>
+        <record id="gccv_test_domain_attrs" model="gccvtype">
+            <field name="name">attrs</field>
+            <field name="parent_id" eval="ref('gccv_xml')"></field>
+        </record>
+     -->
+        <!-- Thư viện cv   -->
+        <!-- -->
+        <record id="loaisuvu_viec_con_lai" model="tvcv">
+            <field name="name">Việc Còn Lại</field>
+            <field name="loai_record">Công Việc</field>
+        </record> 
+        <!-- 
+         <record id="loai_hongthietbivotuyet" model="tvcv">
+            <field name="name">Hỏng thiết bị vô tuyến</field>
+            <field name="loai_record">Sự Cố</field>
+        </record>
+        <record id="loai_hongnguon1" model="tvcv">
+            <field name="name">Hỏng nguồn</field>
+            <field name="loai_record">Sự Cố</field>
+        </record>
+        <record id="loai_doitacravaotram1" model="tvcv">
+            <field name="name">Đối tác ra vào trạm</field>
+            <field name="loai_record">Sự Vụ</field>
+        </record>
+        <record id="loai_doitacbangiaovattu1" model="tvcv">
+            <field name="name">Đối tác bàn giao vật tư</field>
+            <field name="loai_record">Sự Vụ</field>
+           </record>
+            -->
+    </data>
+</odoo>

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tonkho_thietbi,tonkho.thietbi,model_tonkho_thietbi,stock.group_stock_user,1,1,1,1
+access_tonkho_brand,tonkho.brand,model_tonkho_brand,stock.group_stock_user,1,1,1,1
+access_tonkho_title_cac_ben,tonkho.title_cac_ben,model_tonkho_title_cac_ben,stock.group_stock_user,1,1,1,1
+access_tonkho_texttemplate,tonkho.texttemplate,model_tonkho_texttemplate,stock.group_stock_user,1,1,1,1
+access_tonkho_tocdo,tonkho.tocdo,model_tonkho_tocdo,stock.group_stock_user,1,1,1,1

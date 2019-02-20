@@ -1,0 +1,59 @@
+<odoo>
+<data>
+
+
+
+      <!-- FILE -->
+      <record id="file_search" model="ir.ui.view">
+         <field name="name">file search</field>
+         <field name="model">dai_tgg.file</field>
+         <field name="arch" type="xml">
+            <search string="File">
+               <field name="name" />
+            </search>
+         </field>
+      </record>
+      <record model="ir.ui.view" id="file_form">
+         <field name="name">file Form</field>
+         <field name="model">dai_tgg.file</field>
+         <field name="arch" type="xml">
+            <form string="File ">
+               <sheet>
+                  <group>
+                     <field name="name" />
+                     <field name="file" filename="name" />
+                     <field name="mo_ta" />
+                     <field name="image" widget="image" />
+                     <field name="image_2" widget="image" />
+                     <field name="image_3" widget="image" />
+                  </group>
+               </sheet>
+            </form>
+         </field>
+      </record>
+      <record model="ir.ui.view" id="file_list">
+         <field name="name">file</field>
+         <field name="model">dai_tgg.file</field>
+         <field name="arch" type="xml">
+            <tree string="File">
+               <field name="name" />
+               <field name="file" />
+               <field name="mo_ta" />
+               <field name="image"/>
+               <field name="image_2"/>
+               <field name="image_3"/>
+               
+            </tree>
+         </field>
+      </record>
+      <record model="ir.actions.act_window" id="file_action">
+         <field name="name">File</field>
+         <field name="res_model">dai_tgg.file</field>
+         <field name="view_mode">tree,form</field>
+      </record>
+      <!-- FILE -->
+      
+<menuitem id="file_menu" parent="else_more_menu" action="file_action" sequence="6" />
+      
+</data>
+</odoo>

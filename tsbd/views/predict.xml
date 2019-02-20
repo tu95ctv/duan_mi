@@ -1,0 +1,62 @@
+<odoo>
+	<data>
+		  <record model="ir.ui.view" id="predict_list">
+            <field name="name">tsbd.predict.list</field>
+            <field name="model">tsbd.predict</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="match_id"></field>
+                    <field name="site_id"></field>
+                    <field name="amount"></field>
+                    <field name="predict_score1"></field>
+                    <field name="predict_score2"></field>
+                    <field name="predict_handicap"></field>
+                    <field name="predict_handicap_winning_mount"></field>
+                    <field name="predict_ou"></field>
+                    <field name="predict_ou_winning_mount"></field>
+                    <field name="predict_exact_score_winning_amount"></field>
+                </tree>
+            </field>
+        </record>
+        
+        
+        <record model="ir.ui.view" id="predict_search">
+            <field name="name">tsbd.predict.search</field>
+            <field name="model">tsbd.predict</field>
+            <field name="arch" type="xml">
+                <search string="predict search">
+                	
+                    <field name="site_id"></field>
+                    <field name="amount"></field>
+                    <field name="predict_score1"></field>
+                    <field name="predict_score2"></field>
+                    <field name="predict_handicap"></field>
+                    <field name="predict_handicap_winning_mount"></field>
+                    <field name="predict_ou"></field>
+                    <field name="predict_ou_winning_mount"></field>
+                    <field name="predict_exact_score_winning_amount"></field>
+                     
+                    <group expand="0" string="Group By">
+                    <filter string="group_site_id" context="{'group_by':'site_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        
+        
+        
+        
+        <record model="ir.actions.act_window" id="predict_action">
+            <field name="name">Predict action</field>
+            <field name="res_model">tsbd.predict</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <menuitem name="predict  menu" id="tsbd.predict_menu" parent="tsbd.menu_root" action="predict_action" />
+        
+        
+        
+        
+        
+	</data>
+</odoo>

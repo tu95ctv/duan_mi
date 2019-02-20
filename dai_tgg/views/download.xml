@@ -1,0 +1,59 @@
+<odoo>
+<data>
+<record id="download_bcn_and_p3_form" model="ir.ui.view">
+            <field name="name">downloadwizard.download.form</field>
+            <field name="model">downloadwizard.download</field>
+            <field name="inherit_id" ref="downloadwizard.download_all_model_form"></field>
+            <field name="arch" type="xml">
+            	<xpath expr="//button[2]" position="after">
+                        <button name="update_tvcv_diem_to_cvi"  attrs="{'invisible':[('model_name','!=','download_p3')]}"  string="Kiểm tra điểm ở Công việc có trùng với điểm ở thư viện" type="object" class="oe_highlight" groups="base.group_erp_manager" />
+            	</xpath>
+            	<!-- <field name="font_height"  position="attributes">
+            		<attribute name="attrs">{'invisible':['|',('model_name','=','download_bcn'),('model_name','=','download_p3')]}</attribute>
+            	</field> -->
+            	<field name="is_moi_sheet_moi_loai" position="before">
+            		<field name="date" attrs="{'invisible':[('model_name','!=','download_bcn'),('model_name','!=','download_p3')]}"></field>
+            		<field name="end_date" attrs="{'invisible':[('model_name','!=','download_p3')]}"></field>
+            		<field name="chon_thang" attrs="{'invisible':[('model_name','!=','download_p3')]}"></field>
+            		<field name="department_id" attrs="{'invisible':[('model_name','!=','download_p3')]}"></field>
+            		<field name="chi_tiet_hay_danh_sach" attrs="{'invisible':[('model_name','!=','download_p3')]}"></field>
+            		<field name="bcn_cvi_ids"></field>
+            		<field name="bcn_thue_bao_line_ids"></field>
+            		<field name="diem_line_ids"  attrs="{'invisible':[('model_name','!=','download_p3')]}">
+            				<tree>
+            					<field name="user_id"></field>
+            					<field name="user_id_count"></field>
+            					<field name="diemtc"></field>
+            					<field name="diemld"></field>
+            				</tree>
+            		</field>
+            		<field name="is_write_diem"  attrs="{'invisible':[('model_name','!=','download_p3')]}" groups="base.group_erp_manager"/>
+            		<field name="diff_diem_tvcv_count"  attrs="{'invisible':[('model_name','!=','download_p3')]}" groups="base.group_erp_manager"/>
+            	</field>
+            </field>
+            </record>   
+	  
+	  
+	   <act_window id="download_tvcv" name="Download TVCV" res_model="downloadwizard.download" src_model="tvcv" view_mode="form" multi="True" target="new" key2="client_action_multi" />
+       <act_window id="download_user" name="Download Danh sách Users" res_model="downloadwizard.download" src_model="res.users" view_mode="form" multi="True" target="new" key2="client_action_multi" />
+       <act_window id="download_bcn" name="Download Báo cáo ngày" res_model="downloadwizard.download" src_model="ctr" view_mode="form" multi="True" target="new" key2="client_action_multi" context="{'transfer_active_model':'download_bcn'}" />
+       <act_window id="download_cvi" name="Download list Công việc/ sự cố/sự vụ" res_model="downloadwizard.download" src_model="cvi" view_mode="form" multi="True" target="new" key2="client_action_multi"  />
+
+<menuitem id="dlcv_menu" parent="else_more_menu" action="dlcv_action" sequence="10" />
+ <menuitem name="Download Báo cáo ngày" id="dl_bcn_2" parent="else_more_menu" action="downloadwizard.downloadwizard_action" sequence="9" /> 
+
+
+<record model="ir.actions.act_window" id="downloadp3_action">
+         <field name="name">Download </field>
+         <field name="res_model">downloadwizard.download</field>
+         <field name="view_mode">form</field>
+         <field name="view_type">form</field>
+         <field name="context">{'transfer_active_model':'download_p3'}</field>
+         <field name="target">new</field>
+      </record>
+      
+ <menuitem name="Download P3" id="dl_p3" parent="else_more_menu" action="downloadp3_action" sequence="9" /> 
+
+
+</data>
+</odoo>

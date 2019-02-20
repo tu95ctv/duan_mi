@@ -1,0 +1,100 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="hcmaccount.list">
+      <field name="name">hcmaccount list</field>
+      <field name="model">hcmaccount.hcmaccount</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="hcmaccount.action_window">
+      <field name="name">hcmaccount window</field>
+      <field name="res_model">hcmaccount.hcmaccount</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="hcmaccount.action_server">
+      <field name="name">hcmaccount server</field>
+      <field name="model_id" ref="model_hcmaccount_hcmaccount"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="hcmaccount" id="hcmaccount.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="hcmaccount.menu_1" parent="hcmaccount.menu_root"/>
+    <menuitem name="Menu 2" id="hcmaccount.menu_2" parent="hcmaccount.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="hcmaccount.menu_1_list" parent="hcmaccount.menu_1"
+              action="hcmaccount.action_window"/>
+    <menuitem name="Server to list" id="hcmaccount" parent="hcmaccount.menu_2"
+              action="hcmaccount.action_server"/>
+    -->
+    
+     <record id="view_stock_return_picking_form_inherit_stock_account" model="ir.ui.view">
+            <field name="name">stock.return.picking.stock.account.form</field>
+            <field name="inherit_id" ref="stock_account.view_stock_return_picking_form_inherit_stock_account"/>
+            <field name="model">stock.return.picking</field>
+            <field name="arch" type="xml">
+         
+              <xpath expr="//field[@name='to_refund']" position="attributes">
+              		<attribute name="invisible">1</attribute>
+              </xpath>
+            </field>
+        </record>
+         
+         
+
+                  
+               <!--    
+        <menuitem name="fucking"
+            id="account.menu_finance"
+            groups="base.group_erp_manager"
+            web_icon="account_invoicing,static/description/icon.png"
+            sequence="40"/>
+  -->
+        <record id="account.menu_finance" model="ir.ui.menu">
+            <field name="active" eval="False"/>
+            <field name="groups_id" eval="[(6,0,[ref('account.group_account_manager')])]"></field>
+        </record>
+       
+       
+       <!-- 
+      <record id="base.default_user" model="res.users">
+        <field name="groups_id" eval="[(4,ref('account.group_account_manager'))]"/>
+    </record>
+    
+        <record id="account.group_account_invoice" model="res.groups">
+        <field name="name">Billing</field>
+        <field name="category_id" ref="base.module_category_accounting_and_finance"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+          -->
+  </data>
+</odoo>

@@ -1,0 +1,88 @@
+<odoo>
+    <data>
+        <record id="view_move_line_form_inherit" model="ir.ui.view">
+            <field name="name">stock.move.line.form.inherit</field>
+            <field name="model">stock.move.line</field>
+            <field name="inherit_id" ref="stock.view_move_line_form"></field>
+            <field name="arch" type="xml">
+                <field name="reference" position="after">
+                    <field name="picking_id"></field>
+                    <field name="inventory_id"></field>
+                </field>
+                <field name="reference" position="replace">
+                    <field name="ref_picking_id_or_inventory_id"></field>
+                </field>
+                <field name="lot_id" position="after">
+                    <field name="tinh_trang"></field>
+                    <field name="ghi_chu"></field>
+                </field>
+            </field>
+        </record>
+        <record id="view_move_form" model="ir.ui.view">
+            <field name="name">stock.move.form</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_picking_form"></field>
+            <field name="arch" type="xml">
+                <field name="move_dest_ids" position="before">
+                    <field name="move_orig_ids"></field>
+                </field>
+            </field>
+        </record>
+        <record id="view_stock_move_line_operation_tree_inherit" model="ir.ui.view">
+            <field name="name">stock.move.line.operations.tree</field>
+            <field name="model">stock.move.line</field>
+            <field name="inherit_id" ref="stock.view_stock_move_line_operation_tree"></field>
+            <field name="arch" type="xml">
+                <field name="location_id" position="attributes">
+                    <attribute name="context">{'product_id_for_search_quant_d4':parent.product_id}</attribute>
+                </field>
+                <field name="product_uom_qty" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="lot_id" position="attributes">
+                    <attribute name="context">{'default_product_id': parent.product_id, 'active_picking_id': picking_id, 'location_id_for_name_search_exist_in_quants_d4':location_id}</attribute>
+                </field>
+            </field>
+        </record>
+        <record id="view_move_line_tree_inherit" model="ir.ui.view">
+            <field name="name">stock.move.line.operations.tree</field>
+            <field name="model">stock.move.line</field>
+            <field name="inherit_id" ref="stock.view_move_line_tree"></field>
+            <field name="arch" type="xml">
+                <field name="reference" position="replace">
+                    <field name="ref_picking_id_or_inventory_id"></field>
+                </field>
+                <field name="product_id" position="after">
+                    <!-- <field name="pn_id" ></field> -->
+                    <field name="lot_id" string="Serial number"></field>
+                    <field name="inventory_id"></field>
+                    <field name="inventory_line_id"></field>
+                </field>
+            </field>
+        </record>
+        <!-- SEARCH -->
+        <record id="stock_move_line_view_search" model="ir.ui.view">
+            <field name="name">stock.move.line.search</field>
+            <field name="model">stock.move.line</field>
+            <field name="inherit_id" ref="stock.stock_move_line_view_search" />
+            <field name="arch" type="xml">
+                <field name="product_id" position="after">
+                    <field string="Serial number" name="lot_id"></field>
+                    <!-- <field string = "Part number" name="pn_id"></field> -->
+                </field>
+                <!-- 
+                <field name="product_id"/>
+                <field name="location_id" groups="stock.group_stock_multi_locations"/>
+                <field name="location_dest_id" groups="stock.group_stock_multi_locations"/>
+                <filter string="To Do" name="todo" domain="[('state','not in', ['done', 'draft'])]"/>
+                <filter string="Done" name="done" domain="[('state','=','done')]"/>
+                 -->
+                <filter name="incoming" position="replace" />
+                <filter name="outgoing" position="replace" />
+                <filter name="internal" position="replace" />
+                <filter name="manufacturing" position="replace" />
+            </field>
+        </record>
+        <menuitem id="stock_move_line_menu" action="stock.stock_move_line_action" parent="stock.menu_stock_warehouse_mgmt" sequence="31" name="Các dòng điều chuyển" />
+    </data>
+</odoo>

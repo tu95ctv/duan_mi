@@ -1,0 +1,37 @@
+user:
+allow_write_all_instance: False
+
+allow_write_field = True
+allow_write_field = False
+
+
+not_write: True 
+
+val == False ==> write
+
+
+
+write_all: True
+write_field: False     write_field--> False
+allow_write_from_False_to_not_false and val ==False --> write_field = True
+
+Write_all: False:
+write_field: True      write_field--> True
+
+
+wr_all:True,wr_field:True --> True
+wr_all:False, wr_field:False --> False
+
+if wr_field not declare:
+	wr_field = write_all
+else:
+	wr_field = wr_field
+	
+	
+allow_write_from_False_to_not_false = setting ['allow_write_from_False_to_not_false']	
+if wr_field ==False:
+	val ==False:
+		wr_field == True
+allow_write_from_False_to_not_false
+	
+	

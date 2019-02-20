@@ -1,0 +1,41 @@
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_inventory_line_categ_id
+#: model:ir.model.fields,field_description:tonkho.field_stock_quant_categ_id
+msgid "Internal Category"
+msgstr "Nhóm"
+
+#. module: base
+#: model:ir.model.fields,field_description:base.field_res_partner_parent_id
+#: model:ir.model.fields,field_description:base.field_res_users_parent_id
+msgid "Related Company"
+msgstr "Công ty"
+
+#. module: tonkho
+#: model:ir.ui.menu,name:tonkho.stock_move_line_menu
+#: model:ir.ui.view,arch_db:tonkho.view_production_lot_form
+msgid "Product Moves"
+msgstr "Các Dòng Ði?u Chuy?n"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_quant_tracking
+#: model:ir.ui.view,arch_db:tonkho.quant_search_view
+msgid "Tracking"
+msgstr "Có SN?"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_inventory_line_tracking
+#: model:ir.model.fields,field_description:tonkho.field_stock_move_line_tracking
+#: model:ir.model.fields,field_description:tonkho.field_stock_quant_tracking
+#: model:ir.ui.view,arch_db:tonkho.quant_search_view
+msgid "Tracking"
+msgstr "Có SN?"
+
+#. module: tonkho
+#: model:ir.model.fields,field_description:tonkho.field_stock_move_line_stock_quant_id
+msgid "Stock Quant"
+msgstr "L?y v?t tu trong kho"
+
+#. module: tonkho
+#: model:ir.ui.menu,name:tonkho.menu_action_location_form
+msgid "Các v? trí"
+msgstr "Các v? trí"

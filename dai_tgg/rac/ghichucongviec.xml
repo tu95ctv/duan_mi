@@ -1,0 +1,122 @@
+<openerp>
+  <data>
+  
+  <!-- GHI CHÚ CÔNG VIỆC -->
+      <record id="gccv_search" model="ir.ui.view">
+         <field name="name">gccv search</field>
+         <field name="model">gccv</field>
+         <field name="arch" type="xml">
+            <search string="Search SK">
+               <field name="name" />
+               <field name="noi_dung" />
+               <field name="thanh_cong_hay_that_bai" />
+               <field name="loi_code" />
+               <field name="gccv_type_ids" />
+               <field name="doi_lap_id" />
+               <field name="doi_lap_ids" />
+               <!-- <field name="cate_" /> -->
+               <!--<filter string="sự cố" name="su_co" domain="[('cate_','=','Sự cố đứt quang')]" />
+                    
+                    
+                    <group expand="0" string="Group By">
+                        <filter string="group theo cate sự kiện " domain="[]" context="{'group_by':'cate_'}" />
+                    </group>
+                    -->
+            </search>
+         </field>
+      </record>
+      <record model="ir.ui.view" id="ghichucongviec_form">
+         <field name="name">gccv Form</field>
+         <field name="model">gccv</field>
+         <field name="arch" type="xml">
+            <form string="ghichucongvie Tree">
+               <sheet>
+                  <group>
+                     <field name="name" />
+                     <field name="noi_dung" />
+                     <field name="thanh_cong_hay_that_bai" />
+                     <field name="loi_code" />
+                     <field name="gccv_type_ids" />
+                     <field name="doi_lap_id" />
+                     <field name="doi_lap_ids" />
+                     <field name="thac_mac" />
+                     <field name="ket_qua_du_doan" />
+                     <field name="ket_qua_thuc_te" />
+                     <field name="dung_voi_ket_qua_du_doan" />
+                     <field name="image_truoc_test" widget="image" width="800" />
+                     <field name="image_sau_test" widget="image" width="800" />
+                  </group>
+               </sheet>
+            </form>
+         </field>
+      </record>
+      <record model="ir.ui.view" id="ghichucongviec_list">
+         <field name="name">gccviec list</field>
+         <field name="model">gccv</field>
+         <field name="arch" type="xml">
+            <tree string="ghichucongviec">
+               <field name="name" />
+               <field name="noi_dung" />
+               <field name="thanh_cong_hay_that_bai" />
+               <field name="loi_code" />
+               <field name="gccv_type_ids" />
+               <field name="doi_lap_id" />
+               <field name="doi_lap_ids" />
+               <field name="image_truoc_test" widget="image" />
+               <field name="image_sau_test" widget="image" />
+               <field name="ket_qua_du_doan" />
+               <field name="ket_qua_thuc_te" />
+               <field name="dung_voi_ket_qua_du_doan" />
+            </tree>
+         </field>
+      </record>
+      <record model="ir.actions.act_window" id="ghichucongviec_action">
+         <field name="name">Ghi chú công việc</field>
+         <field name="res_model">gccv</field>
+         <field name="view_mode">tree,form</field>
+         <!--   <field name="view_id" ref="suco_list2"></field>-->
+      </record>
+      <!-- END GHI CHÚ CÔNG VIỆC -->
+      <!-- LOẠI GHI CHÚ CÔNG VIỆC -->
+      <record model="ir.ui.view" id="ghichucongviectype_form">
+         <field name="name">Comment Form</field>
+         <field name="model">gccvtype</field>
+         <field name="arch" type="xml">
+            <form string="ghichucongvie Tree">
+               <sheet>
+                  <group>
+                     <field name="name" />
+                     <field name="minh_hoa" />
+                     <field name="parent_id" />
+                     <field name="gccv_ids" />
+                  </group>
+               </sheet>
+            </form>
+         </field>
+      </record>
+      <record model="ir.ui.view" id="ghichucongviectype_list">
+         <field name="name">gccviec list</field>
+         <field name="model">gccvtype</field>
+         <field name="arch" type="xml">
+            <tree string="ghichucongviec">
+               <field name="name" />
+               <field name="minh_hoa" />
+               <field name="parent_id" />
+               <field name="gccv_ids" />
+            </tree>
+         </field>
+      </record>
+      <record model="ir.actions.act_window" id="gccvtype_action">
+         <field name="name">Ghi chú công việc</field>
+         <field name="res_model">gccvtype</field>
+         <field name="view_mode">tree,form</field>
+         <!--   <field name="view_id" ref="suco_list2"></field>-->
+      </record>
+      <!-- END LOẠI GHI CHÚ CÔNG VIỆC -->
+ <menuitem name="Ghi chú công việc menu" id="ghichucongviec_icon" sequence="1" />
+      <menuitem name="Ghi chú công việc" id="ghichucongviec_menu" parent="ghichucongviec_icon" sequence="1" action="ghichucongviec_action" />
+      <menuitem name="Loại ghi chú" id="ghichucongviec_type_menu" parent="ghichucongviec_icon" sequence="2" action="gccvtype_action" />
+  </data>
+</openerp>
+
+     

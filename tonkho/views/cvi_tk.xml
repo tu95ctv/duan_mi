@@ -1,0 +1,32 @@
+<odoo>
+    <data>
+       
+        <record model="ir.ui.view" id="cvi_form">
+            <field name="name">cv form inherit</field>
+            <field name="model">cvi</field>
+            <field name="inherit_id" ref="dai_tgg.cvi_form" />
+            <field name="arch" type="xml">
+                <field name="noi_dung" position="after">
+                    <field name="categ_id" ></field>
+                    <field name="thiet_bi_id" context="{'default_categ_id':categ_id}"  domain="[('categ_id','=',categ_id)]"></field>
+                </field>
+                <field name="cvi_cm_ids" position="attributes">
+                    <attribute name="context">{'is_comment':True}</attribute>
+                </field>
+            </field>
+        </record>
+        
+        
+        <record model="ir.ui.view" id="cvi_list_sample_inherit">
+            <field name="name">cv list inherit</field>
+            <field name="model">cvi</field>
+            <field name="inherit_id" ref="dai_tgg.cvi_list_sample" />
+            <field name="arch" type="xml">
+                <field name="loai_record" position="after">
+                    <field name="categ_id"></field>
+                    <field name="thiet_bi_id"></field>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

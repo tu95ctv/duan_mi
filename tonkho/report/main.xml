@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="paperformat_euro_lowmargin" model="report.paperformat">
+            <field name="name">European A4 low margin</field>
+            <field name="default" eval="True" />
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">5</field>
+            <field name="margin_bottom">5</field>
+            <field name="margin_left">10</field>
+            <field name="margin_right">5</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">0</field>
+            <field name="dpi">80</field>
+        </record>
+        <!-- 
+      <report string="In Biên Bản Bàn Giao" id="action_bao_cao_dieu_chuyen" model="stock.picking" 
+      report_type="qweb-pdf"
+       name="tonkho.bao_cao_dieu_chuyen"
+        file="abc.abc" 
+        paperformat="tonkho.paperformat_euro_lowmargin"
+        />
+         -->
+        <report string="In Biên Bản Bàn Giao theo move line" id="action_bcdc" model="stock.picking" report_type="qweb-pdf" name="tonkho.bcdc" file="abc.abc" paperformat="tonkho.paperformat_euro_lowmargin" />
+        <!-- 
+      <template id="tonkho.bao_cao_dieu_chuyen">
+         <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+               <div class="article o_report_layout_standard">
+                  <div class="page" style="font-family:Times New Roman; font-size:22px;">
+                     <t t-call="tonkho.bien_ban_description" />
+                     <t t-call="tonkho.full_table" />
+                     <t t-call="tonkho.reason" />
+                     <t t-call="tonkho.so_ban_in" />
+                     <t t-call="tonkho.ky_ten" />
+                  </div>
+               </div>
+            </t>
+         </t>
+      </template>
+       -->
+        <template id="tonkho.bcdc">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <div class="article o_report_layout_standard">
+                        <div class="page" style="font-family:Times New Roman; font-size:22px;">
+                            <t t-call="tonkho.bien_ban_description" />
+                            <t t-call="tonkho.table_theo_move_line" />
+                            <t t-call="tonkho.reason" />
+                            <t t-call="tonkho.so_ban_in" />
+                            <t t-call="tonkho.ky_ten" />
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+        <template id="tonkho.reason">
+            <t t-if="o.ly_do">
+                <div>Lý do: <span t-field="o.ly_do" />.
+             </div>
+            </t>
+        </template>
+        <template id="tonkho.so_ban_in">
+            <div>
+         Biên bản này được in thành
+         <span t-field="o.so_ban_in" />
+         bản.
+         <!-- 
+         Bên nhận giữ
+         <span t-field="o.ben_nhan_giu" />
+         bản, bên giao nhận
+         <span t-field="o.ben_giao_giu" />
+         bản.
+          --></div>
+        </template>
+        <template id="ky_ten">
+            <t t-foreach="o.generate_partner_bootstrap_ti_le()" t-as="alist">
+                <div class="row" style="margin-top:50px;">
+                    <t t-set="boostrap_ti_le" t-value="int(12/len(alist))" />
+                    <t t-foreach="alist" t-as="atuple">
+                        <t t-set="title" t-value="atuple[0]" />
+                        <t t-set="names" t-value="atuple[1]" />
+                        <t t-call="tonkho.mot_ben_ky"></t>
+                    </t>
+                </div>
+            </t>
+        </template>
+        <template id="mot_ben_ky">
+            <div t-att-class="'col-xs-%s'%boostrap_ti_le">
+            <div class="row">
+                <p class="text-center">
+                    <strong>
+                        <t t-esc="title"></t>
+                    </strong>
+                </p>
+                </div>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <div class="row">
+                    <t t-foreach="names" t-as="name">
+                        <t t-set="boostrap_ti_le_2" t-value="int(12/len(names))" />
+                        <div t-att-class="'col-xs-%s'%boostrap_ti_le_2 if boostrap_ti_le_2 !=12 else None">
+                            <p class="text-center" t-esc="name"></p>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </template>
+        <!-- <template id="ky_ten">
+        
+         <div class="row" style="margin-top:50px;">
+           <t t-set="alist" t-value="o.generate_partner_bootstrap_ti_le()"></t>
+           <t t-set="boostrap_ti_le" t-value="int(12/len(alist))"/>
+           <t t-foreach="alist" t-as="atuple">
+           		<t t-set="title" t-value="atuple[0]"/>
+           		<t t-set="name" t-value="atuple[1]"/>
+           		<t t-call="tonkho.mot_ben_ky">
+           </t>
+			</t>
+         </div>
+         
+      </template> -->
+    </data>
+</odoo>

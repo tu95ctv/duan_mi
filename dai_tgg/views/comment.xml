@@ -1,0 +1,68 @@
+<openerp>
+  <data>
+ <!-- COMMENT -->
+
+      <!-- 
+      
+      <record model="ir.ui.view" id="comment_form">
+         <field name="name">Comment Form</field>
+         <field name="model">cvi</field>
+         <field name="arch" type="xml">
+            <form string="Comment Form">
+               <sheet>
+                  <group>
+                     <group>
+                        <field name="noi_dung" />
+              			 <field name="loai_record" />
+                        <field name="file_ids" />
+                     </group>
+                     <group>
+                        <field name="doitac_ids" />
+                     </group>
+                  </group>
+               </sheet>
+            </form>
+         </field>
+      </record>
+       
+      
+      
+      <record model="ir.ui.view" id="comment_list">
+         <field name="name">Comment list</field>
+         <field name="priority">16</field>
+         <field name="model">cvi</field>
+         <field name="inherit_id" ref="dai_tgg.cvi_list_sample"></field>
+         <field name="mode">primary</field>
+         <field name="arch" type="xml">
+         <xpath expr="//tree" position="attributes">
+              <attribute name="create">false</attribute>
+            </xpath>
+            <field name="loai_record" position="replace"/>
+            <field name="user_id" position="replace"/>
+</field>
+      </record>
+      
+      -->
+
+      
+      
+       <record model="ir.actions.act_window" id="comment_action">
+         <field name="name">Comment</field>
+         <field name="res_model">cvi</field>
+         <field name="view_mode">tree,form</field>
+         <field name="context">{'default_loai_record':'Comment'}</field>
+         <field name="domain">[('loai_record','=','Comment')]</field>
+         <field name="search_view_id" ref="suco_search" />
+      </record>
+        
+    <menuitem id="comment_menu" parent="ctrmenu_menu" action="comment_action" sequence="10" />
+   <!--  <menuitem id="comment_menu" parent="else_more_menu" action="comment_action" sequence="6" /> -->
+      
+      
+      
+      
+      
+      <!--END COMMENT -->
+        
+  </data>
+</openerp>

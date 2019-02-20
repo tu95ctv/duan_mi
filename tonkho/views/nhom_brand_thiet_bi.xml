@@ -1,0 +1,101 @@
+<odoo>
+    <data>
+        <!--  brand -->
+        <record id="brand_form" model="ir.ui.view">
+            <field name="name">tonkho.brand.form</field>
+            <field name="model">tonkho.brand</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"></field>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record id="brand_tree" model="ir.ui.view">
+            <field name="name">tonkho.brand.tree</field>
+            <field name="model">tonkho.brand</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"></field>
+                </tree>
+            </field>
+        </record>
+        <record id="brand_action" model="ir.actions.act_window">
+            <field name="name">Hãng sản xuất</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">tonkho.brand</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain"></field>
+            <field name="view_type">form</field>
+        </record>
+        <!--  thiet bi -->
+        <record id="thietbi_form" model="ir.ui.view">
+            <field name="name">tonkho.thietbi.form</field>
+            <field name="model">tonkho.thietbi</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"></field>
+                        <field name="brand_id"></field>
+                        <field name="categ_id"></field>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record id="thietbi_tree" model="ir.ui.view">
+            <field name="name">tonkho.thietbi.tree</field>
+            <field name="model">tonkho.thietbi</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"></field>
+                    <field name="categ_id"></field>
+                    <field name="brand_id"></field>
+                </tree>
+            </field>
+        </record>
+        <record id="thiet_bi_action" model="ir.actions.act_window">
+            <field name="name">Thiết bị</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">tonkho.thietbi</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain"></field>
+            <field name="view_type">form</field>
+        </record>
+        <!-- categ -->
+        <record id="categ_tree" model="ir.ui.view">
+            <field name="name">product.category.tree</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_list_view"></field>
+            <field name="arch" type="xml">
+                    <field name="display_name" position="before">
+                    <field name="stt_for_report"></field>
+                    <field name="name_khong_dau" groups="base.group_erp_manager"></field>
+                    <field name="name_viet_tat" groups="base.group_erp_manager"></field>
+                    </field>
+            </field>
+        </record>
+        <record id="categ_search" model="ir.ui.view">
+            <field name="name">product.category.search</field>
+            <field name="model">product.category</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="Tên có hoặc không dấu" filter_domain="['|','|',('name','ilike',self),('name_khong_dau','ilike',self),('name_viet_tat','ilike',self)]"></field>
+                </search>
+            </field>
+        </record>
+        <record id="categ_action" model="ir.actions.act_window">
+            <field name="name">Nhóm</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.category</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain"></field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="tonkho.categ_tree"></field>
+            <field name="search_view_id" ref="categ_search"></field>
+        </record>
+        <menuitem id="menu_stock_quant_action_product" action="brand_action" parent="stock.menu_stock_inventory_control" sequence="6" />
+        <menuitem id="thietbi_menu" action="thiet_bi_action" parent="stock.menu_stock_inventory_control" sequence="6" />
+        <menuitem id="categ_menu" action="categ_action" parent="stock.menu_stock_inventory_control" sequence="5" />
+    </data>
+</odoo>

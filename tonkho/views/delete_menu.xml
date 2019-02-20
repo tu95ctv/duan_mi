@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!--  
+ <delete model="ir.ui.menu" id="stock.menu_stock_scrap"/>
+ <delete model="ir.ui.menu" id="stock.menu_procurement_compute"/>
+ <delete model="ir.ui.menu" id="stock.menu_reordering_rules_config"/>
+  <delete model="ir.ui.menu" id="stock.menu_valuation"/>
+  <delete model="ir.ui.menu" id="stock.stock_move_menu"/>
+  <delete model="ir.ui.menu" id="stock.stock_move_line_menu"/>
+  <delete model="ir.ui.menu" id="stock.menu_warehouse_report"/>
+  -->
+        <!--  xóa cái dashboard
+  <delete model="ir.ui.menu" id="stock.stock_picking_type_menu"/>
+  
+   -->
+        <record id="hr.menu_hr_root" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6,0, [ref('base.group_erp_manager')])]" />
+        </record>
+        <!-- 
+     <menuitem
+            id="hr.menu_hr_root"
+            name="Employees"
+            groups="base.group_erp_manager"
+            web_icon="hr,static/description/icon.png"
+            sequence="75"/>
+             -->
+        <record id="mail.mail_channel_menu_root_chat" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6,0, [ref('base.group_erp_manager')])]" />
+        </record>
+        <!-- 
+    <menuitem
+        id="mail.mail_channel_menu_root_chat"
+        name="Discuss"
+        action="mail.mail_channel_action_client_chat"
+        web_icon="mail,static/description/icon.png"
+        groups="base.group_erp_manager"
+        sequence="1"/>
+        
+     -->
+        <record id="stock.menu_stock_config_settings" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6,0, [ref('base.group_erp_manager')])]" />
+        </record>
+        <!-- 
+      <menuitem id="stock.menu_stock_config_settings" name="Configuration" parent="stock.menu_stock_root"
+        sequence="100" groups="base.group_erp_manager"/>
+       -->
+        <!-- 
+      <menuitem
+        id="stock.menu_stock_scrap"
+        name="Scrap"
+        parent="stock.menu_stock_warehouse_mgmt"
+        action="stock.action_stock_scrap"
+        sequence="99"
+        groups="base.group_erp_manager"
+        />
+        -->
+        <record id="stock.menu_stock_scrap" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6,0, [ref('base.group_erp_manager')])]" />
+        </record>
+        <record id="stock.menu_warehouse_report" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6,0, [ref('base.group_erp_manager')])]" />
+        </record>
+        <record id="stock.menu_procurement_compute" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6,0, [ref('base.group_erp_manager')])]" />
+        </record>
+        <record id="stock.menu_reordering_rules_config" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6,0, [ref('base.group_erp_manager')])]" />
+        </record>
+        <!--  -->
+        <record id="stock.stock_picking_type_menu" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6,0, [ref('base.group_erp_manager')])]" />
+        </record>
+        <!-- 
+       <menuitem
+          action="stock.stock_picking_type_action"
+          id="stock.stock_picking_type_menu"
+          parent="stock.menu_stock_root" sequence="0"
+          name="Dashboard"
+          groups="base.group_erp_manager"
+          />   
+             -->
+        <!-- <delete model="ir.ui.menu" id="mail.mail_channel_menu_root_chat"/> -->
+        <!-- 
+     <menuitem
+            action="stock.stock_picking_type_action"
+            id="stock.stock_picking_type_menu"
+            parent="stock.menu_stock_root" sequence="0"
+            name="Dashboard"
+            groups="base.group_erp_manager"
+            />   
+        -->
+        <!-- 
+       <menuitem
+        id="mail.mail_channel_menu_root_chat"
+        name="Discuss"
+        action="mail.mail_channel_action_client_chat"
+        web_icon="mail,static/description/icon.png"
+        groups="base.group_erp_manager"
+        sequence="1"/>
+             
+             -->
+    </data>
+</odoo>

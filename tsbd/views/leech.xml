@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="leech_list">
+            <field name="name">tsbd.leech.list</field>
+            <field name="model">tsbd.leech</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="all_match_link" />
+                    <field name="link" />
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="leech_form">
+            <field name="name">tsbd.leech.form</field>
+            <field name="model">tsbd.leech</field>
+            <field name="arch" type="xml">
+                <form>
+                <sheet>
+                <header>
+                    <button name="leech_a_match" string="leech_a_match" type="object"  class="oe_highlight" ></button> 
+                    <button name="leech_all_match" string="leech_all_match" type="object"  class="oe_highlight" ></button>
+                    <button name="leech_all_season" string="leech_all_season" type="object"   ></button>
+                    <button name="leech_all_season_auto_get_period" string="leech_all_season_auto_get_period" type="object"   ></button>
+                    <button name="test" string="Test" type="object"  class="oe_highlight" ></button> 
+                    <button name="clean_match" string="clean_match" type="object"  class="oe_highlight" ></button> 
+                    <button name="trig" string="trig" type="object"  class="oe_highlight" ></button> 
+                    <button name="bxh" string="bxh" type="object"  class="oe_highlight" ></button> 
+                </header>
+                    <group>
+                        <field name="link"></field>
+                        <field name="all_match_link"></field>
+                        <field name="all_match_link_select"></field>
+                        <field name="count"></field>
+                        <field name="is_get_thong_ke"></field>
+                        <field name ="cate_id"></field>
+                        <field name ="bxh_ids"></field>
+                        <field name="log"></field>
+                        <field name="log1"></field>
+                  		<field name ="match_ids"></field>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="leech_action">
+            <field name="name">leech action</field>
+            <field name="res_model">tsbd.leech</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <!-- menu categories -->
+        <menuitem name="leech menu" id="tsbd.leech_menu" parent="tsbd.menu_root" action="leech_action" />
+    </data>
+</odoo>

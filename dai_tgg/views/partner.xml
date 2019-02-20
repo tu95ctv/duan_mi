@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="partner_dai_tgg_form_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="priority" eval="2" />
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <field name="function" position="replace"></field>
+                <xpath expr="//button[@name='toggle_active']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//group[1]/group[1]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <!-- 
+                <field name="vat" position="attributes">
+                	<field name="invisbile">1</field>
+                </field>
+                 -->
+                <field name="category_id" position="replace"></field>
+                <field name="website" position="replace"></field>
+                <xpath expr="//field[@name='lang']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <field name="title" position="replace"></field>
+                <field name="mobile" position="replace"></field>
+                <xpath expr="//notebook" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <field name="email" position="after">
+                    <field name="job_id" string="Chức vụ"></field>
+                    <field name="department_id"></field>
+                </field>
+            </field>
+        </record>
+       
+        <record model="ir.ui.view" id="partner_list_inherit">
+            <field name="name">Đối tác list</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree" />
+            <field name="arch" type="xml">
+       
+                <field name="is_company" position="replace"></field>
+                <xpath expr="//field[@name='parent_id']" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                    <attribute name="string">Công Ty</attribute>
+                </xpath>
+                <xpath expr="//field[@name='parent_id']" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                </xpath>
+                <xpath expr="//field[@name='email']" position="attributes">
+                    <attribute name="string">Email</attribute>
+                </xpath>
+                <field name="email" position="after">
+                    <field name="department_id"></field>
+                    <field name="job_id" string="Chức vụ"></field>
+                    <field name="company_type" string="Cá nhân hay công ty"></field>
+                    <!-- 
+            	<field name="name_khong_dau"></field>
+            	<field name="name_viet_tat"></field>
+            	 -->
+                </field>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_res_partner_filter">
+            <field name="name">res.partner.search.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter" />
+            <field name="arch" type="xml">
+                <filter name="salesperson" position="replace" />
+                <!--<filter name="group_country" position="replace" />  -->
+                <field name="name" position="attributes">
+                    <attribute name="filter_domain">['|','|','|','|',('display_name','ilike',self),('ref','=',self),('email','ilike',self),('name_khong_dau','ilike',self),('name_viet_tat','ilike',self)]</attribute>
+                    <attribute name="string">Name hoặc Mail hoặc Tên không dấu hoặc Tên Viết Tắt</attribute>
+                </field>
+                
+                <!-- <filter name="group_company" position="after">
+                    <filter name="group_is_company" string="Công ty hay cá nhân" context="{'group_by': 'is_company'}" />
+                    <filter name="group_job_id" string="Chức vụ" context="{'group_by': 'job_id'}" />
+                </filter>
+                 -->
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="partner_action">
+            <field name="name">Đối tác (Partner)</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    
+        <menuitem name="Đối Tác" id="partner_menu" parent="else_more_menu" action="partner_action" sequence="3" />
+    </data>
+</odoo>

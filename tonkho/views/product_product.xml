@@ -1,0 +1,200 @@
+
+
+<odoo>
+    <data>
+        <record id="product_form_view_procurement_button_inherit" model="ir.ui.view">
+            <field name="name">product.template.product.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="stock.product_form_view_procurement_button" />
+            <field name="arch" type="xml">
+                <field name="lst_price" position="replace" />
+                 <field name="uom_po_id" position="replace"></field>
+                <field name="barcode" position="replace"></field>
+                
+                <xpath expr="//header" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                
+                <field name="sale_ok" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <xpath expr="//label[@for='sale_ok']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <field name="purchase_ok" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <xpath expr="//label[@for='purchase_ok']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//label[@for='standard_price']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <field name="standard_price" position="replace" />
+                <field name="type" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                
+                
+                <field name="categ_id" position="after">
+                    <field name="pn"></field>
+                    <field name="tracking" />
+                    <field name="write_date"></field>
+                    <field name="create_date"></field>
+                </field>
+                
+                <field name="default_code" position="replace" />
+                
+                
+                <field name="uom_id" position="after">
+                    <field name="thiet_bi_id" />
+                    <field name="brand_id" />
+                    <field name="invisible_toc_do_field" invisible="1"></field>
+                    <field name="toc_do_id" attrs="{'invisible': [('invisible_toc_do_field','=',True)]}"></field>
+                     <field name="qty_available_du_phong"></field>
+                     <field name="qty_available_dang_chay"></field>
+                     <field name="qty_available_dai_hcm"></field>
+                     
+                </field>
+                
+                
+                <xpath expr="//page[1]/group" position="inside">
+                		 <group>
+                    <field name="quant_ids" />
+                    </group>
+                </xpath>
+                
+                
+                
+               
+                <!-- 
+                <notebook position="before">
+                <group>
+                    <field name="quant_ids" />
+                    </group>
+                </notebook>
+                 -->
+                <!-- xóa 2 nút on hand và forcast
+                  -->
+                  
+                  <xpath expr="//button[1]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[2]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+           
+       
+                
+             
+                 <xpath expr="//button[3]" position="attributes">
+                    <attribute name="groups">base.group_erp_manager</attribute>
+                </xpath> <!-- nút product move -->
+                
+               <xpath expr="//button[4]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>  
+               
+                <xpath expr="//button[5]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[6]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                
+                    <xpath expr="//button[7]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                
+                
+                <xpath expr="//button[8]" position="attributes">
+                    <attribute name="groups">base.group_erp_manager</attribute>
+                </xpath>
+                
+                <xpath expr="//page[2]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//page[3]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//page[4]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//page[4]" position="after">
+                    <page string="Serial numbers">
+                        <group>
+                            <field name="lot_ids"></field>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+        
+        
+        <record id="product_product_tree_view_ỉnherit" model="ir.ui.view">
+            <field name="name">product.template.stock.tree.inherit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_product_tree_view" />
+            <field name="arch" type="xml">
+                <tree position="attributes">
+                    <attribute name="decoration-info"></attribute>
+                    <attribute name="decoration-danger"></attribute>
+                </tree>
+                <field name="uom_id" position="replace" />
+                <field name="default_code" position="replace" />
+                <field name="barcode" position="replace" />
+                <field name="lst_price" position="replace" />
+                <field name="name" position="after">
+                   <field name="id" /> 
+                    <field name="pn"></field>
+                    <field name="categ_id" />
+                    <field name="thiet_bi_id" />
+                    <field name="brand_id" />
+                    <field name="uom_id" />
+                    <field name="tracking" />
+                    <field name="toc_do_id"></field>
+                    <field name="pn_replace" groups="tonkho.show_thong_tin_khong_dau"></field>
+                    <field name="name_khong_dau" groups="tonkho.show_thong_tin_khong_dau"></field>
+                    <field name="name_viet_tat" groups="tonkho.show_thong_tin_khong_dau"></field>
+                    <!-- base.group_erp_manager -->
+                    <field name="lot_ids"></field>
+                </field>
+                <field name="qty_available" position="replace"></field>
+                <field name="virtual_available" position="replace">
+                     <field name="qty_available_du_phong"></field>
+                     <field name="qty_available_dang_chay"></field>
+                    <field name="qty_available_dai_hcm"></field>
+                    <field name="write_date"></field>
+                    <field name="create_date"></field>
+                </field>
+            </field>
+        </record>
+        <record id="product_search_form_view_tonkho" model="ir.ui.view">
+            <field name="name">product.product.search</field>
+            <field name="model">product.product</field>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="Tên có dấu hoặc không dấu hoặc part number" filter_domain="['|','|','|','|',('name','ilike',self),('name_khong_dau','ilike',self),('name_viet_tat','ilike',self),('pn','ilike',self),('pn_replace','ilike',self)]"></field>
+                    <field string="Tìm vật tư có trong kho" name="stock_location_id_selection" filter_domain="[('quant_ids.quantity','&gt;=',1),('quant_ids.location_id','ilike',self)]" />
+                    <field name="pn" filter_domain="['|',('pn','ilike',self),('pn_replace','ilike',self)]"></field>
+                    <group>
+                        <filter name="group_by_tracking" string="Có SN hay Không" domain="[]" context="{'group_by':'tracking'}" />
+                        <filter name="group_by_uom_id" string="Đơn vị tính" domain="[]" context="{'group_by':'uom_id'}" />
+                        <filter name="group_by_categ_id" string="Nhóm" domain="[]" context="{'group_by':'categ_id'}" />
+                        <filter string="Vật tư có tồn tại trong bất cứ kho nào" name="quant_ids" domain="[('quant_ids.quantity','&gt;=',1)]" />
+                        <filter string="Vật tư không  có số lượng" name="quant_ids" domain="[('quant_ids','=',False)]" />
+                        <field string="Tìm vật tư có trong kho này" name="stock_location_id_selection" filter_domain="[('quant_ids.quantity','&gt;=',1),('quant_ids.location_id','ilike',self)]" />
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="product_product_action">
+            <field name="name">Vật tư</field>
+            <field name="res_model">product.product</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="product_search_form_view_tonkho"></field>
+        </record>
+        <menuitem id="product_product_menu" parent="stock.menu_stock_inventory_control" action="product_product_action" name="Vật tư" sequence="1" />
+    </data>
+</odoo>

@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <record id="download_quants_and_product_form" model="ir.ui.view">
+            <field name="name">downloadwizard.download.form</field>
+            <field name="model">downloadwizard.download</field>
+            <field name="inherit_id" ref="downloadwizard.download_all_model_form"></field>
+            <field name="arch" type="xml">
+                <field name="is_moi_sheet_moi_loai" position="after">
+                    <field name="is_xuat_dc" attrs="{'invisible':[('model_name','!=','stock.quant')]}"></field>
+                    <field name="is_xuat_kho_dc" attrs="{'invisible':[('model_name','!=','stock.quant')]}"></field>
+                    <field name="parent_location_id" domain="[('is_kho_cha','=',True)]" attrs="{'invisible':[('model_name','!=','stock.quant'),('model_name','!=','product.product'),('model_name','!=','product.template')]}"></field>
+                    <field name="parent_location_runing_id" domain="[('is_kho_cha','=',True)]" attrs="{'invisible':[('model_name','!=','product.product'),('model_name','!=','product.template')]}"></field>
+                	 <field name="kho_line_ids">
+                	 	<tree>
+                	 	<field name="location_id"></field>
+                	 	<field name="name_categ"></field>
+                	 	<field name="quantity"></field>
+                	 	</tree>
+                	 </field>
+                </field>
+            </field>
+        </record>
+        <act_window id="downloadquants" name="Download số lượng trong kho" res_model="downloadwizard.download" src_model="stock.quant" view_mode="form" multi="True" target="new" key2="client_action_multi" context="{'download_from_model':'tonkho'}" />
+        <act_window id="download_product" name="Download vật tư" res_model="downloadwizard.download" src_model="product.product" view_mode="form" multi="True" target="new" key2="client_action_multi" context="{'download_from_model':'tonkho'}" />
+        <act_window id="download_template" name="Download Template" res_model="downloadwizard.download" src_model="product.template" view_mode="form" multi="True" target="new" key2="client_action_multi" context="{'download_from_model':'tonkho'}" />
+        
+        <record model="ir.actions.act_window" id="download_quants_action">
+            <field name="name">Download </field>
+            <field name="res_model">downloadwizard.download</field>
+            <field name="view_mode">form</field>
+            <field name="view_type">form</field>
+            <field name="target">new</field>
+            <field name="context">{'transfer_active_model':'stock.quant','download_from_model':'tonkho'}</field>
+        </record>
+        <menuitem name="Download Kho" id="dl_stock_quant" parent="stock.menu_stock_inventory_control" action="download_quants_action" sequence="8" />
+    </data>
+</odoo>

@@ -1,0 +1,152 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="match_form">
+            <field name="name">match.form</field>
+            <field name="model">tkbd.match</field>
+            <field name="arch" type="xml">
+                <form>
+                <sheet>
+                    <group string="Hai Đội">
+                        <group >
+                            <field name="name" />
+                        </group>
+                        <group>
+                            <field name="ti_le" />
+                        </group>
+                        <group string="Đội Nhà">
+                            <field name="team_1" />
+                            <field name="score_1" />
+                            <field name="chu" />
+                            <field name="ti_le_float_1" />
+                            <field name="thang_thua_1" />
+                            <field name="tien_thang_thua_1" />
+                        </group>
+                        <group string="Đội Khách">
+                            <field name="team_2" />
+                            <field name="score_2" />
+                            <field name="khach" />
+                            <field name="ti_le_float_2" />
+                            <field name="thang_thua_2" />
+                            <field name="tien_thang_thua_2" />
+                        </group>
+                    </group>
+                    <group string="Over Under" name="over_under">
+                        <group string="Tài">
+                    	   <field name="ti_le_tai_xiu_char"></field>
+                            <field name="tien_an_tai"></field>
+                            <field name="thang_thua_tai"></field>
+                        </group>
+                        <group string="Xỉu">
+                            <field name="ti_le_tai_xiu_float"></field>
+                            <field name="tien_an_xiu"></field>
+                            <field name="thang_thua_xiu"></field>
+                        </group>
+                    </group>
+                    </sheet>
+                </form>
+                
+            </field>
+        </record>
+        <record model="ir.ui.view" id="match_list">
+            <field name="name">match.list</field>
+            <field name="model">tkbd.match</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="team_1" />
+                    <field name="score_1" />
+                    <field name="team_2" />
+                    <field name="score_2" />
+                </tree>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="tkbd.match_action">
+            <field name="name">match window</field>
+            <field name="res_model">tkbd.match</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <!-- -team -->
+        <record model="ir.ui.view" id="team_list">
+            <field name="name">tkbd list</field>
+            <field name="model">tkbd.team</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+        
+        
+        
+             <record model="ir.actions.act_window" id="tkbd.team_action">
+            <field name="name">tkbd window</field>
+            <field name="res_model">tkbd.team</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        
+        <!-- bet -->
+        
+     <record model="ir.ui.view" id="bet_list">
+            <field name="name">bet.list</field>
+            <field name="model">tkbd.bet</field>
+            <field name="arch" type="xml">
+                <tree>
+                     <field name="name" />
+                    <field name="team_1" />
+                    <field name="score_1" />
+                    <field name="team_2" />
+                    <field name="score_2" />
+                </tree>
+            </field>
+        </record>
+        
+        
+            <record model="ir.ui.view" id="bet_form">
+            <field name="name">bet.form.inherit</field>
+            <field name="model">tkbd.bet</field>
+            <field name="inherit_id" ref="match_form"></field>
+            <field name="arch" type="xml">
+            	
+            	<xpath expr="//group[@name='over_under']" position="after">
+            		<group>
+            		<group>
+            			<field name="match_id"></field>
+            			<field name="score_1_current"></field>
+            			<field name="tien_cuoc"></field>
+            		</group>
+            		<group>
+            			<field name="team_id" domain="['|',('id','=',team_1),('id','=',team_2)]"></field>
+            			<field name="score_2_current"></field>
+            			<field name="tien_thang_thua"></field>
+            		</group>
+            		</group>
+            	</xpath>
+            </field>
+        </record>
+        
+        
+        
+     <record model="ir.actions.act_window" id="tkbd.bet_action">
+            <field name="name">bet window</field>
+            <field name="res_model">tkbd.bet</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="bet_form"></field>
+        </record>
+        
+        <record id="bet_act_link_view" model="ir.actions.act_window.view">
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="bet_list"/>
+        <field name="act_window_id" ref="bet_action"/>
+    </record>
+   
+     
+        <menuitem name="tkbd" id="tkbd.menu_root" />
+        <menuitem name="Menu 1" id="tkbd.menu_1" parent="tkbd.menu_root" />
+        <menuitem name="Team" id="tkbd.menu_1_list" parent="tkbd.menu_1" action="tkbd.team_action" sequence="2" />
+        <menuitem name="Match" id="tkbd.menu_2_list" parent="tkbd.menu_1" action="tkbd.match_action" sequence="1" />
+        <menuitem name="Bet" id="tkbd.menu_3_list" parent="tkbd.menu_1" action="tkbd.bet_action" sequence="1" />
+    </data>
+</odoo>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <data>
+        <template id="assets_backend" name="tonkho assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/tonkho/static/src/css/style.css"/>
+            </xpath>
+        </template>
+    </data>

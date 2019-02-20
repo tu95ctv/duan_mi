@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="stock_inventory_line_tree" model="ir.ui.view">
+            <field name="name">stock.inventory.line.tree</field>
+            <field name="model">stock.inventory.line</field>
+            <field name="inherit_id" ref="stock.stock_inventory_line_tree2"></field>
+            <field name="arch" type="xml">
+                <field name="product_id" position="after">
+                    <field name="stt"></field>
+                    <field name="categ_id"></field>
+                    <field name="tracking"></field>
+                </field>
+              
+            </field>
+        </record>
+        <record id="action_inventory_line_tonkho" model="ir.actions.act_window">
+            <field name="name">Inventory Lines</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">stock.inventory.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <!-- <field name="view_id" ref="stock_inventory_line_tree" /> -->
+        </record>
+      <!--   <menuitem action="action_inventory_line_tonkho" id="action_inventory_line_menu" parent="stock.menu_stock_inventory_control" sequence="30" groups="base.group_erp_manager" />-->
+       <menuitem action="action_inventory_line_tonkho" id="action_inventory_line_menu" parent="stock.menu_stock_warehouse_mgmt" sequence="32" groups="base.group_erp_manager" />
+      
+    </data>
+</odoo>

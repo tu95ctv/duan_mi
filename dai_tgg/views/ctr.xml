@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+   <data>
+      <record id="ctr_search" model="ir.ui.view">
+         <field name="name">ca truc search</field>
+         <field name="priority" eval="1" />
+         <field name="model">ctr</field>
+         <field name="arch" type="xml">
+            <search string="Search ca truc">
+               <field name="member_ids" />
+               <field name="id" />
+               <!-- <field name="cvi_ids" string="search theo loại hoặc nội dung hoặc tv công việc, loại sự cố, sự vụ " filter_domain="['|','|','|','|',('cvi_ids.name','ilike',self),('cvi_ids.tvcv_id.name','ilike',self),('cvi_ids.tvcv_id.name_khong_dau','ilike',self),('cvi_ids.noi_dung','ilike',self),('cvi_ids.noi_dung_khong_dau','ilike',self)]" /> -->
+               <field name="cvi_ids" string="search theo loại hoặc nội dung hoặc tv công việc, loại sự cố, sự vụ " filter_domain="['|',('cvi_ids.noi_dung','ilike',self),('cvi_ids.tvcv_id.name','ilike',self)]" />
+               <group string="Group By Đơn vị">
+                  <filter string="Đơn Vị" context="{'group_by' : 'department_id'}" />
+                  <filter string="date" context="{'group_by' : 'date'}" />
+                  <filter string="month" context="{'group_by' : 'date:month'}" />
+               </group>
+            </search>
+         </field>
+      </record>
+      <record model="ir.ui.view" id="ctr_form">
+         <field name="name">ctr.form</field>
+         <field name="model">ctr</field>
+         <field name="arch" type="xml">
+            <form string="Ca Trực Form">
+               <sheet>
+                  <group>
+                     <group>
+                     	<field name="id" invisible="1"/>
+                        <field name="name" />
+                        <field name="department_id" />
+                        <field name="date" />
+                        <field name="ca" />
+                        <field name="gio_bat_dau_ca" invisible="1" />
+                        <field name="gio_ket_thuc_ca" invisible="1" />
+                     </group>
+                     <group>
+                        <field name="member_ids"
+                         domain="[('department_id','=',department_id)]">
+                           <tree>
+                              <field name="name" string="Tên người Trực" />
+                              <field name="department_id" />
+                           </tree>
+                        </field>
+                     </group>
+                  </group>
+                  <notebook>
+                     <page string="Công việc/ Sự cố/ Sự vụ">
+                        <field name="cvi_ids" context="{'member_ids':member_ids}" /><!-- ,'tree_view_ref':'dai_tgg.cvi_list_sample' -->
+                     </page>
+                     <page string="Tồn đọng của những ca trước">
+                        <group>
+                           <field name="ton_dong_show_number"></field>
+                           <field name="ton_dong_ca_truoc_ids"  context="{'member_ids':member_ids}">
+                           </field>
+                        </group>
+                        <group>
+                        </group>
+                     </page>
+                  </notebook>
+               </sheet>
+            </form>
+         </field>
+      </record>
+      <record id="ctr_list" model="ir.ui.view">
+         <field name="name">Truc ca</field>
+         <field name="model">ctr</field>
+         <field name="arch" type="xml">
+            <tree>
+               <field name="id" />
+               <field name="date" />
+               <field name="ca" />
+               <field name="cvi_show" />
+               <field name="member_ids" widget="many2many_tags"/>
+               <field name="department_id" />
+               <field name="create_uid" string="Người tạo" groups="dai_tgg.show_thong_tin_create_write" />
+               <field name="write_uid" string="Người sửa" groups="dai_tgg.show_thong_tin_create_write" />
+               <field name="create_date" string="Ngày giờ Tạo" groups="dai_tgg.show_thong_tin_create_write" />
+               <field name="write_date" string="Ngày giờ sửa" groups="dai_tgg.show_thong_tin_create_write" />
+            </tree>
+         </field>
+      </record>
+      <record model="ir.actions.act_window" id="ctr_action">
+         <field name="name">Ca Trực</field>
+         <field name="res_model">ctr</field>
+         <field name="groups" eval="[(4, ref('base.group_user'))]" />
+         <field name="view_mode">tree,form</field>
+      </record>
+      <menuitem name="Công Việc/Trực" id="ctrtvcv_icon" web_icon="dai_tgg,static/src/image/customers-icon-18.png" sequence="2"/>
+      <menuitem name="Menu Ca trực" id="ctrmenu_menu" parent="ctrtvcv_icon" action="ctr_action" sequence="2" />
+      <menuitem name="Ca trực" id="ctr_menu" parent="ctrmenu_menu" action="ctr_action" sequence="1" />
+   </data>
+</openerp>
+

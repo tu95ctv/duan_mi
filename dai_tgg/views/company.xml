@@ -1,0 +1,45 @@
+<odoo>
+<data>
+<!--  CONG TY-->
+      <record id="company_form_inherit" model="ir.ui.view">
+         <field name="name">dai_tgg.company</field>
+         <field name="model">res.company</field>
+         <field name="inherit_id" ref="base.view_company_form" />
+         <field name="mode">primary</field>
+         <field name="arch" type="xml">
+            <xpath expr="//field[@name='parent_id']" position="replace">
+               <field name="parent_id" />
+            </xpath>
+            <xpath expr="//field[@name='currency_id']" position="replace" />
+            <xpath expr="//field[@name='partner_id']" position="replace">
+               <field name="child_ids" />
+            </xpath>
+         </field>
+      </record>
+      <record id="company_list" model="ir.ui.view">
+         <field name="name">Company list</field>
+         <field name="model">res.company</field>
+         <field name="arch" type="xml">
+            <tree>
+               <field name="id" />
+               <field name="name" />
+               <field name="parent_id" />
+               <field name="child_ids" />
+               <!--   <field name="cong_ty_type" /> -->
+            </tree>
+         </field>
+      </record>
+      <record model="ir.actions.act_window" id="company_action">
+         <field name="name">Company(Công Ty)</field>
+         <field name="res_model">res.company</field>
+         <field name="view_mode">tree,form</field>
+      </record>
+      <record id="tree_link_action_company" model="ir.actions.act_window.view">
+         <field eval="1" name="sequence" />
+         <field name="view_mode">tree</field>
+         <field name="view_id" ref="company_list" />
+         <field name="act_window_id" ref="company_action" />
+      </record>
+      <!--  END CONG TY -->
+</data>
+</odoo>

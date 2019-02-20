@@ -1,0 +1,46 @@
+<odoo>
+    <data>
+       
+        <record model="ir.ui.view" id="ematch_form">
+            <field name="name">tsbd.ematch.form</field>
+            <field name="model">tsbd.ematch</field>
+            <field name="arch" type="xml">
+                <form>
+                <sheet>
+                
+                
+                	<group>
+               		<field name="match_ids"></field>
+               		</group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+         <record model="ir.ui.view" id="ematch_list">
+            <field name="name">tsbd.ematch.list</field>
+            <field name="model">tsbd.ematch</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="id"></field>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="tsbd_ematch_search" model="ir.ui.view">
+        <field name="name">tsbd.ematch.search</field>
+        <field name="model">tsbd.ematch</field>
+        <field name="arch" type="xml">
+            <search string="ematch search">
+                    
+                </search>
+                </field>
+                </record>
+        <record model="ir.actions.act_window" id="ematch_action">
+            <field name="name">ematch action</field>
+            <field name="res_model">tsbd.ematch</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+     <menuitem name="ematch menu" id="tsbd.ematch_menu" parent="tsbd.menu_root" action="ematch_action" />
+    </data>
+</odoo>

@@ -1,0 +1,253 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="match_form">
+            <field name="name">tsbd.match.form</field>
+            <field name="model">tsbd.match</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <header>
+                            <button name="leech_button" string="leech_button" type="object" class="oe_highlight"></button>
+                            <button name="parse_button" string="parse_button" type="object" class="oe_highlight"></button>
+                            <button name="detail_match_button" string="detail_match_button" type="object" class="oe_highlight"></button>
+                            <button name="get_odds_button" string="get_odds_button" type="object" class="oe_highlight"></button>
+                            <button name="create_match_for_test" string="create_match_for_test" type="object" class="oe_highlight"></button>
+                            <button name="get_infor_test" string="get_infor_test" type="object" class="oe_highlight"></button>
+                            <button name="get_infor_test2" string="get_infor_test2" type="object" class="oe_highlight"></button>
+                        </header>
+                        <group>
+                            <field name="time"></field>
+                            <field name="current_time"></field>
+                            <field name="link"></field>
+                            <field name="parse_log"></field>
+                            <field name="log"></field>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="team1" />
+                                <field name="score1" />
+                                <field name="cate_id" />
+                                <field name="match_link" />
+                             
+                            </group>
+                            <group>
+                                <field name="team2" />
+                                <field name="score2" />
+                                <field name="score_odd" />
+                                <field name="winner" />
+                                <field name="loser" />
+                            </group>
+                            <group>
+                                <field name="is_copy_begin_to_curent" />
+                            </group>
+                        </group>
+                        <group string="Handicap">
+                            <group string="Begin Handicap">
+                                <field name="begin_handicap" />
+                                <field name="begin_handicap_money1" />
+                                <field name="begin_handicap_money2" />
+                            </group>
+                            <group string="curent Handicap">
+                                <field name="curent_handicap" />
+                                <field name="curent_handicap_money1" />
+                                <field name="curent_handicap_money2" />
+                            </group>
+                        </group>
+                        <group string="Over/Under">
+                            <group string="Begin Over/Under">
+                                <field name="begin_ou" />
+                                <field name="begin_ou_money1" />
+                                <field name="begin_ou_money2" />
+                            </group>
+                            <group string="Curent Over/Under">
+                                <field name="curent_ou" />
+                                <field name="curent_ou_money1" />
+                                <field name="curent_ou_money2" />
+                            </group>
+                        </group>
+                        <group>
+                            <field name="event_ids" context="{'default_score1':score1,'default_score2':score2}">
+                                <tree editable="bottom">
+                                    <field name="time"></field>
+                                    <field name="current_time"></field>
+                                    <field name="event"></field>
+                                    <field name="score1"></field>
+                                    <field name="score2"></field>
+                                </tree>
+                            </field>
+                        </group>
+                        <group>
+                            <group>
+                              <field name="cua_tren_hay_cua_duoi" />
+                               <field name="handicap_bet_winner" />
+                               <field name="handicap_bet_loser" />
+                            <field name="handicap_wl1"></field>
+                            <field name="handicap_wl2"></field>
+                            <field name="handicap_wl_amount1" />
+                            <field name="handicap_wl_amount2" />
+                            <field name="handicap_win_amount" />
+                            <field name="handicap_lost_amount" />
+                            </group>
+                            <group>
+                            <field name="over_or_under" />
+                            <field name="over_wl"></field>
+                            <field name="under_wl"></field>
+                            <field name="over_wl_amount"></field>
+                            <field name="under_wl_amount"></field>
+                            <field name="ou_win_amount"></field>
+                            <field name="ou_lost_amount"></field>
+                            <field name="team_match_limit"></field>
+                            </group>
+                            <group>
+                            <field name="sum_handicap_wl1"></field>
+                            <field name="sum_handicap_wl2"></field>
+                            </group>
+                            <group>
+                            <field name="team1_over"></field>
+                            <field name="team1_under"></field>
+                            <field name="team2_over"></field>
+                            <field name="team2_under"></field>
+                            </group>
+                            <field name="team1_match_ids" context="{'team':team1}"></field>
+                            <!-- 	<field name="str_win_lost2"></field>
+                    	<field name="sum_handicap_wl2"></field> -->
+                            <field name="team2_match_ids" context="{'team':team2}"></field>
+                            <field name="bet_ids" context="{'default_score1':score1,'default_score2':score2,             'default_handicap': curent_handicap,'default_handicap_money1':curent_handicap_money1,'default_handicap_money2':curent_handicap_money2,             'default_ou': curent_ou,'default_ou_money1':curent_ou_money1,'default_ou_money2':curent_ou_money2,             }">
+                                <tree editable="bottom">
+                                    <field name="time"></field>
+                                    <field name="current_time"></field>
+                                    <field name="bet_kind"></field>
+                                    <field name="handicap_money1"></field>
+                                    <field name="handicap"></field>
+                                    <field name="handicap_money2"></field>
+                                    <field name="ou_money1"></field>
+                                    <field name="ou"></field>
+                                    <field name="ou_money2"></field>
+                                    <field name="exact_money"></field>
+                                    <field name="bet_score1"></field>
+                                    <field name="bet_score2"></field>
+                                    <field name="amount"></field>
+                                    <field name="score1"></field>
+                                    <field name="score2"></field>
+                                    <field name="winning_ratio"></field>
+                                    <field name="winning_amount"></field>
+                                </tree>
+                            </field>
+                        </group>
+                        <group>
+                            <field name="total_winning_amount"></field>
+                            <field name="predict_ids" context="{'default_amount':1}">
+                                <tree editable="bottom">
+                                    <field name="site_id"></field>
+                                    <field name="amount"></field>
+                                    <field name="predict_score1"></field>
+                                    <field name="predict_score2"></field>
+                                    <field name="predict_handicap"></field>
+                                    <field name="predict_handicap_winning_mount"></field>
+                                    <field name="predict_ou"></field>
+                                    <field name="predict_ou_winning_mount"></field>
+                                    <field name="predict_exact_score_winning_amount"></field>
+                                </tree>
+                            </field>
+                        </group>
+                        <group>
+                            <field name="statictis_match_ids"></field>
+                            <field name="betscoreline_ids">
+                                <tree>
+                                    <field name="betscore_id"></field>
+                                    <field name="odd"></field>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="match_list">
+            <field name="name">tsbd.match.list</field>
+            <field name="model">tsbd.match</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="time" />
+                    <field name="date" />
+                    <field name="state" />
+                    <field name="team1" />
+                    <field name="score1" />
+                    <field name="score2" />
+                    <field name="team2" />
+                    <field name="winner" />
+                    <field name="handicap_bet_winner" />
+                    <field name="begin_handicap" />
+                    <field name="handicap_0_05_1"></field>
+                    <field name="cua_tren_hay_cua_duoi" />
+                    <field name="context_team_handicap_wl" />
+                    <field name="handicap_wl1" />
+                    <field name="handicap_wl2" />
+                    <field name="handicap_wl_amount1" />
+                    <field name="handicap_wl_amount2" />
+                    <field name="handicap_win_amount" />
+                    <field name="handicap_lost_amount" />
+                    <field name="begin_ou" />
+                    <field name="over_0_05_1" />
+                    <field name="over_wl"></field>
+                    <field name="under_wl"></field>
+                    <field name="over_wl_amount"></field>
+                    <field name="under_wl_amount"></field>
+                    <field name="ou_win_amount"></field>
+                    <field name="ou_lost_amount"></field>
+                    <!-- 
+                    <field name="keo_0_025_05" />
+                    <field name="handicap_wl1" />
+                    <field name="handicap_wl2" />
+                     -->
+                    <field name="cate_id" />
+                    <field name="period_id" />
+                    <field name="bang_id" />
+                    <field name="write_date" />
+                    <field name="score_odd" />
+                    <!--  <field name="match_link" /> 
+                    <field name="handicap_bet_winner" />
+                    <field name="handicap_bet_loser" />
+                    <field name="winner" />
+                    <field name="loser" />
+                    -->
+                </tree>
+            </field>
+        </record>
+        <record id="tsbd_match_search" model="ir.ui.view">
+            <field name="name">tsbd.match.search</field>
+            <field name="model">tsbd.match</field>
+            <field name="arch" type="xml">
+                <search string="match search">
+                    <field name="team1" string="team" filter_domain="['|',('team1.name','ilike',self),('team2.name','ilike',self)]"></field>
+                    <field name="begin_handicap" string="begin_handicap" filter_domain="['|',('begin_handicap','=',self),('begin_handicap','=',-self)]"></field>
+                    <field name="loser" string="loser"></field>
+                    <field name="handicap_bet_winner" string="bet winner"></field>
+                    <filter string="This Month" name="this_month" domain="[('date', '&gt;=', context_today().strftime('%%Y-%%m-01'))]" />
+                    <filter string="Trận đã và đang đá" name="finishing" domain="[('state', '!=', 'Chưa bắt đầu')]" />
+                    <group expand="0" string="Group By">
+                        <filter string="state" domain="[]" context="{'group_by':'state'}" />
+                        <filter string="cua_tren_hay_cua_duoi" domain="[]" context="{'group_by':'cua_tren_hay_cua_duoi'}" />
+                        <filter string="keo_0_025_05" domain="[]" context="{'group_by':'keo_0_025_05'}" />
+                        <filter string="handicap_0_05_1" domain="[]" context="{'group_by':'handicap_0_05_1'}" />
+                        <filter string="date" domain="[]" context="{'group_by':'date'}" />
+                        <filter string="day" domain="[]" context="{'group_by':'date:day'}" />
+                        <filter string="handicap_bet_winner" domain="[]" context="{'group_by':'handicap_bet_winner'}" />
+                        <filter string="cate" domain="[]" context="{'group_by':'cate_id'}" />
+                        <filter string="over_or_under" domain="[]" context="{'group_by':'over_or_under'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="match_action">
+            <field name="name">Match action</field>
+            <field name="res_model">tsbd.match</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'search_default_state':1, 'search_default_keo_0_025_05':1,'search_default_finishing':1}</field>
+        </record>
+        <!-- Top menu item -->
+        <menuitem name="tsbd_menu" id="tsbd.menu_root" />
+        <!-- menu categories -->
+        <menuitem name="Match menu" id="tsbd.match_menu" parent="tsbd.menu_root" action="match_action" />
+    </data>
+</odoo>

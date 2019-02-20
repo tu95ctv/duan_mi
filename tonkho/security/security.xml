@@ -1,0 +1,85 @@
+<odoo>
+<data >
+     <!-- 
+      <record id="tonkho.doi_tac_giao" model="stock.location">
+         <field name="name">Đối tác giao</field>
+      </record>
+      
+       <record id="tonkho.doi_tac_nhan" model="stock.location">
+         <field name="name">Đối tác nhận</field>
+      </record>
+       -->
+      
+      
+  <!--  
+      
+<record id="stock_picking_rule_1" model="ir.rule">
+        <field name="name">Biên bản bị hủy thì không được sửa</field>
+        <field ref="model_stock_picking" name="model_id"/>
+        <field name="domain_force">[('ban_giao_or_nghiem_thu','not in',['HUY'])]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="perm_read" eval="False" />
+  </record>
+  
+
+  <record id="stock_picking_rule_2" model="ir.rule">
+        <field name="name">Biên bản trả do hủy thì không được sửa</field>
+        <field ref="model_stock_picking" name="model_id"/>
+        <field name="domain_force">[('ban_giao_or_nghiem_thu','not in',['TRA_DO_HUY'])]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="perm_read" eval="False" />
+  </record>
+     
+  
+    <record id="stock_picking_rule_3" model="ir.rule">
+        <field name="name">Chỉ được sửa bb của đơn vị mình</field>
+        <field ref="model_stock_picking" name="model_id"/>
+        <field name="domain_force">['|',('department_id','=',user.department_id.id),('location_dest_id.department_id','=',user.department_id.id)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="perm_read" eval="False" />
+  </record>
+  
+  
+   -->  
+    
+<!-- 
+    <record id="location_rule_1" model="ir.rule">
+        <field name="name">User Chỉ được tạo kho cho riêng mình</field>
+        <field ref="model_stock_location" name="model_id"/>
+        <field name="domain_force">[('department_id','=',user.department_id.id)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="perm_read" eval="False" />
+  </record>
+  
+  
+  
+  
+
+<record id="user_edit_themself" model="ir.rule">
+        <field name="name">Only user edit themself</field>
+        <field ref="model_stock_picking" name="model_id"/>
+        <field name="domain_force">[('location_id.department_id','child_of',user.department_id.id)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+  </record>
+ <record id="user_edit_themself" model="ir.rule">
+        <field name="name">stock quant read allow</field>
+        <field ref="model_stock_quant" name="model_id"/>
+        <field name="domain_force">[('location_id.department_id','child_of',user.department_id.id)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+  </record>
+  -->
+  <!-- 
+  <record id="stock_picking_rule_1" model="ir.rule">
+        <field name="name">stockpicking rule 1</field>
+        <field ref="model_stock_picking" name="model_id"/>
+        <field name="domain_force">[('department_id','=',user.department_id.id)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="perm_read" eval="False" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_unlink" eval="True" />
+        <field name="perm_create" eval="True" />
+  </record> 
+   -->
+  
+</data>
+</odoo>

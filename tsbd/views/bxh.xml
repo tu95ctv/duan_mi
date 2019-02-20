@@ -1,0 +1,33 @@
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="bxh_list">
+            <field name="name">tsbd.bxh.tree</field>
+            <field name="model">tsbd.bxh</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="team_id" />
+                    <field name="stt"></field>
+                    <field name="match_number" />
+                    <field name="diem" />
+                    <field name="diem_dd" />
+                    <field name="hsbt" />
+                    <field name="score_sum" />
+                    <field name="lost_score_sum" />
+                    <field name="cate_id" />
+                    <field name="home_t" />
+                    <field name="home_h" />
+                     <field name="home_b" />
+                    <field name="home_tg" />
+                    <field name="home_th" />
+                    <field name="home_match_number" />
+                      <field name="away_t" />
+                    <field name="away_h" />
+                     <field name="away_b" />
+                    <field name="away_tg" />
+                    <field name="away_th" />
+                    <field name="away_match_number" />
+                </tree>
+            </field>
+        </record>
+	</data>
+</odoo>

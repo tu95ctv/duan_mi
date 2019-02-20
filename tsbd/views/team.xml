@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+       
+        <record model="ir.ui.view" id="team_form">
+            <field name="name">tsbd.team.form</field>
+            <field name="model">tsbd.team</field>
+            <field name="arch" type="xml">
+                <form>
+                <sheet>
+
+                	<group>
+               		<field name="name"></field>
+               		<field name="id"></field>
+      
+               		</group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+         <record model="ir.ui.view" id="team_list">
+            <field name="name">tsbd.team.list</field>
+            <field name="model">tsbd.team</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="id"></field>
+                    <field name="name"></field>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="tsbd_team_search" model="ir.ui.view">
+        <field name="name">tsbd.team.search</field>
+        <field name="model">tsbd.team</field>
+        <field name="arch" type="xml">
+            <search string="team search">
+            	<field name="name"></field>
+                    
+                </search>
+                </field>
+                </record>
+        <record model="ir.actions.act_window" id="team_action">
+            <field name="name">team action</field>
+            <field name="res_model">tsbd.team</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+     <menuitem name="team menu" id="tsbd.team_menu" parent="tsbd.menu_root" action="team_action" />
+    </data>
+</odoo>

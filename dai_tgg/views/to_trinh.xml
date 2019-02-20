@@ -1,0 +1,54 @@
+<odoo>
+<data>
+
+<!-- Tờ Trình -->
+      
+      <record model="ir.ui.view" id="dai_tgg.totrinh_form">
+         <field name="name">dai_tgg.totrinh.form</field>
+         <field name="model">dai_tgg.totrinh</field>
+         <field name="arch" type="xml">
+            <form string="Tờ trình ">
+               <sheet>
+                  <group>
+                    <field name="so_to_trinh" />
+               		<field name="ngay_to_trinh" />
+                    <field name="ve_viec" />
+                    <field name="name" />
+               		<field name="file_ids"></field>
+               		
+               		<!-- 
+               		<field name="name_khong_dau" />
+               		<field name="name_viet_tat" />
+               		 -->
+                  </group>
+               </sheet>
+            </form>
+         </field>
+      </record>
+      <record model="ir.ui.view" id="dai_tgg.totrinh_list">
+         <field name="name">dai_tgg.totrinh.list</field>
+         <field name="model">dai_tgg.totrinh</field>
+         <field name="arch" type="xml">
+            <tree string="Tờ Trình">
+               <field name="name" />
+               <field name="so_to_trinh" />
+               <field name="ngay_to_trinh" />
+               <field name="ve_viec" />
+               
+            </tree>
+         </field>
+      </record>
+      <record model="ir.actions.act_window" id="dai_tgg.totrinh_action">
+         <field name="name">Tờ trình</field>
+         <field name="res_model">dai_tgg.totrinh</field>
+         <field name="view_mode">tree,form</field>
+      </record>
+      
+      <!-- End Tờ Trình -->
+      
+      
+      
+            <menuitem id="dai_tgg.totrinh_menu" parent="else_more_menu" action="dai_tgg.totrinh_action" sequence="8" />
+      
+</data>
+</odoo>

@@ -1,0 +1,63 @@
+<odoo>
+<data>
+<!-- 
+    <record model="ir.module.category" id="module_category_import_xl">
+         <field name="name">Category Group Import Excel</field>
+         <field name="description">Category Group Import Excel</field>
+         <field name="sequence">5</field>
+         <field name="visible" eval="1" />
+      </record>
+ -->
+     <record id="show_thong_tin_khong_dau" model="res.groups">
+         <field name="name">Group Show thông tin không dấu</field>
+      </record>
+ 		
+ 	<record id="group_write_field_when_import_excel" model="res.groups">
+         <field name="name">Group cho phép write field</field>
+        <!--  <field name="category_id" ref="module_category_import_xl" /> -->
+      </record>
+      
+      
+      
+      
+       <!-- 
+        <record id="stock.stock_picking_type_menu" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6,0, [])]"/>
+    </record>
+        <menuitem
+            action="stock.stock_picking_type_action"
+            id="stock.stock_picking_type_menu"
+            parent="stock.menu_stock_root" sequence="0"
+            name="Dashboard"
+            />   
+            
+             --> 
+               <!--      groups="base.group_erp_manager" -->    
+            
+            
+
+
+<!-- 
+ 
+ <record id="ltk_dang_chay" model="stock.location"> 
+          <field name="name">LTK Đang Chạy</field> 
+          <field name="usage">inventory</field> 
+      </record>
+    
+     <record id="ptr_dang_chay" model="stock.location"> 
+          <field name="name">137 Đang Chạy</field> 
+          <field name="usage">inventory</field> 
+      </record>
+      
+       <record id="dpb_dang_chay" model="stock.location"> 
+          <field name="name">DBP Đang Chạy</field> 
+          <field name="usage">inventory</field> 
+      </record>
+      
+       <record id="tti_dang_chay" model="stock.location"> 
+          <field name="name">TTI Đang Chạy</field> 
+          <field name="usage">inventory</field> 
+      </record>
+       -->
+</data>
+</odoo>

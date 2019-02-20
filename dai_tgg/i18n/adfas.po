@@ -1,0 +1,2383 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dai_tgg
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e-20161103\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-08 03:09+0000\n"
+"PO-Revision-Date: 2017-12-08 11:13+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: vi\n"
+"X-Generator: Poedit 2.0.5\n"
+
+#. module: dai_tgg
+#: model:ir.ui.menu,name:dai_tgg.cvi_menu
+msgid " Công Việc"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.menu,name:dai_tgg.menu_menu
+msgid " Công Việc menu"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.act_window,name:dai_tgg.doitac_action
+msgid " Đối Tác"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:importthuvien,type_choose:0
+msgid "640G 1850 "
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.totrinh_template
+msgid "<b>TRẠM VIỄN THÔNG LONG AN</b>"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_active
+msgid "Active"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.ltk_config_settings_view
+msgid "Apply"
+msgstr ""
+
+#. module: dai_tgg
+#: code:addons/dai_tgg/models/adaptor.py:52
+#, python-format
+msgid "Bad Report Reference"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_ctr_ca
+msgid "Buổi ca"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.cvi_form
+msgid "CHIA ĐIỂM CHO NHIỀU NGƯỜI"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.cvi_form
+msgid "COMMENTS"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.cvi_search
+msgid "CV Tháng Trước"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.cvi_search
+msgid "CV Tháng này"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.act_window,name:dai_tgg.ctr_action
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_ctr_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_ctr_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_sucosuvu_ctr_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_ctr_ids
+msgid "Ca Trực"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_congty_ca_chieu_bat_dau
+msgid "Ca chieu bat dau"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_congty_ca_chieu_duration
+msgid "Ca chieu duration"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_congty_ca_dem_bat_dau
+msgid "Ca dem bat dau"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_congty_ca_dem_duration
+msgid "Ca dem duration"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_congty_ca_sang_bat_dau
+msgid "Ca sang bat dau"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_congty_ca_sang_duration
+msgid "Ca sang duration"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.menu,name:dai_tgg.ctr_menu
+msgid "Ca trực"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.menu,name:dai_tgg.ctrmenu_menu
+msgid "Ca trực Menu"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_cabinet_rack
+msgid "Cabinet rack"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_camsua_cam_sua_do_chot
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_cam_sua_do_chot
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_cam_sua_do_chot
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_cam_sua_do_chot
+msgid "Cam sua do chot"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_camsua_cam_sua_do_diff_user
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_cam_sua_do_diff_user
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_cam_sua_do_diff_user
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_cam_sua_do_diff_user
+msgid "Cam sua do diff user"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_camsua_cam_sua_do_time
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_cam_sua_do_time
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_cam_sua_do_time
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_cam_sua_do_time
+msgid "Cam sua do time"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.ltk_config_settings_view
+msgid "Cancel"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:cvi,loai_cvi:0
+msgid "Chia Điểm Cha"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:cvi,loai_cvi:0
+msgid "Chia Điểm Con"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:cvi,valid_diemtc_conclusion:0
+msgid "Chia điểm không đủ 100%"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:ctr,ca:0
+msgid "Chiều"
+msgstr ""
+
+#. module: dai_tgg
+#: model:res.groups,name:dai_tgg.time_allow_field_edit_group
+msgid "Cho phép sửa field kể cả quá time"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.cvi_search
+msgid "Chọn tháng này"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_doitac_chuc_vu
+msgid "Chức vụ"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_clei
+msgid "Clei"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.act_window,name:dai_tgg.comment_action
+#: model:ir.ui.menu,name:dai_tgg.comment_menu
+msgid "Comment"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.comment_form
+msgid "Comment Form"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_comment_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_comment_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_comment_ids
+msgid "Comments/Ghi Chú"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.cvi_search
+msgid "Con của thư viện cv"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.cvi_search
+msgid "Con của thư viện cv pr way"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.act_window,name:dai_tgg.ltk_config_settings_action
+#: model:ir.ui.view,arch_db:dai_tgg.ltk_config_settings_view
+msgid "Configure Sales"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_importthuvien_create_number
+msgid "Create number"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_comment_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_congty_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_congtytype_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_ctr_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_cvitype_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_dai_tgg_file_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_doitac_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_donvi_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_dotxuathaydinhky_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_gccvtype_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_importthuvien_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_loaisuco_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_loaisuvu_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_ltk_config_settings_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_pn_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcvcate_create_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_comment_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_congty_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_congtytype_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_ctr_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_cvitype_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_dai_tgg_file_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_doitac_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_donvi_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_dotxuathaydinhky_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_gccvtype_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_importthuvien_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_loaisuco_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_loaisuvu_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_ltk_config_settings_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_pn_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcvcate_create_date
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_res_users_property_stock_customer
+msgid "Customer Location"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_comment_cvi_id
+msgid "Cvi id"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.cvi_form
+msgid "CÁC GIAI ĐOẠN CÔNG VIỆC"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_cd_children_ids
+msgid "Các CV Chia Điểm Con"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_gd_children_ids
+msgid "Các CV Giai Đoạn Con"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_gccvtype_gccv_ids
+msgid "Các Ghi chú"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv_gccv_type_ids
+msgid "Các Loại ghi chú"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_res_users_cac_sep_ids
+msgid "Các Lãnh Đạo"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_res_users_cac_linh_ids
+msgid "Các Nhân Viên"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_children_ids
+msgid "Các TVCV Giai Đoạn Con"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_res_users_ctr_ids
+msgid "Các ca đã trực"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_congty_child_ids
+msgid "Các đơn vị con"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_is_has_children
+msgid "Có CV giai đoạn con"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.vattu_search
+msgid "Có Map với Kiểm Kê"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "Có Map với LTK"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "Có Map với NOC"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "Có Map với NOC but NOTLTK"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.vattu_search
+msgid "Có Map với Noc"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+#: model:ir.ui.view,arch_db:dai_tgg.kknoc_search
+#: model:ir.ui.view,arch_db:dai_tgg.vattu_search
+msgid "Có SN"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_co_cong_viec_cha
+#: model:ir.ui.view,arch_db:dai_tgg.tvcv_search
+msgid "Có công việc cha"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_ltk_config_settings_is_cam_sua_do_time
+msgid "Có cấm sửa do quá thời gian?"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_ltk_config_settings_is_cam_sua_truoc_ngay
+msgid "Có cấm sửa trước ngày?"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:importthuvien,type_choose:0
+msgid "Công Ty"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.congty_form
+msgid "Công Ty Form"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_ctr_cvi_ids
+#: model:ir.ui.view,arch_db:dai_tgg.ctr_form
+msgid "Công Việc"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_cd_parent_id
+msgid "Công Việc Chia Điểm Cha"
+msgstr "CD Parent work"
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_gd_parent_id
+msgid "Công Việc Giai Đoạn Cha"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_parent_id
+msgid "Công Việc giai đoạn Cha"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:cvi,loai_cvi:0
+msgid "Công Việc Đơn"
+msgstr "Single work"
+
+#. module: dai_tgg
+#: model:ir.ui.menu,name:dai_tgg.ctrtvcv_icon
+msgid "Công Việc/Trực"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.act_window,name:dai_tgg.cvi_action
+msgid "Công việc"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_ltk_config_settings_cam_sua_truoc_ngay
+msgid "Cấm sửa trước ngày"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.menu,name:dai_tgg.config_menu
+msgid "Cấu hình"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.totrinh_template
+msgid "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_data
+msgid "Data"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_res_users_device_identity_ids
+msgid "Device identities"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_camsua_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_comment_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_congty_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_congtytype_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_ctr_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_cvitype_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_dai_tgg_file_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_doitac_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_donvi_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_dotxuathaydinhky_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_gccvtype_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_importthuvien_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_loaisuco_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_loaisuvu_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_ltk_config_settings_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_pn_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_sucosuvu_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcvcate_display_name
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_duplicate_sn_vat_tu_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_duplicate_sn_vat_tu_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_duplicate_sn_vat_tu_ids
+msgid "Duplicate sn vat tu ids"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,help:dai_tgg.field_cvi_duration
+#: model:ir.model.fields,help:dai_tgg.field_suco_duration
+#: model:ir.model.fields,help:dai_tgg.field_sucosuvu_duration
+#: model:ir.model.fields,help:dai_tgg.field_suvu_duration
+msgid "Duration in Hours"
+msgstr ""
+
+#. module: dai_tgg
+#: code:addons/dai_tgg/models/models.py:501
+#: code:addons/dai_tgg/models/models.py:1218
+#: code:addons/dai_tgg/models/models.py:1801
+#, python-format
+msgid "Error ! You cannot create recursive categories."
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.act_window,name:dai_tgg.file_action
+#: model:ir.model.fields,field_description:dai_tgg.field_dai_tgg_file_file
+#: model:ir.model.fields,field_description:dai_tgg.field_importthuvien_file
+#: model:ir.ui.menu,name:dai_tgg.file_menu
+msgid "File"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_file_name
+msgid "File của Noc"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_dai_tgg_file_name
+msgid "File name"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_importthuvien_filename
+msgid "Filename"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_comment_file_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_file_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_file_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_sucosuvu_file_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_file_ids
+msgid "Files đính kèm"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.cvi_form
+msgid "Form"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_ghi_chu
+msgid "Ghi Chú"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_ghi_chu
+msgid "Ghi chu"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_ghi_chu
+msgid "Ghi chú"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.act_window,name:dai_tgg.gccvtype_action
+#: model:ir.actions.act_window,name:dai_tgg.ghichucongviec_action
+#: model:ir.ui.menu,name:dai_tgg.ghichucongviec_menu
+msgid "Ghi chú công việc"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.menu,name:dai_tgg.ghichucongviec_icon
+msgid "Ghi chú công việc menu"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv_doi_lap_id
+msgid "Ghi chú đối lập"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:cvi,loai_cvi:0
+msgid "Giai Đoạn Cha"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:cvi,loai_cvi:0
+msgid "Giai Đoạn Con"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:cvi,loai_cvi:0
+msgid "Giai Đoạn Con và Chia Điểm Cha"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:cvi,loai_cvi:0
+msgid "Giai Đoạn Con và Giai Đoạn Cha"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_gio_ket_thuc
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_gio_ket_thuc
+#: model:ir.model.fields,field_description:dai_tgg.field_sucosuvu_gio_ket_thuc
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_gio_ket_thuc
+msgid "Giờ Kết Thúc"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_ctr_gio_ket_thuc
+msgid "Giờ Kết Thúc ca"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_gio_bat_dau
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_gio_bat_dau
+#: model:ir.model.fields,field_description:dai_tgg.field_sucosuvu_gio_bat_dau
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_gio_bat_dau
+msgid "Giờ bắt đầu "
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_ctr_gio_bat_dau
+msgid "Giờ bắt đầu ca "
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+#: model:ir.ui.view,arch_db:dai_tgg.kknoc_search
+#: model:ir.ui.view,arch_db:dai_tgg.pn_search
+#: model:ir.ui.view,arch_db:dai_tgg.tvcv_search
+#: model:ir.ui.view,arch_db:dai_tgg.vattu_search
+msgid "Group By"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.user_search
+msgid "Group By Đơn vị"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:ltk.config.settings,group_time_allow_field_edit_group:0
+msgid "Gán cho nhân viên quyền cho sửa fields"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_ltk_config_settings_group_time_allow_field_edit_group
+msgid "Gán quyền sửa fields cho nhân viên"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.module.category,description:dai_tgg.module_category_dai_tgg
+msgid "Helps you manage your inventory and main stock operations: delivery orders, receptions, etc."
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_hien_trang_su_dung
+msgid "Hiện trạng sử dụng"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_he_thong
+msgid "Hệ Thống"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_camsua_id
+#: model:ir.model.fields,field_description:dai_tgg.field_comment_id
+#: model:ir.model.fields,field_description:dai_tgg.field_congty_id
+#: model:ir.model.fields,field_description:dai_tgg.field_congtytype_id
+#: model:ir.model.fields,field_description:dai_tgg.field_ctr_id
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_id
+#: model:ir.model.fields,field_description:dai_tgg.field_cvitype_id
+#: model:ir.model.fields,field_description:dai_tgg.field_dai_tgg_file_id
+#: model:ir.model.fields,field_description:dai_tgg.field_doitac_id
+#: model:ir.model.fields,field_description:dai_tgg.field_donvi_id
+#: model:ir.model.fields,field_description:dai_tgg.field_dotxuathaydinhky_id
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv_id
+#: model:ir.model.fields,field_description:dai_tgg.field_gccvtype_id
+#: model:ir.model.fields,field_description:dai_tgg.field_importthuvien_id
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_id
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_id
+#: model:ir.model.fields,field_description:dai_tgg.field_loaisuco_id
+#: model:ir.model.fields,field_description:dai_tgg.field_loaisuvu_id
+#: model:ir.model.fields,field_description:dai_tgg.field_ltk_config_settings_id
+#: model:ir.model.fields,field_description:dai_tgg.field_pn_id
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_id
+#: model:ir.model.fields,field_description:dai_tgg.field_sucosuvu_id
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_id
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_id
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcvcate_id
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_id
+msgid "ID"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:importthuvien,type_choose:0
+msgid "INVENTORY-FW4570"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:importthuvien,type_choose:0
+msgid "INVENTORY_240G"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:importthuvien,type_choose:0
+msgid "INVENTORY_RING_NAM_CIENA"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:importthuvien,type_choose:0
+msgid "INVETORY 1670"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_ilike_map_kk_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_ilike_map_kk_ids
+msgid "Ilike map kk ids"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_ilike_map_kknoc_ids
+msgid "Ilike map kknoc ids"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_ilike_map_ltk_ids
+msgid "Ilike map ltk ids"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_ilike_map_vattu_ids
+msgid "Ilike map vattu ids"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.menu,name:dai_tgg.import_icon
+msgid "Import"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.act_window,name:dai_tgg.importthuvien_action
+#: model:ir.ui.menu,name:dai_tgg.import_tvcv_menu
+msgid "Import thư viện"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:importthuvien,type_choose:0
+msgid "Inventory-120G"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:importthuvien,type_choose:0
+msgid "Inventory-330G"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_camsua_is_admin
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_is_admin
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_is_admin
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_is_admin
+msgid "Is admin"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_is_has_tvcv_con
+msgid "Is has tvcv con"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_is_not_also_map_pn
+msgid "Is not also map pn"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_is_sep
+msgid "Is sep"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.act_window,name:dai_tgg.kknoc_action
+msgid "KK Noc"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.menu,name:dai_tgg.kknoc_menu
+msgid "KKNOC"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+#: model:ir.ui.view,arch_db:dai_tgg.kknoc_search
+#: model:ir.ui.view,arch_db:dai_tgg.vattu_search
+msgid "Không Có SN"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:ltk.config.settings,group_time_allow_field_edit_group:0
+msgid "Không gán cho nhân viên quyền cho sửa fields"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_kiem_ke_id
+msgid "Kiem ke id"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_pn_kiemke_ids
+msgid "Kiemke ids"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:importthuvien,type_choose:0
+#: model:ir.ui.menu,name:dai_tgg.kiemke_icon
+msgid "Kiểm Kê"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.act_window,name:dai_tgg.kiemke_action
+msgid "Kiểm kê kế toán"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:cvi,valid_diemtc_conclusion:0
+msgid "Kiểm tra điểm OK"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_valid_diemtc_conclusion
+msgid "Kết luận Valid"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv_ket_qua_du_doan
+msgid "Kết quả dự đoán"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv_ket_qua_thuc_te
+msgid "Kết quả thực tế"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv_dung_voi_ket_qua_du_doan
+msgid "Kết quả đúng với thực tế hay không"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_camsua___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_comment___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_congty___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_congtytype___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_ctr___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_cvitype___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_dai_tgg_file___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_doitac___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_donvi___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_dotxuathaydinhky___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_gccvtype___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_importthuvien___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_loaisuco___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_loaisuvu___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_ltk_config_settings___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_pn___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_suco___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_sucosuvu___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcvcate___last_update
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_comment_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_congty_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_congtytype_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_ctr_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_cvitype_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_dai_tgg_file_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_doitac_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_donvi_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_dotxuathaydinhky_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_gccvtype_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_importthuvien_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_loaisuco_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_loaisuvu_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_ltk_config_settings_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_pn_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcvcate_write_uid
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_comment_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_congty_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_congtytype_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_ctr_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_cvitype_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_dai_tgg_file_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_doitac_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_donvi_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_dotxuathaydinhky_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_gccvtype_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_importthuvien_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_loaisuco_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_loaisuvu_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_ltk_config_settings_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_pn_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcvcate_write_date
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_len_duplicate_sn_vat_tu_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_len_duplicate_sn_vat_tu_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_len_duplicate_sn_vat_tu_ids
+msgid "Len duplicate sn vat tu ids"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_len_gd_child
+msgid "Len gd child"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_len_ilike_map_kk_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_len_ilike_map_kk_ids
+msgid "Len ilike map kk ids"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_len_ilike_map_kknoc_ids
+msgid "Len ilike map kknoc ids"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_len_ilike_map_ltk_ids
+msgid "Len ilike map ltk ids"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_len_ilike_map_vattu_ids
+msgid "Len ilike map vattu ids"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_len_sn
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_len_sn
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_len_sn
+msgid "Len sn"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_importthuvien_log
+msgid "Log"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_loai_card
+msgid "Loại Card"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_loai_su_co_id
+msgid "Loại Sự Cố"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_loai_su_vu_id
+msgid "Loại Sự Vụ"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_loai_cvi
+msgid "Loại công việc"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.menu,name:dai_tgg.ghichucongviec_type_menu
+msgid "Loại ghi chú"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_gccvtype_parent_id
+msgid "Loại ghi chú Cha"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_loai_tai_san
+msgid "Loại tài sản"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_congty_cong_ty_type
+msgid "Loại đơn vị"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_camsua_ly_do_cam_sua_do_diff_user
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_ly_do_cam_sua_do_diff_user
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_ly_do_cam_sua_do_diff_user
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_ly_do_cam_sua_do_diff_user
+msgid "Ly do cam sua do diff user"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_camsua_ly_do_cam_sua_do_time
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_ly_do_cam_sua_do_time
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_ly_do_cam_sua_do_time
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_ly_do_cam_sua_do_time
+msgid "Ly do cam sua do time"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv_loi_code
+msgid "Lỗi"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_map_kiem_ke_id
+msgid "Map kiem ke id"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_map_kknoc_id
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_map_kknoc_id
+msgid "Map kknoc id"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_map_ltk_id
+msgid "Map ltk id"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_map_kiemke_id
+msgid "Map với Kiểm Kê"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_map_ltk_id
+msgid "Map với LTK"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_res_users_picking_warn_msg
+msgid "Message for Stock Picking"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_gccvtype_minh_hoa
+msgid "Minh Họa"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_code
+msgid "Mã công việc"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_ma_du_an
+msgid "Mã dự án"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_ma_vach
+msgid "Mã vạch"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_dai_tgg_file_mo_ta
+msgid "Mô tả file"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "NOT LTK"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_comment_name
+#: model:ir.model.fields,field_description:dai_tgg.field_congty_name
+#: model:ir.model.fields,field_description:dai_tgg.field_congtytype_name
+#: model:ir.model.fields,field_description:dai_tgg.field_ctr_name
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_name
+#: model:ir.model.fields,field_description:dai_tgg.field_cvitype_name
+#: model:ir.model.fields,field_description:dai_tgg.field_donvi_name
+#: model:ir.model.fields,field_description:dai_tgg.field_dotxuathaydinhky_name
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv_name
+#: model:ir.model.fields,field_description:dai_tgg.field_gccvtype_name
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_name
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_name
+#: model:ir.model.fields,field_description:dai_tgg.field_loaisuco_name
+#: model:ir.model.fields,field_description:dai_tgg.field_loaisuvu_name
+#: model:ir.model.fields,field_description:dai_tgg.field_pn_name
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_name
+#: model:ir.model.fields,field_description:dai_tgg.field_sucosuvu_name
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_name
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcvcate_name
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_name
+msgid "Name"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_ctr_date
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_ngay_bat_dau
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_ngay_bat_dau
+#: model:ir.model.fields,field_description:dai_tgg.field_sucosuvu_ngay_bat_dau
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_ngay_bat_dau
+msgid "Ngày"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.tvcv_list
+msgid "Ngày giờ sửa"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.tvcv_list
+msgid "Ngày giờ tạo"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.res_users_form_inherit_not
+#: model:ir.ui.view,arch_db:dai_tgg.users_tree
+msgid "Ngày sinh"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.tvcv_list
+msgid "Người Sửa"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.tvcv_list
+msgid "Người Tạo"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.comment_list
+msgid "Người comment"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_congty_nhan_vien_ids
+msgid "Nhan vien ids"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_user_id
+msgid "Nhân viên tạo"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv_doi_lap_ids
+msgid "Những ghi chú đối lập"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_ctr_member_ids
+msgid "Những thành viên trực"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_noi_dung
+msgid "Noi dung"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_noi_dung_trich_dan
+msgid "Noi dung trich dan"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_noi_dung
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv_noi_dung
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_noi_dung
+#: model:ir.model.fields,field_description:dai_tgg.field_sucosuvu_noi_dung
+msgid "Nội dung"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_comment_noi_dung
+msgid "Nội dung comment"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_pn
+msgid "P/N"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.act_window,name:dai_tgg.pn_action
+#: model:ir.ui.menu,name:dai_tgg.pn_menu
+#: model:ir.ui.view,arch_db:dai_tgg.file_search
+#: model:ir.ui.view,arch_db:dai_tgg.pn_search
+msgid "PN"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_pn
+msgid "Part-Number"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_phan_loai
+msgid "Phân Loại"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_cong_viec_cate_id
+msgid "Phân loại TVCV"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_diem_percent
+msgid "Phần trăm điểm so với TVCV cha"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_pn
+msgid "Pn"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_pn_id
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_pn_id
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_pn_id
+msgid "Pn id"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.trucca_print
+msgid "Report title"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_sn
+msgid "S/N"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_sn
+msgid "SN"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_stt
+msgid "STT"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_res_users_property_product_pricelist
+msgid "Sale Pricelist"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.cvi_search
+#: model:ir.ui.view,arch_db:dai_tgg.gccv_search
+#: model:ir.ui.view,arch_db:dai_tgg.tvcv_search
+msgid "Search SK"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "Search kk"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.user_search
+msgid "Search user"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.vattu_search
+msgid "Search vattu"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,help:dai_tgg.field_res_users_picking_warn
+msgid "Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" will throw an exception with the message and block the flow. The Message has to be written in the next field."
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_sn
+msgid "Serial number"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_ma_vach_thuc_te
+msgid "Serial/Mã vạch thực tế "
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_sheet_name
+msgid "Sheet name"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_shelf
+msgid "Shelf"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_importthuvien_skipupdate_number
+msgid "Skipupdate number"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_slot
+msgid "Slot"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_sn_false
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_sn_false
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_sn_false
+msgid "Sn false"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_res_users_picking_warn
+msgid "Stock Picking"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.cvi_pivot
+msgid "Stock Picking Analysis"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_stt
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_stt
+msgid "Stt"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_stt_shelf
+msgid "Stt shelf"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_comment_su_co_id
+msgid "Su co id"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_comment_su_vu_id
+msgid "Su vu id"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_sum_cd_con
+msgid "Sum cd con"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_sum_gd_con
+msgid "Sum gd con"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:ctr,ca:0
+msgid "Sáng"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_so_luong
+msgid "Số Lượng"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_so_lan
+msgid "Số Lần"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_so_the
+msgid "Số Thẻ"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.totrinh_template
+msgid "Số lượng"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_slncl
+msgid "Số lượng người cùng làm"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.act_window,name:dai_tgg.suco_action
+#: model:ir.model.fields,field_description:dai_tgg.field_ctr_su_co_ids
+#: model:ir.ui.menu,name:dai_tgg.suco_menu
+#: model:ir.ui.view,arch_db:dai_tgg.ctr_form
+msgid "Sự Cố"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.suco_form
+msgid "Sự Cố Form"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.act_window,name:dai_tgg.suvu_action
+#: model:ir.model.fields,field_description:dai_tgg.field_ctr_su_vu_ids
+#: model:ir.ui.menu,name:dai_tgg.suvu_ke_thua_menu
+#: model:ir.ui.view,arch_db:dai_tgg.ctr_form
+msgid "Sự Vụ"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv_thanh_cong_hay_that_bai
+msgid "Thanh cong hay that bai"
+msgstr ""
+
+#. module: dai_tgg
+#: model:res.groups,name:dai_tgg.thay_doi_thu_vien_group
+msgid "Thay đổi thư viện group"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.trucca_print
+msgid "This object's name is"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,help:dai_tgg.field_res_users_property_product_pricelist
+msgid "This pricelist will be used, instead of the default one, for sales to the current partner"
+msgstr ""
+
+#. module: dai_tgg
+#: code:addons/dai_tgg/models/adaptor.py:52
+#, python-format
+msgid "This report is not loaded into the database: %s."
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,help:dai_tgg.field_res_users_property_stock_customer
+msgid "This stock location will be used, instead of the default one, as the destination location for goods you send to this partner"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,help:dai_tgg.field_res_users_property_stock_supplier
+msgid "This stock location will be used, instead of the default one, as the source location for goods you receive from the current partner"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:cvi,valid_diemtc_conclusion:0
+msgid "Thiếu giai đoạn"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:cvi,valid_diemtc_conclusion:0
+msgid "Thiếu giai đoạn con"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:cvi,valid_diemtc_conclusion:0
+msgid "Thiếu giai đoạn và Chia điểm không đủ 100%"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_importthuvien_thong_bao_khac
+msgid "Thong bao khac"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_thu_vien_da_chon_list
+msgid "Thu vien da chon list"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:gccv,thanh_cong_hay_that_bai:0
+msgid "Thành Công"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_tvcv_id
+msgid "Thư Viện Công việc"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:importthuvien,type_choose:0
+msgid "Thư viện công việc"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.act_window,name:dai_tgg.thuvientvcv_action
+#: model:ir.ui.menu,name:dai_tgg.tvcv_menu
+msgid "Thư viện công việc (TVCV)"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:gccv,thanh_cong_hay_that_bai:0
+msgid "Thất Bại"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv_thac_mac
+msgid "Thắc Mắc"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_thoi_gian_hoan_thanh
+msgid "Thời Gian Hoàn Thành"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.comment_list
+msgid "Thời gian"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_ltk_config_settings_allow_edit_time
+msgid "Thời gian cho phép để sửa record (giây)"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_duration
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_duration
+#: model:ir.model.fields,field_description:dai_tgg.field_sucosuvu_duration
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_duration
+msgid "Thời lượng (giờ)"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_trig_field
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_trig_field
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_trig_field
+msgid "Trig field"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_importthuvien_trigger_model
+msgid "Trigger model"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.ctr_form
+msgid "Truc ca Form"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.report.xml,name:dai_tgg.trucca_print_report
+msgid "Truc ca print"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.session_calendar_view
+msgid "Trucca Calendar"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_tram
+#: model:ir.model.fields,field_description:dai_tgg.field_kknoc_tram
+#: model:ir.model.fields,field_description:dai_tgg.field_vattu_tram
+msgid "Trạm"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kknoc_search
+msgid "Trạm LTK"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_trang_thai
+msgid "Trạng thái"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_donvi_tvcv_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_dotxuathaydinhky_tvcv_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcvcate_tvcv_ids
+msgid "Tvcv ids"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_importthuvien_type_choose
+msgid "Type choose"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_name
+msgid "Tên công việc"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_ten_du_an
+msgid "Tên dự án"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.ctr_form
+msgid "Tên người Trực"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_ten_vat_tu
+msgid "Tên tài sản"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_doitac_name
+msgid "Tên đối tác"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_importthuvien_update_number
+msgid "Update number"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:importthuvien,type_choose:0
+msgid "User"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.act_window,name:dai_tgg.users_action
+msgid "User(Nhân viên)"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_res_users
+msgid "Users"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.menu,name:dai_tgg.users_menu
+msgid "Users(Nhân viên)"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_valid_cd
+msgid "Valid cd"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_valid_gd
+msgid "Valid gd"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_valid_thu_vien
+msgid "Valid thư viện"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_valid_diemtc
+msgid "Valid Điểm Tự Chấm"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_pn_vattu_ids
+msgid "Vattu ids"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_res_users_property_stock_supplier
+msgid "Vendor Location"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:importthuvien,type_choose:0
+#: model:ir.ui.menu,name:dai_tgg.vattu_menu
+msgid "Vật Tư LTK"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.act_window,name:dai_tgg.vattu_action
+#: model:ir.ui.view,arch_db:dai_tgg.totrinh_template
+msgid "Vật tư"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_vi_tri_lap_dat
+msgid "Vị trí lắp đặt"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_yes_no_search
+msgid "Yes no search"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.server,name:dai_tgg.action_dynamic_domain
+msgid "action_dynamic_domain cong viec"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_camsua
+msgid "camsua"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_comment
+#: model:ir.ui.view,arch_db:dai_tgg.comment_list
+msgid "comment"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_congty
+msgid "congty"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_congtytype
+msgid "congtytype"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_ctr
+msgid "ctr"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_cvi
+msgid "cvi"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_cvitype
+msgid "cvitype"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_camsua_cam_sua
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_cam_sua
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_cam_sua
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_cam_sua
+msgid "cấm sửa"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_dai_tgg_file
+msgid "dai_tgg.file"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_doitac
+msgid "doitac"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_donvi
+msgid "donvi"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_dotxuathaydinhky
+msgid "dotxuathaydinhky"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_gccv
+msgid "gccv"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_gccvtype
+msgid "gccvtype"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.importthuvien_form
+msgid "get_tram_from_sheet_name"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.ghichucongviec_form
+#: model:ir.ui.view,arch_db:dai_tgg.ghichucongviectype_form
+msgid "ghichucongvie Tree"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.ghichucongviec_list
+#: model:ir.ui.view,arch_db:dai_tgg.ghichucongviectype_list
+msgid "ghichucongviec"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.tvcv_search
+msgid "group by Có CV giai đoạn con"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.tvcv_search
+msgid "group by Có công việc cha"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.tvcv_search
+msgid "group by Công Việc giai đoạn Cha"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.tvcv_search
+msgid "group by Phân loại công việc"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.tvcv_search
+msgid "group by Thời Gian Hoàn Thành"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.tvcv_search
+msgid "group by Điểm"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.tvcv_search
+msgid "group by Đơn vị tính"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.tvcv_search
+msgid "group by Độ Phức Tạp"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.tvcv_search
+msgid "group by Đột xuất hay định kỳ"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.vattu_search
+msgid "group theo cabinet_rack"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kknoc_search
+msgid "group theo data"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "group theo don_vi"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "group theo duplicate_sn_vat_tu_ids"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kknoc_search
+msgid "group theo file_name"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+#: model:ir.ui.view,arch_db:dai_tgg.vattu_search
+msgid "group theo ghi_chu"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.vattu_search
+msgid "group theo he_thong"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "group theo hien_trang_su_dung"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.pn_search
+msgid "group theo kiemke_ids"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+#: model:ir.ui.view,arch_db:dai_tgg.kknoc_search
+msgid "group theo len_duplicate_sn_vat_tu_ids"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "group theo len_ilike_map_ltk_ids"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "group theo len_sn"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.vattu_search
+msgid "group theo loai_card"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "group theo loai_tai_san"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "group theo ma_du_an"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "group theo ma_vach"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "group theo ma_vach_thuc_te"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "group theo map_kknoc_id"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "group theo map_ltk_id"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+#: model:ir.ui.view,arch_db:dai_tgg.kknoc_search
+#: model:ir.ui.view,arch_db:dai_tgg.pn_search
+#: model:ir.ui.view,arch_db:dai_tgg.vattu_search
+msgid "group theo name"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.vattu_search
+msgid "group theo phan_loai"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+#: model:ir.ui.view,arch_db:dai_tgg.kknoc_search
+#: model:ir.ui.view,arch_db:dai_tgg.vattu_search
+msgid "group theo pn"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+#: model:ir.ui.view,arch_db:dai_tgg.kknoc_search
+msgid "group theo pn_id"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kknoc_search
+msgid "group theo sheet_name"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.vattu_search
+msgid "group theo shelf"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.vattu_search
+msgid "group theo slot"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+#: model:ir.ui.view,arch_db:dai_tgg.kknoc_search
+#: model:ir.ui.view,arch_db:dai_tgg.vattu_search
+msgid "group theo sn"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+#: model:ir.ui.view,arch_db:dai_tgg.kknoc_search
+msgid "group theo sn_false"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "group theo so_the"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+#: model:ir.ui.view,arch_db:dai_tgg.kknoc_search
+msgid "group theo stt"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.vattu_search
+msgid "group theo stt_shelf"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "group theo ten_du_an"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "group theo ten_vat_tu"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+#: model:ir.ui.view,arch_db:dai_tgg.kknoc_search
+msgid "group theo tram"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "group theo trang_thai"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.pn_search
+msgid "group theo vattu_ids"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "group theo vi_tri_lap_dat"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_search
+msgid "group theo yes_no_search"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.importthuvien_form
+msgid "import thư viện"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.importthuvien_form
+msgid "import_strect"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_importthuvien
+msgid "importthuvien"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:importthuvien,type_choose:0
+msgid "iventory hw8800"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:importthuvien,type_choose:0
+msgid "iventory7500"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:importthuvien,trigger_model:0
+#: model:ir.model,name:dai_tgg.model_kiemke
+msgid "kiemke"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.doitac_list
+#: model:ir.ui.view,arch_db:dai_tgg.doitacc_form
+#: model:ir.ui.view,arch_db:dai_tgg.file_form
+#: model:ir.ui.view,arch_db:dai_tgg.file_list
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_form
+#: model:ir.ui.view,arch_db:dai_tgg.kiemke_list
+#: model:ir.ui.view,arch_db:dai_tgg.kknoc_list
+#: model:ir.ui.view,arch_db:dai_tgg.pn_form
+#: model:ir.ui.view,arch_db:dai_tgg.pn_list
+#: model:ir.ui.view,arch_db:dai_tgg.vattu_form
+#: model:ir.ui.view,arch_db:dai_tgg.vattu_list
+msgid "kk"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:importthuvien,trigger_model:0
+#: model:ir.model,name:dai_tgg.model_kknoc
+msgid "kknoc"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.menu,name:dai_tgg.kiemke_menu
+msgid "kế toán kiểm kê"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.port_thiet_bi_print_sp
+msgid "lo:"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_loaisuco
+msgid "loaisuco"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_loaisuvu
+msgid "loaisuvu"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_ltk_config_settings
+msgid "ltk.config.settings"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.importthuvien_form
+msgid "map NOC voi KK"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.importthuvien_form
+msgid "map NOC voi LTK"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.importthuvien_form
+msgid "map_kiemke_voi_noc"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.user_search
+msgid "name or login or đơn vị"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_pn
+msgid "pn"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.report.xml,name:dai_tgg.port_thiet_bi_print_report
+msgid "port_thiet_bi print"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_suco
+msgid "suco"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_sucosuvu
+msgid "sucosuvu"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_suvu
+msgid "suvu"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.importthuvien_form
+msgid "test_code"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.port_thiet_bi_print_sp
+msgid "to:"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.report.xml,name:dai_tgg.totrinh_print_report
+msgid "totrinh print"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.importthuvien_form
+msgid "trigger"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_tvcv
+msgid "tvcv"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model,name:dai_tgg.model_tvcvcate
+msgid "tvcvcate"
+msgstr ""
+
+#. module: dai_tgg
+#: selection:importthuvien,trigger_model:0
+#: model:ir.model,name:dai_tgg.model_vattu
+msgid "vattu"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_diem
+msgid "Điểm"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_diem_goc
+msgid "Điểm Góc"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_diemld
+msgid "Điểm Lãnh Đạo Chấm"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_percent_diemtc
+msgid "Điểm LĐ/Điểm Tự Chấm (%)"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_diem_tvi
+msgid "Điểm Thư Viện"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_diemtc
+msgid "Điểm Tự Chấm"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_percent_diemtt
+msgid "Điểm Tự Chấm/Điểm Tự Tính(%)"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_diemtt
+msgid "Điểm Tự Tính"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_diem_remain_gd
+msgid "Điểm còn lại của giai đoạn con"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.totrinh_template
+msgid "ĐÀI VIỄN THÔNG TIỀN GIANG"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.module.category,name:dai_tgg.module_category_dai_tgg
+msgid "Đài HCM"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.user_search
+msgid "Đơn Vị"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.actions.act_window,name:dai_tgg.congty_action
+#: model:ir.ui.menu,name:dai_tgg.congty_menu
+msgid "Đơn Vị (Công Ty)"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_ctr_cty_id
+#: model:ir.model.fields,field_description:dai_tgg.field_doitac_cty_id
+#: model:ir.model.fields,field_description:dai_tgg.field_kiemke_don_vi
+#: model:ir.model.fields,field_description:dai_tgg.field_res_users_cty_id
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_cty_id
+#: model:ir.model.fields,field_description:dai_tgg.field_sucosuvu_cty_id
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_cty_id
+#: model:ir.ui.view,arch_db:dai_tgg.totrinh_template
+msgid "Đơn vị"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_congty_parent_id
+msgid "Đơn vị Cha"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_cty_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_sucosuvu_cty_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_cty_ids
+msgid "Đơn vị Liên quan"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_cty_ids
+msgid "Đơn vị liên quan"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_don_vi
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_don_vi
+msgid "Đơn vị tính"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_cty_id
+msgid "Đơn vị tạo"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.res_users_form_inherit_not
+#: model:ir.ui.view,arch_db:dai_tgg.users_tree
+msgid "Địa chỉ"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_comment_doitac_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_cvi_doitac_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_suco_doitac_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_sucosuvu_doitac_ids
+#: model:ir.model.fields,field_description:dai_tgg.field_suvu_doitac_ids
+#: model:ir.ui.menu,name:dai_tgg.doitac_menu
+msgid "Đối Tác"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_do_phuc_tap
+msgid "Độ Phức Tạp"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.ui.view,arch_db:dai_tgg.totrinh_template
+msgid "Độc lập- Tự do-Hạnh phúc"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_tvcv_dot_xuat_hay_dinh_ky
+msgid "Đột xuất hay định kỳ"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv_image_sau_test
+msgid "Ảnh sau khi test"
+msgstr ""
+
+#. module: dai_tgg
+#: model:ir.model.fields,field_description:dai_tgg.field_gccv_image_truoc_test
+msgid "Ảnh trước khi test"
+msgstr ""

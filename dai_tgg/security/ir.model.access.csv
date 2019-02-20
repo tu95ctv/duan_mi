@@ -1,0 +1,20 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_dai_tgg_ctr,dai_tgg.ctr,model_ctr,base.group_user,1,1,1,0
+access_dai_tgg_res_users,dai_tgg.res.users,base.model_res_users,base.group_user,1,1,1,1
+access_dai_tgg_cvi,dai_tgg.cvi,model_cvi,base.group_user,1,1,1,1
+access_dai_tgg_tvcv,dai_tgg.tvcv,model_tvcv,base.group_user,1,0,1,0
+access_dai_tgg_tvcv_for_thaydoi_group,dai_tgg.tvcv_for_thaydoi,model_tvcv,dai_tgg.group_thay_doi_thu_vien,1,1,1,1
+access_dai_tgg_importthuvien,dai_tgg.importthuvien,model_importthuvien,base.group_user,1,1,1,1
+access_dai_tgg_congtytype,dai_tgg.congtytype,model_congtytype,base.group_user,1,1,1,1
+access_dai_tgg_tvcvcate,dai_tgg.tvcvcate,model_tvcvcate,base.group_user,1,1,1,1
+access_dai_tgg_dotxuathaydinhky,dai_tgg.dotxuathaydinhky,model_dotxuathaydinhky,base.group_user,1,1,1,1
+access_dai_tgg_donvi,dai_tgg.donvi,model_donvi,base.group_user,1,1,1,1
+access_dai_tgg_file,dai_tgg.file,model_dai_tgg_file,base.group_user,1,1,1,1
+access_dai_tgg_res_partner1,dai_tgg res partner,base.model_res_partner,base.group_user,1,1,1,1
+access_dai_tgg_res_company,dai_tgg res partner,base.model_res_company,base.group_user,1,1,1,1
+access_dai_tgg_dlcv,dai_tgg.dlcv,model_dlcv,base.group_user,1,1,1,1
+access_dai_tgg_department,dai_tgg.department,hr.model_hr_department,base.group_user,1,0,0,0
+access_dai_tgg_totrinh,dai_tgg.totrinh,model_dai_tgg_totrinh,base.group_user,1,1,1,0
+access_dai_tgg_thuebaoline,dai_tgg.thuebaoline,model_dai_tgg_thuebaoline,base.group_user,1,1,1,1
+access_dai_tgg_thuebao,dai_tgg.thuebao,model_dai_tgg_thuebao,base.group_user,1,1,1,1
+access_dai_tgg_importcvi,dai_tgg.importcvi,model_dai_tgg_importcvi,base.group_user,1,1,1,1

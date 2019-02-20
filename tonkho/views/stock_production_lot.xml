@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="stock.view_production_lot_form_simple" model="ir.ui.view">
+            <!-- <field name="name">stock.production.lot.form.simple</field>
+        <field name="model">stock.production.lot</field> -->
+            <field name="priority">11</field>
+        </record>
+        <record id="view_production_lot_form" model="ir.ui.view">
+            <field name="name">stock.production.lot.form.inherit</field>
+            <field name="model">stock.production.lot</field>
+            <field name="inherit_id" ref="stock.view_production_lot_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//button[2]" position="after">
+                    <button string="Các Dòng Điều Chuyển" type="object" name="action_view_stock_move_lines" class="oe_stat_button" icon="fa-arrows-v" groups="stock.group_stock_user" />
+                </xpath>
+                <xpath expr="//button[1]" position="replace"></xpath>
+                <field name="ref" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="product_id" position="attributes">
+                    <attribute name="readonly">context.get('pn_id_readonly')</attribute>
+                </field>
+                <field name="product_qty" position="replace"></field>
+                <field name="product_uom_id" position="replace"></field>
+                <label for="product_qty" position="replace" />
+                <xpath expr="//group[1]" position="inside">
+                    <group>
+                        <field name="tinh_trang" readonly="0"></field>
+                        <field name="ghi_chu" />
+                        <field name="ngay_su_dung" />
+                        <field name="ghi_chu_ban_dau" groups="tonkho.show_thong_tin_khong_dau" />
+                        <field name="ghi_chu_ngay_nhap" groups="tonkho.show_thong_tin_khong_dau" />
+                        <field name="ghi_chu_ngay_xuat" groups="tonkho.show_thong_tin_khong_dau" />
+                        <field name="write_date" />
+                        <field name="create_date" />
+                    </group>
+                </xpath>
+                <field name="ref" position="before">
+                    <field name="pn" />
+                    <field name="id_ke_toan" />
+                    <field name="the_tai_san" />
+                    <!--  <field name="quant_ids"  string="Trong kho"/> -->
+                </field>
+                <xpath expr="//group[1]" position="after">
+                    <notebook>
+                        <page string="Trong kho">
+                            <field name="quant_ids" string="Trong kho" />
+                        </page>
+                        <page string="Các dòng điều chuyển">
+                            <group>
+                                <field name="is_done_ml_filter" />
+                                <field name="is_your_department_filter" />
+                                <field name="id_show" invisible="1"></field>
+                                </group>
+                                <group>
+                                <div class="oe_title">
+                                    <label for="ml_ids" />
+                                    <field name="ml_ids" context="{'active_id':active_id}" />
+                                </div>
+                            </group>
+                        </page>
+                    </notebook>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_production_lot_form_simple" model="ir.ui.view">
+            <field name="name">stock.production.lot.form.simple</field>
+            <field name="model">stock.production.lot</field>
+            <field name="inherit_id" ref="stock.view_production_lot_form_simple" />
+            <field name="arch" type="xml">
+                <field name="product_id" position="attributes">
+                    <attribute name="readonly">context.get('product_id_readonly')</attribute>
+                </field>
+                <field name="ref" position="replace">
+                    <field name="pn" />
+                    <field name="tinh_trang" readonly="0"></field>
+                    <field name="ghi_chu" />
+                    <field name="ngay_su_dung" />
+                    <field name="ghi_chu_ban_dau" groups="tonkho.show_thong_tin_khong_dau" />
+                    <field name="ghi_chu_ngay_nhap" groups="tonkho.show_thong_tin_khong_dau" />
+                    <field name="ghi_chu_ngay_xuat" groups="tonkho.show_thong_tin_khong_dau" />
+                </field>
+                <field name="product_id" position="attributes">
+                    <attribute name="readonly">context.get('pn_id_readonly')</attribute>
+                </field>
+            </field>
+        </record>
+        <record id="stock.view_production_lot_form_simple" model="ir.ui.view">
+            <field name="priority">17</field>
+        </record>
+        <record id="view_production_lot_tree_inherit" model="ir.ui.view">
+            <field name="name">stock.production.lot.tree</field>
+            <field name="model">stock.production.lot</field>
+            <field name="inherit_id" ref="stock.view_production_lot_tree" />
+            <field name="arch" type="xml">
+                <field name="product_id" position="replace" />
+                <field name="ref" position="replace" />
+                <field name="name" position="after">
+                    <field name="product_id" />
+                    <field name="pn" />
+                    <!-- <field name="product_qty"/>-->
+                    <field name="id_ke_toan" />
+                    <field name="the_tai_san" />
+                    <field name="tinh_trang"></field>
+                    <field name="ghi_chu" />
+                    <field name="ngay_su_dung" groups="tonkho.show_thong_tin_khong_dau" />
+                    <field name="ghi_chu_ban_dau" groups="tonkho.show_thong_tin_khong_dau" />
+                    <field name="ghi_chu_ngay_nhap" groups="tonkho.show_thong_tin_khong_dau" />
+                    <field name="ghi_chu_ngay_xuat" groups="tonkho.show_thong_tin_khong_dau" />
+                    <field name="write_date" />
+                </field>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="search_product_lot_filter">
+            <field name="name">Production Lots Filter</field>
+            <field name="model">stock.production.lot</field>
+            <field name="inherit_id" ref="stock.search_product_lot_filter"></field>
+            <field name="arch" type="xml">
+                <field name="product_id" position="replace">
+                    <field name="product_id" filter_domain="['|',('product_id','ilike',self),('product_id.pn','ilike',self)]" />
+                </field>
+                <xpath expr="//filter[@name='group_by_product']" position="after">
+                    <field name="tinh_trang"></field>
+                    <filter name="group_by_tinh_trang" string="Trạng Thái" domain="[]" context="{'group_by':'tinh_trang'}" />
+                </xpath>
+            </field>
+        </record>
+        <record id="stock.action_production_lot_form" model="ir.actions.act_window">
+            <field name="context">{}</field>
+            <!-- {'search_default_group_by_product': 1} -->
+        </record>
+        <menuitem action="stock.action_production_lot_form" id="stock.menu_action_production_lot_form" parent="stock.menu_stock_inventory_control" groups="stock.group_production_lot" sequence="3" />
+        <!-- <menuitem action="action_location_form" id="menu_action_location_form" 
+        groups="stock.group_stock_multi_locations"
+        parent="menu_warehouse_config" sequence="2"/>
+         -->
+    </data>
+</odoo>
