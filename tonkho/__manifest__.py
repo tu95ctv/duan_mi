@@ -34,7 +34,7 @@
         'views/stock_inventory.xml',
         'views/stock_location.xml',
         'views/stock_production_lot.xml',
-        'views/product_template.xml',
+#         'views/product_template.xml',
         'views/stock_move_line.xml',
         'views/stock_picking11_form.xml',
         'views/stock_picking11_tree.xml',

@@ -84,8 +84,12 @@ class StockPicking(models.Model):
         )
     @api.depends('department_id','ban_giao_or_nghiem_thu','stt_trong_bien_ban_in')
     def name_(self):
-        name = self.department_id.short_name + '/' + '%s'%BG_dict[self.ban_giao_or_nghiem_thu] + '/%s'%self.stt_trong_bien_ban_in
-        self.name = name
+        for r in self:
+            try:
+                name = r.department_id.short_name + '/' + '%s'%BG_dict[r.ban_giao_or_nghiem_thu] + '/%s'%r.stt_trong_bien_ban_in
+                r.name = name
+            except:
+                pass
         
     # xem lại
     picking_type_id = fields.Many2one(
@@ -110,7 +114,7 @@ class StockPicking(models.Model):
     @api.depends('department_id','ban_giao_or_nghiem_thu')
     def stt_trong_bien_ban_in_(self):
         for r in self:
-            domain = [('department_id','=',self.department_id.id),
+            domain = [('department_id','=',r.department_id.id),
                                                         ('ban_giao_or_nghiem_thu','=',r.ban_giao_or_nghiem_thu),
                                                         ('stt_trong_bien_ban_in','!=', 0),
                                                         ]

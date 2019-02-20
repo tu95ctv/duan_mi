@@ -181,7 +181,7 @@
                <filter name="this month" string="Sự Cố Tháng này" domain="[('ngay_bat_dau','&lt;',(context_today()+relativedelta(months=1)).strftime('%Y-%m-01')), ('ngay_bat_dau','&gt;=',time.strftime('%Y-%m-01'))]" help="Chọn tháng này" />
                <filter name="last month" string="Sự Cố Tháng Trước" domain="[('ngay_bat_dau','&gt;=',(context_today()+relativedelta(months=-1)).strftime('%Y-%m-01')), ('ngay_bat_dau','&lt;',time.strftime('%Y-%m-01'))]" help="Chọn tháng này" />
                <group expand="0" string="Group By">
-                  <filter string="group theo Loại" context="{'group_by':'tvcv_id'}" />
+                  <filter name="tvcv_id" string="group theo Loại" context="{'group_by':'tvcv_id'}" />
                </group>
             </search>
          </field>
