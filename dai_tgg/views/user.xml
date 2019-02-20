@@ -12,7 +12,7 @@
             <search string="Search user">
                <field name="name" string="Name hoặc Mail hoặc Tên không dấu hoặc Tên Viết Tắt hoặc Đơn Vị" filter_domain="['|','|','|','|',('name','ilike',self),('login','ilike',self),('department_id','ilike',self),('name_khong_dau','ilike',self),('name_viet_tat','ilike',self)]" />
                <group string="Group By Đơn vị">
-                  <filter string="Đơn Vị" context="{'group_by' : 'department_id'}" />
+                  <filter name="department_id" string="Đơn Vị" context="{'group_by' : 'department_id'}" />
                </group>
             </search>
          </field>

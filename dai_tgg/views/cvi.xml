@@ -76,13 +76,12 @@
                <filter name="this month" string="CV Tháng này" domain="[('ngay_bat_dau','&lt;',(context_today()+relativedelta(months=1)).strftime('%Y-%m-01')), ('ngay_bat_dau','&gt;=',time.strftime('%Y-%m-01'))]" help="Chọn tháng này" />
                <filter name="last month" string="CV Tháng Trước" domain="[('ngay_bat_dau','&gt;=',(context_today()+relativedelta(months=-1)).strftime('%Y-%m-01')), ('ngay_bat_dau','&lt;',time.strftime('%Y-%m-01'))]" help="Chọn tháng này" />
                <group expand="0" string="Group By">
-                  <filter string="group theo Nhân viên tạo" context="{'group_by':'user_id'}" />
-                  <filter string="group theo Đơn vị tạo" context="{'group_by':'department_id'}" />
-                  <filter string="group theo Phòng Ban" context="{'group_by':'department_id'}" />
-                  <filter string="group theo Thư Viện Công việc" context="{'group_by':'tvcv_id'}" />
-                  <filter string="group theo Loại Công việc" context="{'group_by':'loai_cvi'}" />
-                  <filter string="group theo Ngày" context="{'group_by':'ngay_bat_dau:day'}" />
-                  <filter string="group theo Tháng" context="{'group_by':'ngay_bat_dau:month'}" />
+                  <filter name="user_id" string="group theo Nhân viên tạo" context="{'group_by':'user_id'}" />
+                  <filter name="department_id" string="group theo Đơn vị tạo" context="{'group_by':'department_id'}" />
+                  <filter name="tvcv_id" string="group theo Thư Viện Công việc" context="{'group_by':'tvcv_id'}" />
+                  <filter name="loai_cvi" string="group theo Loại Công việc" context="{'group_by':'loai_cvi'}" />
+                  <filter name="ngay_bat_dau_day" string="group theo Ngày" context="{'group_by':'ngay_bat_dau:day'}" />
+                  <filter name="ngay_bat_dau_month" string="group theo Tháng" context="{'group_by':'ngay_bat_dau:month'}" />
                </group>
             </search>
          </field>

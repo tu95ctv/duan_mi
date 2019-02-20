@@ -12,9 +12,9 @@
                <!-- <field name="cvi_ids" string="search theo loại hoặc nội dung hoặc tv công việc, loại sự cố, sự vụ " filter_domain="['|','|','|','|',('cvi_ids.name','ilike',self),('cvi_ids.tvcv_id.name','ilike',self),('cvi_ids.tvcv_id.name_khong_dau','ilike',self),('cvi_ids.noi_dung','ilike',self),('cvi_ids.noi_dung_khong_dau','ilike',self)]" /> -->
                <field name="cvi_ids" string="search theo loại hoặc nội dung hoặc tv công việc, loại sự cố, sự vụ " filter_domain="['|',('cvi_ids.noi_dung','ilike',self),('cvi_ids.tvcv_id.name','ilike',self)]" />
                <group string="Group By Đơn vị">
-                  <filter string="Đơn Vị" context="{'group_by' : 'department_id'}" />
-                  <filter string="date" context="{'group_by' : 'date'}" />
-                  <filter string="month" context="{'group_by' : 'date:month'}" />
+                  <filter name="department_id" string="Đơn Vị" context="{'group_by' : 'department_id'}" />
+                  <filter name="date" string="date" context="{'group_by' : 'date'}" />
+                  <filter name="month" string="month" context="{'group_by' : 'date:month'}" />
                </group>
             </search>
          </field>

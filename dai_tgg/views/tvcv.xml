@@ -26,15 +26,15 @@
                <field name="parent_id"  groups="dai_tgg.show_tvcv_con" />
            
                <group expand="0" string="Group By">
-                  <filter string="group by Đơn vị tính" context="{'group_by':'don_vi'}" />
-                  <filter string="group by Độ Phức Tạp" context="{'group_by':'do_phuc_tap'}" />
-                  <filter string="group by Thời Gian Hoàn Thành" context="{'group_by':'thoi_gian_hoan_thanh'}" />
-                  <filter string="group by Điểm" context="{'group_by':'diem'}" />
-                  <filter string="group by Đột xuất hay định kỳ" context="{'group_by':'dot_xuat_hay_dinh_ky'}" />
-                  <filter string="group by Phân loại công việc" context="{'group_by':'cong_viec_cate_id'}" />
-                  <filter string="group by Có CV giai đoạn con" context="{'group_by':'is_has_children'}"  groups="dai_tgg.show_tvcv_con" />
-                  <filter string="group by Công Việc giai đoạn Cha" context="{'group_by':'parent_id'}"   groups="dai_tgg.show_tvcv_con"/>
-                  <filter string="group by Có công việc cha" context="{'group_by':'co_cong_viec_cha'}"  groups="dai_tgg.show_tvcv_con" />
+                  <filter name="don_vi"  string="group by Đơn vị tính" context="{'group_by':'don_vi'}" />
+                  <filter name="do_phuc_tap" string="group by Độ Phức Tạp" context="{'group_by':'do_phuc_tap'}" />
+                  <filter name="thoi_gian_hoan_thanh" string="group by Thời Gian Hoàn Thành" context="{'group_by':'thoi_gian_hoan_thanh'}" />
+                  <filter name="diem" string="group by Điểm" context="{'group_by':'diem'}" />
+                  <filter name="dot_xuat_hay_dinh_ky"  string="group by Đột xuất hay định kỳ" context="{'group_by':'dot_xuat_hay_dinh_ky'}" />
+                  <filter name="cong_viec_cate_id" string="group by Phân loại công việc" context="{'group_by':'cong_viec_cate_id'}" />
+                  <filter name="is_has_children"  string="group by Có CV giai đoạn con" context="{'group_by':'is_has_children'}"  groups="dai_tgg.show_tvcv_con" />
+                  <filter name="is_has_children" string="group by Công Việc giai đoạn Cha" context="{'group_by':'parent_id'}"   groups="dai_tgg.show_tvcv_con"/>
+                  <filter name="co_cong_viec_cha" string="group by Có công việc cha" context="{'group_by':'co_cong_viec_cha'}"  groups="dai_tgg.show_tvcv_con" />
                </group>
             </search>
          </field>
